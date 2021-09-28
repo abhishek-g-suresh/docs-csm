@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1.2.1 on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-12/upgrade/1.2.1/</link>
+    <description>Recent content in 1.2.1 on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:08:33 +0000</lastBuildDate><atom:link href="/docs-csm/en-12/upgrade/1.2.1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.2.1 Patch Installation Instructions</title>
+      <link>/docs-csm/en-12/upgrade/1.2.1/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:29 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2.1/readme/</guid>
+      <description>CSM 1.2.1 Patch Installation Instructions Introduction This document guides an administrator through the patch update to Cray Systems Management v1.2.1 from v1.2.0. If upgrading from CSM v1.0.x directly to v1.2.1, follow the procedures described in Upgrade CSM instead.
+Bug Fixes  Fixes two issues in CFS, restoring the additional inventory field functionality. Fixes an issue restoring console services functionality on &amp;ldquo;Hill&amp;rdquo; cabinets. Fixes a few issues in PowerDNS where various records were missing in the AXFR transfer.</description>
+    </item>
+    
+    <item>
+      <title>Upgrade And Validate Switch Configurations</title>
+      <link>/docs-csm/en-12/upgrade/1.2.1/upgrade_network/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:29 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2.1/upgrade_network/</guid>
+      <description>Upgrade and validate Switch Configurations Prerequisites  SSH access to the switches or the running configuration file Upgrade or install latest version of CANU Install/Upgrade CANU  Run canu --version to see version CANU installed with version 1.6.13 or greater.   Use the paddle file (CCJ) if available, or validate an up-to-date SHCD Validate SHCD System Layout Service (SLS) input file. Collect Data   CAUTION: All of these steps should be done using an out-of-band connection.</description>
+    </item>
+    
+  </channel>
+</rss>

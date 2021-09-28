@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Casmrel-776-12-NCN-boot-order-backport on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-10/upgrade/lib/validation/casmrel-776-csm12-ncn-boot-order-backport/</link>
+    <description>Recent content in Casmrel-776-12-NCN-boot-order-backport on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:07:50 +0000</lastBuildDate><atom:link href="/docs-csm/en-10/upgrade/lib/validation/casmrel-776-csm12-ncn-boot-order-backport/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NCN Boot Order Hot-fix/backport</title>
+      <link>/docs-csm/en-10/upgrade/lib/validation/casmrel-776-csm12-ncn-boot-order-backport/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:07:48 +0000</pubDate>
+      
+      <guid>/docs-csm/en-10/upgrade/lib/validation/casmrel-776-csm12-ncn-boot-order-backport/readme/</guid>
+      <description>NCN Boot Order Hot-fix/Backport This hot-fix applies the CSM 1.2 boot order tooling to the non-compute nodes.
+Requirements All dependencies and necessities are included in this directory.
+The RPMs and scripts may be installed and run in either:
+ PIT : Install or Recovery context NCN : Runtime context  Ideally, invoke this hot-fix from ncn-m001 (e.g. any NCN that is reachable over SSH).
+ CLARIFICATION: [] **The intent of this hotfix is executing in runtime, this hotfix must run from a node with passwordless-ssh between all the NCNs.</description>
+    </item>
+    
+  </channel>
+</rss>

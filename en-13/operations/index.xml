@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cray System Management Administration Guide on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-13/operations/</link>
+    <description>Recent content in Cray System Management Administration Guide on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:06:58 +0000</lastBuildDate><atom:link href="/docs-csm/en-13/operations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Validate Health</title>
+      <link>/docs-csm/en-13/operations/validate_csm_health/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:28 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/operations/validate_csm_health/</guid>
+      <description>Validate CSM Health Anytime after the installation of the CSM services, the health of the management nodes and all CSM services can be validated.
+The following are examples of when to run health checks:
+ After completing the Install CSM Services Before and after NCN reboots After the system is brought back up Any time there is unexpected behavior observed In order to provide relevant information to create support tickets  The areas should be tested in the order they are listed on this page.</description>
+    </item>
+    
+    <item>
+      <title>Configure The Cray Command Line Interface (cray Cli)</title>
+      <link>/docs-csm/en-13/operations/configure_cray_cli/</link>
+      <pubDate>Tue, 07 Feb 2023 03:06:49 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/operations/configure_cray_cli/</guid>
+      <description>Configure the Cray Command Line Interface (cray CLI) The cray command line interface (CLI) is a framework created to integrate all of the system management REST APIs into easily usable commands.
+Procedures in the CSM installation workflow use the cray CLI to interact with multiple services. The cray CLI configuration needs to be initialized for the Linux account, and the Keycloak user running the procedure needs to be authorized. This section describes how to initialize the cray CLI for use by a user and how to authorize that user.</description>
+    </item>
+    
+    <item>
+      <title>Cray System Management Administration Guide</title>
+      <link>/docs-csm/en-13/operations/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:06:15 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/operations/readme/</guid>
+      <description>Cray System Management (CSM) Administration Guide The Cray System Management (CSM) operational activities are administrative procedures required to operate an HPE Cray EX system with CSM software installed.
+The following administrative topics can be found in this guide:
+ CSM product management Bare-metal Image management Boot orchestration System power off procedures System power on procedures Power management Artifact management Compute rolling upgrades Configuration management Kubernetes Package repository management Security and authentication Resiliency ConMan Utility storage System management health System Layout Service (SLS) System configuration service Hardware State Manager (HSM) Hardware Management (HM) collector HPE Power Distribution Unit (PDU) Node management Network  Management network Customer accessible networks (CMN/CAN/CHN) Dynamic Host Configuration Protocol (DHCP) Domain Name Service (DNS) External DNS MetalLB in BGP-mode   Spire Update firmware with FAS User Access Service (UAS)  CSM product management Important procedures for configuring, managing, and validating the CSM environment.</description>
+    </item>
+    
+    <item>
+      <title>Component Names (xnames)</title>
+      <link>/docs-csm/en-13/operations/component_names_xnames/</link>
+      <pubDate>Tue, 07 Feb 2023 03:06:14 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/operations/component_names_xnames/</guid>
+      <description>Component Names (xnames) Component names (xnames) identify the geolocation for hardware components in the HPE Cray EX system. Every component is uniquely identified by these component names. Some, like the system cabinet number or the CDU number, can be changed by site needs. There is no geolocation encoded within the cabinet number, such as an X-Y coordinate system to relate to the floor layout of the cabinets. Other component names refer to the location within a cabinet and go down to the port on a card or switch or the socket holding a processor or a memory DIMM location.</description>
+    </item>
+    
+  </channel>
+</rss>

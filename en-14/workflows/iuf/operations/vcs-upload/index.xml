@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vcs-upload on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-14/workflows/iuf/operations/vcs-upload/</link>
+    <description>Recent content in Vcs-upload on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:09:41 +0000</lastBuildDate><atom:link href="/docs-csm/en-14/workflows/iuf/operations/vcs-upload/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Argo Templates</title>
+      <link>/docs-csm/en-14/workflows/iuf/operations/vcs-upload/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:46 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/workflows/iuf/operations/vcs-upload/readme/</guid>
+      <description>Argo Templates vcs-upload-content.yaml This template will upload the current product&amp;rsquo;s git content to the gitea server. This operation is calling containerized code living here cf-gitea-import. In the current state of this template, there are a few required parameters:
+All of these parameters may be overridden by passing them through argo with:
+ -p parameter=foo
+  cf_import_gitea_org - Defaults to &amp;lsquo;cray&amp;rsquo; cf_import_content_hostpath - Defaults to /content cf_import_results_hostpath - Defaults to /results  This is the path on the management node where the product&amp;rsquo;s content and results will be stored so it will be used as a volumeMount in the template.</description>
+    </item>
+    
+  </channel>
+</rss>

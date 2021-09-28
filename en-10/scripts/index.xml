@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scripts on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-10/scripts/</link>
+    <description>Recent content in Scripts on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:07:39 +0000</lastBuildDate><atom:link href="/docs-csm/en-10/scripts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/docs-csm/en-10/scripts/operations/node_management/add_remove_replace_ncns/sls_utils/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:07:39 +0000</pubDate>
+      
+      <guid>/docs-csm/en-10/scripts/operations/node_management/add_remove_replace_ncns/sls_utils/readme/</guid>
+      <description>This is a reusable Python library for safely interacting with SLS network data (in JSON format).
+The library has been tested against Python version 3.6 and up.</description>
+    </item>
+    
+  </channel>
+</rss>

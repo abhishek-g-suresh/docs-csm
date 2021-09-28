@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workflows on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-14/operations/iuf/workflows/</link>
+    <description>Recent content in Workflows on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:09:20 +0000</lastBuildDate><atom:link href="/docs-csm/en-14/operations/iuf/workflows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upgrade All Products Provided In A Hpc Software Recipe</title>
+      <link>/docs-csm/en-14/operations/iuf/workflows/upgrade_all_products/</link>
+      <pubDate>Tue, 07 Feb 2023 03:07:02 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/operations/iuf/workflows/upgrade_all_products/</guid>
+      <description>Upgrade All Products Provided in a HPC CSM Software Recipe The following example describes a hypothetical upgrade procedure of all non-CSM product content provided with a HPC CSM Software Recipe release. CSM itself is not upgraded. All stages of iuf are executed to perform a complete upgrade. All of the new software provided in the release is deployed and all management NCNs and managed compute and application (UAN) nodes are rebooted to new images and CFS configurations.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Upgrade on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-10/upgrade/</link>
+    <description>Recent content in Upgrade on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:07:48 +0000</lastBuildDate><atom:link href="/docs-csm/en-10/upgrade/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prepare For Upgrade</title>
+      <link>/docs-csm/en-10/upgrade/prepare_for_upgrade/</link>
+      <pubDate>Tue, 07 Feb 2023 03:07:48 +0000</pubDate>
+      
+      <guid>/docs-csm/en-10/upgrade/prepare_for_upgrade/</guid>
+      <description>Prepare for Upgrade Before beginning an upgrade to a new version of CSM, there are a few things to do on the system first.
+  Graceful Shutdown of Workloads affected by CSM Upgrade
+Warning: Although it is expected that compute nodes and application nodes will continue to provide their services without interruption when the management nodes and services are being upgraded by CSM, it is important to be aware of the possibility of interruption of running jobs.</description>
+    </item>
+    
+    <item>
+      <title>Update Management Network From 1.4 To 1.5</title>
+      <link>/docs-csm/en-10/upgrade/update_management_network/</link>
+      <pubDate>Tue, 07 Feb 2023 03:07:48 +0000</pubDate>
+      
+      <guid>/docs-csm/en-10/upgrade/update_management_network/</guid>
+      <description>Update Management Network From 1.4 To 1.5 IMPORTANT: These procedures only need to be followed if upgrading from CSM 0.9 (Shasta 1.4). If upgrading from CSM 1.0.1 (Shasta 1.5), these procedures should already have been done.
+ New Features and Functions for v1.5 Accessing Network Switches  Finding Switch Hostnames and IP Addresses Reminders   CMM Static Lag Configuration BGP  Aruba Mellanox   Apollo Server Configuration  1.</description>
+    </item>
+    
+  </channel>
+</rss>

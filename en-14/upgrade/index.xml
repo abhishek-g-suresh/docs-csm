@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Upgrade on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-14/upgrade/</link>
+    <description>Recent content in Upgrade on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:08:42 +0000</lastBuildDate><atom:link href="/docs-csm/en-14/upgrade/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upgrade Automation</title>
+      <link>/docs-csm/en-14/upgrade/scripts/upgrade/upgrade_automation/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:45 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/upgrade/scripts/upgrade/upgrade_automation/</guid>
+      <description>Upgrade Automation This document describes how the CSM upgrade process is automated.
+Overview In a nutshell, an upgrade is:
+ Upload new artifacts into a running system. Rebuild each NCN with the newly uploaded images. Deploy new charts after all NCNs are upgraded.  Prerequisites Everything that is needed before upgrading an NCN.
+ NOTE:
+The prerequisites.sh script is required to run on both ncn-m001 and ncn-m002 (at different points in the upgrade process).</description>
+    </item>
+    
+    <item>
+      <title>SLS Updater.py TechNICal Details</title>
+      <link>/docs-csm/en-14/upgrade/scripts/sls/sls_updater.py_technical_details/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:44 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/upgrade/scripts/sls/sls_updater.py_technical_details/</guid>
+      <description>sls_updater.py Technical Details No action needed. Informational purposes only.
+Actions and order This migration is performed offline for data security. The running SLS file is first dumped, then the migration script is run and a new, migrated output file is created.
+ Migrate switch naming (in order): leaf to leaf-bmc, and agg to leaf. Remove api-gateway entries from HMLB subnets for CSM 1.2 security. Remove kubeapi-vip reservations for all networks except NMN.</description>
+    </item>
+    
+    <item>
+      <title>SLS Updates Expert Mode</title>
+      <link>/docs-csm/en-14/upgrade/scripts/sls/expert_mode/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:44 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/upgrade/scripts/sls/expert_mode/</guid>
+      <description>SLS Updates Expert mode The 1.2 SLS Upgrader aims to make the upgrade of SLS from pre-CMS 1.2 to CSM 1.2 as seamless as possible. However, certain system constraints and subnet sizes quickly necessitate overriding standard input.
+ Key takeaways When to use expert mode Minimal input review Forcing preservation of some existing values Expert mode: Overriding defaults and forced guiding of upgrades  Expert mode: Prerequisites Expert mode: Process Expert mode: Example    Key takeaways  Expert mode requires both an iterative (offline) process and command line override values.</description>
+    </item>
+    
+    <item>
+      <title>Upgrade SLS Offline From 1.0.x To Csm 1.2</title>
+      <link>/docs-csm/en-14/upgrade/scripts/sls/readme.sls_upgrade/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:44 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/upgrade/scripts/sls/readme.sls_upgrade/</guid>
+      <description>Upgrade SLS Offline from CSM 1.0.x to CSM 1.2 Abstract Prior to updating SLS, at a minimum, answers to the following questions must be known:
+  Will user traffic (non-administrative) come in via the CAN or CHN, or is the site air-gapped?
+By default when upgrading to CSM 1.2, non-administrative user traffic is migrated from the CAN to the CHN while minimizing changes. If instead it is desired that the non-administrative user traffic continue to come in via the CAN, or if the site is air-gapped, then this must be explicitly specified during the SLS update.</description>
+    </item>
+    
+    <item>
+      <title>Prepare For Upgrade</title>
+      <link>/docs-csm/en-14/upgrade/prepare_for_upgrade/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:43 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/upgrade/prepare_for_upgrade/</guid>
+      <description>Prepare for Upgrade Before beginning an upgrade to a new version of CSM, there are a few things to do on the system first.
+ Reduced resiliency during upgrade Export Nexus data Start typescript Running sessions Health validation Stop typescript Preparation completed  Reduced resiliency during upgrade Warning: Management service resiliency is reduced during the upgrade.
+Although it is expected that compute nodes and application nodes will continue to provide their services without interruption, it is important to be aware that the degree of management services resiliency is reduced during the upgrade.</description>
+    </item>
+    
+    <item>
+      <title>1.3.0 Or Later To 1.4.0 Upgrade Process</title>
+      <link>/docs-csm/en-14/upgrade/upgrade_management_nodes_and_csm_services/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:42 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/upgrade/upgrade_management_nodes_and_csm_services/</guid>
+      <description>CSM 1.3.0 or later to 1.4.0 Upgrade Process Introduction This document guides an administrator through the upgrade of Cray Systems Management from v1.3 to v1.4. When upgrading a system, follow this top-level file from top to bottom. The content on this top-level page is meant to be terse. For additional reference material on the upgrade processes and scripts mentioned explicitly on this page, see resource material.
+Important Notes Service request adjustments are needed for small systems   For systems with only three worker nodes (typically Testing and Development Systems (TDS)), prior to proceeding with this upgrade, CPU limits MUST be lowered on several services in order for this upgrade to succeed.</description>
+    </item>
+    
+    <item>
+      <title>Stage 1 - Ceph Image Upgrade</title>
+      <link>/docs-csm/en-14/upgrade/stage_1/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:42 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/upgrade/stage_1/</guid>
+      <description>Stage 1 - Ceph image upgrade Reminder: If any problems are encountered and the procedure or command output does not provide relevant guidance, see Relevant troubleshooting links for upgrade-related issues.
+ Stage 1 - Ceph image upgrade  Start typescript Argo workflows CSM Upgrade requirement for upgrades staying within a CSM release version Storage node image upgrade Ensure that rbd stats monitoring is enabled Stop typescript Stage completed    Start typescript   (ncn-m001#) If a typescript session is already running in the shell, then first stop it with the exit command.</description>
+    </item>
+    
+    <item>
+      <title>Stage 2 - Kubernetes Upgrade</title>
+      <link>/docs-csm/en-14/upgrade/stage_2/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:42 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/upgrade/stage_2/</guid>
+      <description>Stage 2 - Kubernetes Upgrade Reminder: If any problems are encountered and the procedure or command output does not provide relevant guidance, see Relevant troubleshooting links for upgrade-related issues.
+ Start typescript on ncn-m001 Stage 2.1 - Master node image upgrade Argo workflows Stage 2.2 - Worker node image upgrade  Option 1 - Serial upgrade Option 2 - Parallel upgrade (Tech preview)  Restrictions Example     Stage 2.</description>
+    </item>
+    
+    <item>
+      <title>Stage 3 - Service Upgrades</title>
+      <link>/docs-csm/en-14/upgrade/stage_3/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:42 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/upgrade/stage_3/</guid>
+      <description>Stage 3 - CSM Service Upgrades Reminder: If any problems are encountered and the procedure or command output does not provide relevant guidance, see Relevant troubleshooting links for upgrade-related issues.
+ Start typescript Perform upgrade Verify Keycloak users Take Etcd Manual Backup Stop typescript Stage completed  Start typescript   (ncn-m002#) If a typescript session is already running in the shell, then first stop it with the exit command.</description>
+    </item>
+    
+    <item>
+      <title>Stage 4 - Ceph Upgrade</title>
+      <link>/docs-csm/en-14/upgrade/stage_4/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:42 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/upgrade/stage_4/</guid>
+      <description>Stage 4 - Ceph Upgrade Reminder: If any problems are encountered and the procedure or command output does not provide relevant guidance, then see Relevant troubleshooting links for upgrade-related issues.
+ Ceph upgrade contents Start typescript Procedure  Perform upgrade Diagnose a stalled upgrade  UPGRADE_FAILED_PULL: Upgrade: failed to pull target image   Troubleshoot a failed upgrade   Stop typescript Stage completed  Ceph upgrade contents The upgrade includes all fixes from v15.</description>
+    </item>
+    
+    <item>
+      <title>Stage 0 - Prerequisites And Preflight Checks</title>
+      <link>/docs-csm/en-14/upgrade/stage_0_prerequisites/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:41 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/upgrade/stage_0_prerequisites/</guid>
+      <description>Stage 0 - Prerequisites and Preflight Checks  Reminders:
+ CSM 1.3.0 or higher is required in order to upgrade to CSM 1.4.0. If any problems are encountered and the procedure or command output does not provide relevant guidance, see Relevant troubleshooting links for upgrade-related issues.   Stage 0 has several critical procedures which prepare the environment and verify if the environment is ready for the upgrade.
+ Stage 0 - Prerequisites and Preflight Checks  Start typescript Stage 0.</description>
+    </item>
+    
+    <item>
+      <title>Upgrade</title>
+      <link>/docs-csm/en-14/upgrade/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:41 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/upgrade/readme/</guid>
+      <description>Upgrade CSM The process for upgrading Cray Systems Management (CSM) has many steps in multiple procedures which should be done in a specific order.
+After the upgrade of CSM software, the CSM health checks will validate the system before doing any other operational tasks like the check and update of firmware on system components. Once the CSM upgrade has completed, other product streams for the HPE Cray EX system can be installed or upgraded.</description>
+    </item>
+    
+  </channel>
+</rss>

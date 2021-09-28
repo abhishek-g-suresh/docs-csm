@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SAT on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-13/operations/sat/</link>
+    <description>Recent content in SAT on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:09:35 +0000</lastBuildDate><atom:link href="/docs-csm/en-13/operations/sat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>System Admin Toolkit (SAT) In</title>
+      <link>/docs-csm/en-13/operations/sat/sat_in_csm/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:08 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/operations/sat/sat_in_csm/</guid>
+      <description>System Admin Toolkit (SAT) in CSM The System Admin Toolkit (SAT) is a command-line interface that can assist administrators with common tasks, such as troubleshooting and querying information about the HPE Cray EX System, system boot and shutdown, and replacing hardware components. In CSM 1.3 and newer, the sat command is available on the Kubernetes NCNs without installing the SAT product stream.
+SAT product stream components It is still possible to install SAT as a separate product stream.</description>
+    </item>
+    
+  </channel>
+</rss>

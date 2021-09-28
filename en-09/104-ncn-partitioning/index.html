@@ -1,0 +1,5064 @@
+<!DOCTYPE html>
+<html lang="en-09" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/docs-csm/images/favicon.png" type="image/png">
+
+    <title>NCN Partitions :: Cray System Management (CSM)</title>
+
+    
+    <link href="/docs-csm/css/nucleus.css?1675739395" rel="stylesheet">
+    <link href="/docs-csm/css/fontawesome-all.min.css?1675739395" rel="stylesheet">
+    <link href="/docs-csm/css/hybrid.css?1675739395" rel="stylesheet">
+    <link href="/docs-csm/css/featherlight.min.css?1675739395" rel="stylesheet">
+    <link href="/docs-csm/css/perfect-scrollbar.min.css?1675739395" rel="stylesheet">
+    <link href="/docs-csm/css/auto-complete.css?1675739395" rel="stylesheet">
+    <link href="/docs-csm/css/atom-one-dark-reasonable.css?1675739395" rel="stylesheet">
+    <link href="/docs-csm/css/theme.css?1675739395" rel="stylesheet">
+    <link href="/docs-csm/css/tabs.css?1675739395" rel="stylesheet">
+    <link href="/docs-csm/css/hugo-theme.css?1675739395" rel="stylesheet">
+    
+    <link href="/docs-csm/css/theme-blue.css?1675739395" rel="stylesheet">
+    
+    
+
+    <script src="/docs-csm/js/jquery-3.3.1.min.js?1675739395"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/docs-csm/en-09/104-ncn-partitioning/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href='/docs-csm/en-09'>
+  Cray System Management
+</a>
+
+    </div>
+
+    
+    <section>
+      <ul>
+      
+        <li>
+          <div class="select-style padding">
+          v <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en-09" value="/docs-csm/en-09/104-ncn-partitioning/" selected>0.9</option>
+                    
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </li>
+      
+
+      
+      </ul>
+    </section>
+  
+
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/docs-csm/js/lunr.min.js?1675739395"></script>
+<script type="text/javascript" src="/docs-csm/js/auto-complete.js?1675739395"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/docs-csm\/\/en-09";
+    
+</script>
+<script type="text/javascript" src="/docs-csm/js/search.js?1675739395"></script>
+
+    
+  </div>
+
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/421-mgmt-net-cabling-checklist/" title="1.4 Management Network Cabling Checklist" class="dd-item ">
+        <a href="/docs-csm/en-09/421-mgmt-net-cabling-checklist/">
+        1.4 Management Network Cabling Checklist
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/308-application-node-config/" title="Application Node Config" class="dd-item ">
+        <a href="/docs-csm/en-09/308-application-node-config/">
+        Application Node Config
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/310-cabinets/" title="Cabinets" class="dd-item ">
+        <a href="/docs-csm/en-09/310-cabinets/">
+        Cabinets
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/416-mgmt-net-cabling/" title="Cabling" class="dd-item ">
+        <a href="/docs-csm/en-09/416-mgmt-net-cabling/">
+        Cabling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/066-ceph-csi/" title="Ceph Csi Verification" class="dd-item ">
+        <a href="/docs-csm/en-09/066-ceph-csi/">
+        Ceph Csi Verification
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/302-ncn-metadata-bondx/" title="Collecting NCN Mac Addresses" class="dd-item ">
+        <a href="/docs-csm/en-09/302-ncn-metadata-bondx/">
+        Collecting NCN Mac Addresses
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/301-ncn-metadata-bmc/" title="Collecting The BMC Mac Addresses" class="dd-item ">
+        <a href="/docs-csm/en-09/301-ncn-metadata-bmc/">
+        Collecting The BMC Mac Addresses
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/257-firmware-action-service-cray-windom-compute-node-bios-workaround/" title="Compute Node Bios Workaround For Wnc-rome Aka HPE Cray Ex425" class="dd-item ">
+        <a href="/docs-csm/en-09/257-firmware-action-service-cray-windom-compute-node-bios-workaround/">
+        Compute Node Bios Workaround For Wnc-rome Aka HPE Cray Ex425
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/000-info/" title="Cray Guide Contribution" class="dd-item ">
+        <a href="/docs-csm/en-09/000-info/">
+        Cray Guide Contribution
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/063-csi-files/" title="Cray Site Init Files" class="dd-item ">
+        <a href="/docs-csm/en-09/063-csi-files/">
+        Cray Site Init Files
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/readme/" title="Cray System Management - Guides And References" class="dd-item ">
+        <a href="/docs-csm/en-09/readme/">
+        Cray System Management - Guides And References
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/release_notes/" title="Cray System Management - Release Notes" class="dd-item ">
+        <a href="/docs-csm/en-09/release_notes/">
+        Cray System Management - Release Notes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/051-disk-cleanslate/" title="Disk Cleanslate" class="dd-item ">
+        <a href="/docs-csm/en-09/051-disk-cleanslate/">
+        Disk Cleanslate
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/001-guides/" title="Documentation Guide" class="dd-item ">
+        <a href="/docs-csm/en-09/001-guides/">
+        Documentation Guide
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/256-firmware-action-service-fas-recipes/" title="Firmware Action Service (FAS) Administration Guide" class="dd-item ">
+        <a href="/docs-csm/en-09/256-firmware-action-service-fas-recipes/">
+        Firmware Action Service (FAS) Administration Guide
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/255-firmware-action-service-fas/" title="Firmware Action Service (FAS) | User Procedures" class="dd-item ">
+        <a href="/docs-csm/en-09/255-firmware-action-service-fas/">
+        Firmware Action Service (FAS) | User Procedures
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/250-firmware/" title="Firmware Checkout" class="dd-item ">
+        <a href="/docs-csm/en-09/250-firmware/">
+        Firmware Checkout
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/010-firmware-update-with-fas/" title="Firmware Update The System With FAS" class="dd-item ">
+        <a href="/docs-csm/en-09/010-firmware-update-with-fas/">
+        Firmware Update The System With FAS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/254-ncn-firmware-gb/" title="Gigabyte Firmware Bug" class="dd-item ">
+        <a href="/docs-csm/en-09/254-ncn-firmware-gb/">
+        Gigabyte Firmware Bug
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/304-ncn-pcie-net-boot-and-re-cable/" title="Guide Netboot An NCN From A Spine" class="dd-item ">
+        <a href="/docs-csm/en-09/304-ncn-pcie-net-boot-and-re-cable/">
+        Guide Netboot An NCN From A Spine
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/068-harvest-13-config/" title="Harvest 13 Config" class="dd-item ">
+        <a href="/docs-csm/en-09/068-harvest-13-config/">
+        Harvest 13 Config
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/307-hmn-connections/" title="Hmn Connections File" class="dd-item ">
+        <a href="/docs-csm/en-09/307-hmn-connections/">
+        Hmn Connections File
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/002-csm-install/" title="Install" class="dd-item ">
+        <a href="/docs-csm/en-09/002-csm-install/">
+        Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/007-csm-install-reboot/" title="Install Reboot - Final NCN Install" class="dd-item ">
+        <a href="/docs-csm/en-09/007-csm-install-reboot/">
+        Install Reboot - Final NCN Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/008-csm-validation/" title="Install Validation And Health Checks" class="dd-item ">
+        <a href="/docs-csm/en-09/008-csm-validation/">
+        Install Validation And Health Checks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/418-mgmt-net-ip-helper/" title="Ip-helper Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/418-mgmt-net-ip-helper/">
+        Ip-helper Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/061-livecd-metal-basecamp/" title="Livecd - Metal Basecamp" class="dd-item ">
+        <a href="/docs-csm/en-09/061-livecd-metal-basecamp/">
+        Livecd - Metal Basecamp
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/060-livecd-1.3-rollback/" title="Livecd 1.3 Rollback" class="dd-item ">
+        <a href="/docs-csm/en-09/060-livecd-1.3-rollback/">
+        Livecd 1.3 Rollback
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/059-livecd-backup/" title="Livecd Re-installs" class="dd-item ">
+        <a href="/docs-csm/en-09/059-livecd-backup/">
+        Livecd Re-installs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/058-livecd-troubleshooting/" title="Livecd Recovery" class="dd-item ">
+        <a href="/docs-csm/en-09/058-livecd-troubleshooting/">
+        Livecd Recovery
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/004-csm-remote-livecd/" title="Livecd Remote Iso Install" class="dd-item ">
+        <a href="/docs-csm/en-09/004-csm-remote-livecd/">
+        Livecd Remote Iso Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/062-livecd-virtual-iso-boot/" title="Livecd Virtual Iso Boot" class="dd-item ">
+        <a href="/docs-csm/en-09/062-livecd-virtual-iso-boot/">
+        Livecd Virtual Iso Boot
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/405-mgmt-net-port-config/" title="Management Network Access Port Configurations." class="dd-item ">
+        <a href="/docs-csm/en-09/405-mgmt-net-port-config/">
+        Management Network Access Port Configurations.
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/406-mgmt-net-acl-config/" title="Management Network ACL Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/406-mgmt-net-acl-config/">
+        Management Network ACL Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/402-mgmt-net-base-config/" title="Management Network Base Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/402-mgmt-net-base-config/">
+        Management Network Base Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/408-mgmt-net-can-config/" title="Management Network CAN Setup" class="dd-item ">
+        <a href="/docs-csm/en-09/408-mgmt-net-can-config/">
+        Management Network CAN Setup
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/412-mgmt-net-dell-mellanox-upgrades/" title="Management Network Dell And Mellanox Upgrades" class="dd-item ">
+        <a href="/docs-csm/en-09/412-mgmt-net-dell-mellanox-upgrades/">
+        Management Network Dell And Mellanox Upgrades
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/413-mgmt-net-example-config/" title="Management Network Example Config" class="dd-item ">
+        <a href="/docs-csm/en-09/413-mgmt-net-example-config/">
+        Management Network Example Config
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/409-mgmt-net-firmware-update/" title="Management Network Firmware Update" class="dd-item ">
+        <a href="/docs-csm/en-09/409-mgmt-net-firmware-update/">
+        Management Network Firmware Update
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/417-mgmt-net-flow-control/" title="Management Network Flow Control Settings" class="dd-item ">
+        <a href="/docs-csm/en-09/417-mgmt-net-flow-control/">
+        Management Network Flow Control Settings
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/411-mgmt-net-layer3-config/" title="Management Network Layer3 Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/411-mgmt-net-layer3-config/">
+        Management Network Layer3 Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/404-mgmt-net-mlag-config/" title="Management Network Mlag Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/404-mgmt-net-mlag-config/">
+        Management Network Mlag Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/414-mgmt-net-ntp-config/" title="Management Network NTP Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/414-mgmt-net-ntp-config/">
+        Management Network NTP Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/407-mgmt-net-snmp-config/" title="Management Network Snmp Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/407-mgmt-net-snmp-config/">
+        Management Network Snmp Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/419-mgmt-net-stp/" title="Management Network Spanning-tree Configuration." class="dd-item ">
+        <a href="/docs-csm/en-09/419-mgmt-net-stp/">
+        Management Network Spanning-tree Configuration.
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/415-mgmt-net-switch-rename/" title="Management Network Switch Rename" class="dd-item ">
+        <a href="/docs-csm/en-09/415-mgmt-net-switch-rename/">
+        Management Network Switch Rename
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/410-mgmt-net-uplink-config/" title="Management Network Uplink Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/410-mgmt-net-uplink-config/">
+        Management Network Uplink Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/403-mgmt-net-vlan-config/" title="Management Network Vlan Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/403-mgmt-net-vlan-config/">
+        Management Network Vlan Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/306-sls-add-uan-alias/" title="Manually Add UAN Aliases To SLS" class="dd-item ">
+        <a href="/docs-csm/en-09/306-sls-add-uan-alias/">
+        Manually Add UAN Aliases To SLS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/005-csm-metal-install/" title="Metal Install" class="dd-item ">
+        <a href="/docs-csm/en-09/005-csm-metal-install/">
+        Metal Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/309-move-site-connections/" title="Move Site Connections" class="dd-item ">
+        <a href="/docs-csm/en-09/309-move-site-connections/">
+        Move Site Connections
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/200-ncn-bios-pref/" title="NCN Bios Preferences" class="dd-item ">
+        <a href="/docs-csm/en-09/200-ncn-bios-pref/">
+        NCN Bios Preferences
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/101-ncn-booting/" title="NCN Booting" class="dd-item ">
+        <a href="/docs-csm/en-09/101-ncn-booting/">
+        NCN Booting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/107-ncn-devel/" title="NCN Development" class="dd-item ">
+        <a href="/docs-csm/en-09/107-ncn-devel/">
+        NCN Development
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/253-ncn-hw-swap/" title="NCN Hardware Swaps" class="dd-item ">
+        <a href="/docs-csm/en-09/253-ncn-hw-swap/">
+        NCN Hardware Swaps
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/110-ncn-image-customization/" title="NCN Image Customization" class="dd-item ">
+        <a href="/docs-csm/en-09/110-ncn-image-customization/">
+        NCN Image Customization
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/303-ncn-metadata-usb-serial/" title="NCN Metadata Over Usb-serial Cable" class="dd-item ">
+        <a href="/docs-csm/en-09/303-ncn-metadata-usb-serial/">
+        NCN Metadata Over Usb-serial Cable
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/106-ncn-sles/" title="NCN Operating System Release" class="dd-item ">
+        <a href="/docs-csm/en-09/106-ncn-sles/">
+        NCN Operating System Release
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/105-ncn-packages/" title="NCN Packages" class="dd-item ">
+        <a href="/docs-csm/en-09/105-ncn-packages/">
+        NCN Packages
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/104-ncn-partitioning/" title="NCN Partitions" class="dd-item active">
+        <a href="/docs-csm/en-09/104-ncn-partitioning/">
+        NCN Partitions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/009-ncn-locking/" title="NCN/management Node Locking" class="dd-item ">
+        <a href="/docs-csm/en-09/009-ncn-locking/">
+        NCN/management Node Locking
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/251-firmware-network/" title="Network Firmware" class="dd-item ">
+        <a href="/docs-csm/en-09/251-firmware-network/">
+        Network Firmware
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/052-network-stack/" title="Network Stack (software And Hardware)" class="dd-item ">
+        <a href="/docs-csm/en-09/052-network-stack/">
+        Network Stack (software And Hardware)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/103-ncn-networking/" title="Networking" class="dd-item ">
+        <a href="/docs-csm/en-09/103-ncn-networking/">
+        Networking
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/252-firmware-ncn/" title="Node Firmware" class="dd-item ">
+        <a href="/docs-csm/en-09/252-firmware-ncn/">
+        Node Firmware
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/100-ncn-images/" title="Non-compute Node Images" class="dd-item ">
+        <a href="/docs-csm/en-09/100-ncn-images/">
+        Non-compute Node Images
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/108-ncn-ntp/" title="NTP On NCNs" class="dd-item ">
+        <a href="/docs-csm/en-09/108-ncn-ntp/">
+        NTP On NCNs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/" title="Operations" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/">
+          Operations
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/fas_loader/" title="FAS Loader" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/fas_loader/">
+          FAS Loader
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/fas_loader/fas_loader_fails/" title="Troubleshooting FAS Loader Fails" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/fas_loader/fas_loader_fails/">
+        Troubleshooting FAS Loader Fails
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/kubernetes/" title="Kubernetes" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/kubernetes/">
+          Kubernetes
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/kubernetes/cert_renewal_for_kubernetes_and_bare_metal_etcd/" title="Kubernetes And Bare Metal Etcd Certificate Renewal" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/kubernetes/cert_renewal_for_kubernetes_and_bare_metal_etcd/">
+        Kubernetes And Bare Metal Etcd Certificate Renewal
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/node_management/" title="Node Management" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/node_management/">
+          Node Management
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/node_management/reboot_ncns/" title="Reboot NCNs" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/node_management/reboot_ncns/">
+        Reboot NCNs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/node_management/removing_a_liquid-cooled_blade_from_a_system/" title="Removing A Liquid-cooled Blade From A System" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/node_management/removing_a_liquid-cooled_blade_from_a_system/">
+        Removing A Liquid-cooled Blade From A System
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/node_management/adding_a_liquid-cooled_blade_to_a_system/" title="Adding A Liquid-cooled Blade To A System" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/node_management/adding_a_liquid-cooled_blade_to_a_system/">
+        Adding A Liquid-cooled Blade To A System
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/node_management/check_and_set_the_metalno-wipe_setting_on_ncns/" title="Check And Set The Metal.no-wipe Setting On NCNs" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/node_management/check_and_set_the_metalno-wipe_setting_on_ncns/">
+        Check And Set The Metal.no-wipe Setting On NCNs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/node_management/enable_kdump/" title="Enable Kdump" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/node_management/enable_kdump/">
+        Enable Kdump
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/configuration_management/" title="Configuration Management" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/configuration_management/">
+          Configuration Management
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/configuration_management/configuration_layers/" title="Configuration Layers" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/configuration_management/configuration_layers/">
+        Configuration Layers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/network/" title="Network" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/network/">
+          Network
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/network/metallb_bgp/" title="Metallb BGP" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/network/metallb_bgp/">
+          Metallb BGP
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/network/metallb_bgp/check_bgp_status_and_reset_sessions/" title="Check BGP Status And Reset Sessions" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/network/metallb_bgp/check_bgp_status_and_reset_sessions/">
+        Check BGP Status And Reset Sessions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/boot_orchestration/" title="Boot Orchestration" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/boot_orchestration/">
+          Boot Orchestration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/boot_orchestration/stage_changes_without_bos/" title="Stage Changes Without BOS" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/boot_orchestration/stage_changes_without_bos/">
+        Stage Changes Without BOS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/boot_orchestration/upload_node_boot_information_to_boot_script_service_bss/" title="Upload Node Boot Information To Boot Script Service (bss)" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/boot_orchestration/upload_node_boot_information_to_boot_script_service_bss/">
+        Upload Node Boot Information To Boot Script Service (bss)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/" title="Security And Authentication" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/security_and_authentication/">
+          Security And Authentication
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/restrict_access_to_ncn_images_s3_bucket/" title="Restrict Network Access To The NCN-images S3 Bucket" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/restrict_access_to_ncn_images_s3_bucket/">
+        Restrict Network Access To The NCN-images S3 Bucket
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/update_default_air-cooled_bmc_and_leaf_switch_snmp_credentials/" title="Update Default Air-cooled BMC And Leaf Switch Snmp Credentials" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/update_default_air-cooled_bmc_and_leaf_switch_snmp_credentials/">
+        Update Default Air-cooled BMC And Leaf Switch Snmp Credentials
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/update_default_servertech_pdu_credentials_used_by_the_redfish_translation_service/" title="Update Default Servertech Pdu Credentials Used By The Redfish Translation Service (rts)" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/update_default_servertech_pdu_credentials_used_by_the_redfish_translation_service/">
+        Update Default Servertech Pdu Credentials Used By The Redfish Translation Service (rts)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/update_ncn_passwords/" title="Update NCN Passwords" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/update_ncn_passwords/">
+        Update NCN Passwords
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/updating_the_liquid-cooled_ex_cabinet_default_credentials_after_a_cec_password_change/" title="Updating The Liquid-cooled Ex Cabinet Default Credentials After A Cec Password Change" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/updating_the_liquid-cooled_ex_cabinet_default_credentials_after_a_cec_password_change/">
+        Updating The Liquid-cooled Ex Cabinet Default Credentials After A Cec Password Change
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_ex_cabinet_global_default_password/" title="Change Cray Ex Cabinet Global Default Password" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_ex_cabinet_global_default_password/">
+        Change Cray Ex Cabinet Global Default Password
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_ncn_image_root_password_and_ssh_keys/" title="Change NCN Image Root Password And SSH Keys" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_ncn_image_root_password_and_ssh_keys/">
+        Change NCN Image Root Password And SSH Keys
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_ncn_image_root_password_and_ssh_keys_on_pit_node/" title="Change NCN Image Root Password And SSH Keys On Pit Node" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_ncn_image_root_password_and_ssh_keys_on_pit_node/">
+        Change NCN Image Root Password And SSH Keys On Pit Node
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_smnp_credentials_on_leaf_switches/" title="Change Smnp Credentials On Leaf Switches" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_smnp_credentials_on_leaf_switches/">
+        Change Smnp Credentials On Leaf Switches
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_the_keycloak_admin_password/" title="Change The Keycloak Admin Password" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_the_keycloak_admin_password/">
+        Change The Keycloak Admin Password
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/provisioning_a_liquid-cooled_ex_cabinet_cec_with_default_credentials/" title="Provisioning A Liquid-cooled Ex Cabinet Cec With Default Credentials" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/provisioning_a_liquid-cooled_ex_cabinet_cec_with_default_credentials/">
+        Provisioning A Liquid-cooled Ex Cabinet Cec With Default Credentials
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/add_ldap_user_federation/" title="Add LDAP User Federation" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/add_ldap_user_federation/">
+        Add LDAP User Federation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_air-cooled_node_bmc_credentials/" title="Change Air-cooled Node BMC Credentials" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_air-cooled_node_bmc_credentials/">
+        Change Air-cooled Node BMC Credentials
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_credentials_on_servertech_pdus/" title="Change Credentials On Servertech Pdus" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_credentials_on_servertech_pdus/">
+        Change Credentials On Servertech Pdus
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/hmcollector/" title="Hmcollector" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/hmcollector/">
+          Hmcollector
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/hmcollector/adjust_hmcollector_resource_limits_requests/" title="Adjust Hm Collector Resource Limits And Requests" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/hmcollector/adjust_hmcollector_resource_limits_requests/">
+        Adjust Hm Collector Resource Limits And Requests
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/csm_product_management/" title="Product Management" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/csm_product_management/">
+          Product Management
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/csm_product_management/change_passwords_and_credentials/" title="Change Passwords And Credentials" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/csm_product_management/change_passwords_and_credentials/">
+        Change Passwords And Credentials
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/csm_product_management/apply_security_hardening/" title="Security Hardening" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/csm_product_management/apply_security_hardening/">
+        Security Hardening
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/system_management_health/" title="System Management Health" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/system_management_health/">
+          System Management Health
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/system_management_health/troubleshoot_prometheus_alerts/" title="Troubleshoot Prometheus Alerts" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/system_management_health/troubleshoot_prometheus_alerts/">
+        Troubleshoot Prometheus Alerts
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/401-management-network-install/" title="Overview" class="dd-item ">
+        <a href="/docs-csm/en-09/401-management-network-install/">
+        Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/055-certificate-authority/" title="Overview" class="dd-item ">
+        <a href="/docs-csm/en-09/055-certificate-authority/">
+        Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/006-csm-platform-install/" title="Platform Install" class="dd-item ">
+        <a href="/docs-csm/en-09/006-csm-platform-install/">
+        Platform Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/420-mgmt-net-pxe-tshoot/" title="PXE Boot Troubleshooting" class="dd-item ">
+        <a href="/docs-csm/en-09/420-mgmt-net-pxe-tshoot/">
+        PXE Boot Troubleshooting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/065-csm-safeguards/" title="Safeguards" class="dd-item ">
+        <a href="/docs-csm/en-09/065-csm-safeguards/">
+        Safeguards
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/300-service-guides/" title="Service Guides" class="dd-item ">
+        <a href="/docs-csm/en-09/300-service-guides/">
+        Service Guides
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/067-shasta-cfg/" title="Setup Site-init From Shasta-cfg" class="dd-item ">
+        <a href="/docs-csm/en-09/067-shasta-cfg/">
+        Setup Site-init From Shasta-cfg
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/305-switch-metadata/" title="Switch Metadata" class="dd-item ">
+        <a href="/docs-csm/en-09/305-switch-metadata/">
+        Switch Metadata
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/500-uas-uai-admin-and-user-guide/" title="The Shasta User Access Service" class="dd-item ">
+        <a href="/docs-csm/en-09/500-uas-uai-admin-and-user-guide/">
+        The Shasta User Access Service
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/troubleshooting/" title="Troubleshooting Information" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/troubleshooting/">
+          Troubleshooting Information
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/troubleshooting/known_issues/" title="Known Issues" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/troubleshooting/known_issues/">
+          Known Issues
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/troubleshooting/known_issues/orphaned_cfs_pods/" title="Orphaned CFS Pods After Booting Or Rebooting" class="dd-item ">
+        <a href="/docs-csm/en-09/troubleshooting/known_issues/orphaned_cfs_pods/">
+        Orphaned CFS Pods After Booting Or Rebooting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/troubleshooting/known_issues/cfs_sessions_stuck_in_pending/" title="CFS Sessions Are Stuck In Pending State" class="dd-item ">
+        <a href="/docs-csm/en-09/troubleshooting/known_issues/cfs_sessions_stuck_in_pending/">
+        CFS Sessions Are Stuck In Pending State
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/troubleshooting/known_issues/conman_pod_kubernetes_copy_fails/" title="Copying File From The Cray-conman Pod Fails" class="dd-item ">
+        <a href="/docs-csm/en-09/troubleshooting/known_issues/conman_pod_kubernetes_copy_fails/">
+        Copying File From The Cray-conman Pod Fails
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/" title="Upgrade" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/">
+          Upgrade
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/" title="0.9" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/">
+          0.9
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.6/" title="-0.9.6" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.6/">
+          -0.9.6
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.6/readme/" title="0.9.6 Patch Installation Instructions" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.6/readme/">
+        0.9.6 Patch Installation Instructions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/" title="-0.9.5" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/">
+          -0.9.5
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/" title="Operations" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/">
+          Operations
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/node_management/" title="Node Management" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/node_management/">
+          Node Management
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/node_management/check_and_set_the_metalno-wipe_setting_on_ncns/" title="Check And Set The Metal.no-wipe Setting On NCNs" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/node_management/check_and_set_the_metalno-wipe_setting_on_ncns/">
+        Check And Set The Metal.no-wipe Setting On NCNs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/node_management/reboot_ncns/" title="Reboot NCNs" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/node_management/reboot_ncns/">
+        Reboot NCNs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/network/" title="Network" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/network/">
+          Network
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/network/metallb_bgp/" title="Metallb BGP" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/network/metallb_bgp/">
+          Metallb BGP
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/network/metallb_bgp/check_bgp_status_and_reset_sessions/" title="Check BGP Status And Reset Sessions" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/network/metallb_bgp/check_bgp_status_and_reset_sessions/">
+        Check BGP Status And Reset Sessions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/readme/" title="Cve-2021-22555 Cve-2021-33909" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/readme/">
+        Cve-2021-22555 Cve-2021-33909
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/readme/" title="0.9 Patch Release Upgrade Procedures" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/readme/">
+        0.9 Patch Release Upgrade Procedures
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.2/" title="0.9.2 Patch Upgrade Guide" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.2/">
+        0.9.2 Patch Upgrade Guide
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.3/" title="0.9.3 Patch Upgrade Guide" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.3/">
+        0.9.3 Patch Upgrade Guide
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.4/" title="0.9.4 Patch Upgrade Guide" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.4/">
+          0.9.4 Patch Upgrade Guide
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/069-upgrade-workarounds-rpm/" title="Upgrade Install Workarounds Rpm" class="dd-item ">
+        <a href="/docs-csm/en-09/069-upgrade-workarounds-rpm/">
+        Upgrade Install Workarounds Rpm
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/003-csm-usb-livecd/" title="Usb Livecd - Creation And Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/003-csm-usb-livecd/">
+        Usb Livecd - Creation And Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/070-usp-install-workarounds/" title="Utility Storage Installation Troubleshooting" class="dd-item ">
+        <a href="/docs-csm/en-09/070-usp-install-workarounds/">
+        Utility Storage Installation Troubleshooting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/400-switch-bgp-neighbors/" title="Verify And Update BGP Neighbors" class="dd-item ">
+        <a href="/docs-csm/en-09/400-switch-bgp-neighbors/">
+        Verify And Update BGP Neighbors
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/docs-csm/en-09/'>0.9</a> > NCN Partitions
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-controls-partitioning">What Controls Partitioning?</a></li>
+    <li><a href="#plan-of-record--baseline">Plan of Record / Baseline</a>
+      <ul>
+        <li><a href="#problems-when-abovebelow-baseline">Problems When Above/Below Baseline</a></li>
+        <li><a href="#worker-nodes-with-etcd">Worker Nodes with ETCD</a></li>
+      </ul>
+    </li>
+    <li><a href="#disk-layout-quick-reference-tables">Disk Layout Quick-Reference Tables</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#overlayfs-example">Persistent Directories</a></li>
+      </ul>
+    </li>
+    <li><a href="#overlayfs-control">OverlayFS Control</a>
+      <ul>
+        <li><a href="#reset-toggles">Reset Toggles</a></li>
+        <li><a href="#re-sizing-the-persistent-overlay">Re-sizing the Persistent Overlay</a></li>
+        <li><a href="#thin-overlay-feature">Thin Overlay Feature</a></li>
+      </ul>
+    </li>
+    <li><a href="#systemd-metalfs">SystemD MetalFS</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+            </h1>
+          
+
+        
+
+
+<h1 id="ncn-partitions">NCN Partitions</h1>
+<p>Shasta non-compute nodes use drive storage for persistence and block storage. This page outlines
+reference information for these disks, their partition tables, and their management.</p>
+<ul>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#ncn-partitions">NCN Partitions</a>
+<ul>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#what-controls-partitioning">What Controls Partitioning?</a></li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#plan-of-record--baseline">Plan of Record / Baseline</a>
+<ul>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#problems-when-abovebelow-baseline">Problems When Above/Below Baseline</a></li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#worker-nodes-with-etcd">Worker Nodes with ETCD</a>
+<ul>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#disable-luks">Disable Luks</a></li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#expand-the-raid">Expand the RAID</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#disk-layout-quick-reference-tables">Disk Layout Quick-Reference Tables</a></li>
+</ul>
+</li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#overlayfs-and-persistence">OverlayFS and Persistence</a>
+<ul>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#persistent-directories">Persistent Directories</a></li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#overlayfs-example">OverlayFS Example</a>
+<ul>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#layering---upperdir-and-lowerdirs">Layering - Upperdir and Lowerdir(s)</a></li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#layering-real-world-example">Layering Real World Example</a></li>
+</ul>
+</li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#overlayfs-control">OverlayFS Control</a>
+<ul>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#reset-toggles">Reset Toggles</a></li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#reset-on-next-boot">Reset On Next Boot</a></li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#reset-on-every-boot">Reset on Every Boot</a></li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#re-sizing-the-persistent-overlay">Re-sizing the Persistent Overlay</a></li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#thin-overlay-feature">Thin Overlay Feature</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#systemd-metalfs">SystemD MetalFS</a></li>
+<li><a href="/docs-csm/en-09/104-ncn-partitioning/#oldretired-fs-labels">Old/Retired FS-Labels</a></li>
+</ul>
+<h2 id="what-controls-partitioning">What Controls Partitioning?</h2>
+<p>Partitioning is controlled by two aspects:</p>
+<ul>
+<li>dracut; this selects disks and builds their partition tables and/or LVM storage.</li>
+<li>cloud-init; this manages standalone partitions or volumes, as well as high-level object storage.</li>
+</ul>
+<h2 id="plan-of-record--baseline">Plan of Record / Baseline</h2>
+<table>
+<thead>
+<tr>
+<th>Node Type</th>
+<th style="text-align:center">No. of &ldquo;small&rdquo; disks (0.5 TiB)</th>
+<th style="text-align:center">No. of &ldquo;large&rdquo; disks (1.9 TiB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k8s-master nodes</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td>k8s-worker nodes</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td>ceph-storage nodes</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3+</td>
+</tr>
+</tbody>
+</table>
+<p>Disks are chosen by dracut. Kubernetes and storage nodes use different dracut modules.</p>
+<ul>
+<li>First, <code>two disks</code> for the OS are chosen from the pool of &ldquo;small&rdquo; disks</li>
+<li>Second, <code>one disk</code> is selected for the ephemeral data</li>
+</ul>
+<h3 id="problems-when-abovebelow-baseline">Problems When Above/Below Baseline</h3>
+<p>NCN masters and workers use the same artifacts, and thus have the same dracut modules assimilating disks. Therefore, it is important
+to beware of:</p>
+<ul>
+<li>k8s-master nodes with 1 or more extra &ldquo;large&rdquo; disk(s); these disks help but are unnecessary</li>
+<li>ceph-storage nodes do not run the same dracut modules since they have different disk demands</li>
+</ul>
+<h3 id="worker-nodes-with-etcd">Worker Nodes with ETCD</h3>
+<p>k8s-worker nodes with 1 or more extra &ldquo;small&rdquo; disk(s); these disks are confusing and unnecessary and can be disabled
+easily.</p>
+<h4 id="disable-luks">Disable Luks</h4>
+<blockquote>
+<p><strong><code>NOTE</code></strong> This is broken, use the <a href="#expand-the-raid">expand RAID</a> option instead. (MTL-1309)</p>
+</blockquote>
+<p>All NCNs (master/worker/storage) have the same kernel parameters, but are not always necessary. This method works by toggling the dependency
+for the metal ETCD module, disabling LUKs will disable ETCD bare-metal creation.</p>
+<ol>
+<li>
+<p>Disable LUKs for each worker node, thus disabling the metal ETCD module:</p>
+<ul>
+<li>During Bootstrap (on the <code>pit</code> node):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed -i <span style="color:#e6db74">&#39;s/disk-opts rd.luks /disk-opts rd.luks=0 /g&#39;</span> /var/www/ncn-w*/script.ipxe
+</code></pre></div></li>
+<li>During runtime with <code>csi</code>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">csi handoff bss-update-param rd.luks<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>Rebuild the node</p>
+<ul>
+<li>Run the <a href="/docs-csm/en-09/051-disk-cleanslate/#basic-wipe">basic wipe</a> if the node was already booted</li>
+<li>(re)boot the node</li>
+</ul>
+</li>
+</ol>
+<h4 id="expand-the-raid">Expand the RAID</h4>
+<p>This option simply expands the RAID to consume the extra disks, leaving none behind for the metal ETCD module to find.</p>
+<ol>
+<li>
+<p>Set <code>metal.disks</code> equal to the number of &ldquo;small&rdquo; disks in the node(s), this will reserve them for the RAID and prevent any other partitioning from happening on them.</p>
+<ul>
+<li>During Bootstrap (on the <code>pit</code> node):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed -i <span style="color:#e6db74">&#39;s/disk-opts /disk-opts metal.disks=3 /g&#39;</span> /var/www/ncn-w*/script.ipxe
+</code></pre></div></li>
+<li>During runtime with <code>csi</code>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">csi handoff bss-update-param metal.disks<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>Change the RAID type, or leave it as default (mirror)</p>
+<ul>
+<li>During Bootstrap (on the <code>pit</code> node):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed -i <span style="color:#e6db74">&#39;s/disk-opts /disk-opts metal.md-level=stripe /g&#39;</span> /var/www/ncn-w*/script.ipxe
+</code></pre></div></li>
+<li>During runtime with <code>csi</code>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">csi handoff bss-update-param metal.md-level<span style="color:#f92672">=</span>stripe
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>Rebuild the node</p>
+<ul>
+<li>Run the <a href="/docs-csm/en-09/051-disk-cleanslate/#basic-wipe">basic wipe</a> if the node was already booted</li>
+<li>(re)boot the node</li>
+</ul>
+</li>
+</ol>
+<h2 id="disk-layout-quick-reference-tables">Disk Layout Quick-Reference Tables</h2>
+<p>The table below represents all recognizable FS labels on any given NCN, varying slightly by node-role (i.e. kubernetes-manager vs. kubernetes-worker).</p>
+<table>
+<thead>
+<tr>
+<th>k8s-manager</th>
+<th>k8s-worker</th>
+<th>storage-ceph</th>
+<th>FS Label</th>
+<th>Partitions</th>
+<th>Device</th>
+<th>Partition Size</th>
+<th>OverlayFS</th>
+<th>Work Order(s)</th>
+<th>Memo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td><code>BOOTRAID</code></td>
+<td><em>Not Mounted</em></td>
+<td>2 small disks in RAID1</td>
+<td><code>500 MiB</code></td>
+<td>❌</td>
+<td>Present since Shasta-Preview 1</td>
+<td></td>
+</tr>
+<tr>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td><code>SQFSRAID</code></td>
+<td><code>/run/initramfs/live</code></td>
+<td>2 small disks in RAID1</td>
+<td><code>100 GiB</code></td>
+<td>✅</td>
+<td><a href="https://connect.us.cray.com/jira/browse/MTL-1885">CASM-1885</a></td>
+<td>squashfs should compress our images to about 1/3rd their uncompressed size. (20G → 6.6G)  On pepsi&rsquo;s ncn-w001, we are at about 20G of non-volatile data storage needed.</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td><code>ROOTRAID</code></td>
+<td><code>/run/initramfs/overlayfs</code></td>
+<td>2 small disks in RAID1</td>
+<td>Max/Remainder</td>
+<td>✅</td>
+<td>Present since Shasta-Preview 1</td>
+<td>The persistent image file is loaded from this partition, when the image file is loaded the underlying drive is lazily unmounted (<code>umount -l</code>) so that when the overlay closes the disk follows suit.</td>
+</tr>
+<tr>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td><code>CONRUN</code></td>
+<td><code>/run/containerd</code></td>
+<td>Ephemeral</td>
+<td><code>75 GiB</code></td>
+<td>❌</td>
+<td><a href="https://connect.us.cray.com/jira/browse/MTL-916">MTL-916</a></td>
+<td>On pepsi ncn-w001, we have less than 200G of operational storage for this.</td>
+</tr>
+<tr>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td><code>CONLIB</code></td>
+<td><code>/run/lib-containerd</code></td>
+<td>Ephemeral</td>
+<td><code>25%</code></td>
+<td>✅</td>
+<td><a href="https://connect.us.cray.com/jira/browse/MTL-892">MTL-892</a> <a href="https://connect.us.cray.com/jira/browse/CASMINST-255">CASMINST-255</a></td>
+<td></td>
+</tr>
+<tr>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td><code>ETCDK8S</code></td>
+<td><code>/run/lib-etcd</code></td>
+<td>Ephemeral</td>
+<td><code>32 GiB</code></td>
+<td>✅</td>
+<td><a href="https://connect.us.cray.com/jira/browse/CASMPET-338">CASMPET-338</a></td>
+<td></td>
+</tr>
+<tr>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td><code>K8SLET</code></td>
+<td><code>/var/lib/kubelet</code></td>
+<td>Ephemeral</td>
+<td><code>25%</code></td>
+<td>❌</td>
+<td><a href="https://connect.us.cray.com/jira/browse/MTL-892">MTL-892</a> <a href="https://connect.us.cray.com/jira/browse/CASMINST-255">CASMINST-255</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The above table&rsquo;s rows with overlayFS map their &ldquo;Mount Paths&rdquo; to the &ldquo;Upper Directory&rdquo; in the table below:</p>
+<blockquote>
+<p>The &ldquo;OverlayFS Name&rdquo; is the name used in fstab and seen in the output of <code>mount</code>.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>OverlayFS Name</th>
+<th>Upper Directory</th>
+<th>Lower Directory (or more)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>etcd_overlayfs</code></td>
+<td><code>/run/lib-etcd</code></td>
+<td><code>/var/lib/etcd</code></td>
+</tr>
+<tr>
+<td><code>containerd_overlayfs</code></td>
+<td><code>/run/lib-containerd</code></td>
+<td><code>/var/lib/containerd</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>For notes on previous/old labels, scroll to the bottom.</p>
+</blockquote>
+<h1 id="overlayfs-and-persistence">OverlayFS and Persistence</h1>
+<p>There are a few overlays used for NCN image boots. These enable two critical functions; changes to data and new data will persist between reboots, and RAM (memory) is freed because we are using our block-devices (SATA/PCIe).</p>
+<ol>
+<li><code>ROOTRAID</code> is the persistent root overlayFS, it commits and saves all changes made to the running OS and it stands on a RAID1 mirror.</li>
+<li><code>CONLIB</code> is a persistent overlayFS for containerd, it commits and saves all new changes while allowing read-through to pre-existing (baked-in) data from the squashFS.</li>
+<li><code>ETCDK8S</code> is a persistent overlayFS for etcd, it works like the <code>CONLIB</code> overlayFS however this exists in an encrypted LUKS2 partition.</li>
+</ol>
+<h4 id="persistent-directories">OverlayFS Example</h4>
+<blockquote>
+<p>Helpful commands&hellip; the overlayFS organization can be best viewed with these three commands:</p>
+<ol>
+<li><code>lsblk</code>, <code>lsblk -f</code> will show how the RAIDs and disks are mounted</li>
+<li><code>losetup -a</code> will show where the squashFS is mounted from</li>
+<li><code>mount | grep ' / '</code> will show you the overlay being layered atop the squashFS</li>
+</ol>
+</blockquote>
+<p>Let us pick apart the <code>SQFSRAID</code> and <code>ROOTRAID</code> overlays.</p>
+<ul>
+<li><code>/run/rootfsbase</code> is the SquashFS image itself</li>
+<li><code>/run/initramfs/live</code> is the squashFS&rsquo;s storage array, where one or more squashFS can live</li>
+<li><code>/run/initramfs/overlayfs</code> is the overlayFS storage array, where the persistent directories live</li>
+<li><code>/run/overlayfs</code> and <code>/run/ovlwork</code> are symlinks to `/run/initramfs/overlayfs/overlayfs-SQFSRAID-$(blkid -s UUID -o value /dev/disk/by-label/SQFSRAID) and the neighboring work directory</li>
+<li>Admin note: The &ldquo;work&rdquo; directory is where the operating system processes data. It is the interim where data passes between RAM and persistent storage.</li>
+</ul>
+<p>Using the above bullets, one may be able to better understand the machine output below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ncn-m002# mount | grep  <span style="color:#e6db74">&#39; / &#39;</span>
+LiveOS_rootfs on / type overlay <span style="color:#f92672">(</span>rw,relatime,lowerdir<span style="color:#f92672">=</span>/run/rootfsbase,upperdir<span style="color:#f92672">=</span>/run/overlayfs,workdir<span style="color:#f92672">=</span>/run/ovlwork<span style="color:#f92672">)</span>
+                                             ^^^R/O^SQUASHFS IMAGE^^^|^^^ R/W PERSISTENCE ^^^|^^^^^^INTERIM^^^^^^
+                                             ^^^R/O^SQUASHFS IMAGE^^^|^^^ R/W PERSISTENCE ^^^|^^^^^^INTERIM^^^^^^
+                                             ^^^R/O^SQUASHFS IMAGE^^^|^^^ R/W PERSISTENCE ^^^|^^^^^^INTERIM^^^^^^
+ncn-m002#  losetup -a
+/dev/loop1: <span style="color:#f92672">[</span>0025<span style="color:#f92672">]</span>:74858 <span style="color:#f92672">(</span>/run/initramfs/thin-overlay/meta<span style="color:#f92672">)</span>
+/dev/loop2: <span style="color:#f92672">[</span>0025<span style="color:#f92672">]</span>:74859 <span style="color:#f92672">(</span>/run/initramfs/thin-overlay/data<span style="color:#f92672">)</span>
+/dev/loop0: <span style="color:#f92672">[</span>2430<span style="color:#f92672">]</span>:100 <span style="color:#f92672">(</span>/run/initramfs/live/LiveOS/filesystem.squashfs<span style="color:#f92672">)</span>
+</code></pre></div><blockquote>
+<p>The THIN OVERLAY is the transient space the system uses behind the scenes to allow data to live in RAM as it is written to disk.
+The THIN part of the overlay is the magic, using THIN overlays means the kernel will automatically clear free blocks.</p>
+</blockquote>
+<p>Below is the layout of what a persistent system looks like. Note, this means that persistent capacity
+is there, but admins should beware of reset toggles on unfamiliar systems. There are toggles to reset
+overlays that are, by default, toggled <code>off</code> (so data persistence be default is safe but one should
+not assume).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ncn-m002# lsblk
+NAME                MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
+loop0                 7:0    <span style="color:#ae81ff">0</span>   3.8G  <span style="color:#ae81ff">1</span> loop  /run/rootfsbase
+loop1                 7:1    <span style="color:#ae81ff">0</span>    30G  <span style="color:#ae81ff">0</span> loop
+└─live-overlay-pool 254:2    <span style="color:#ae81ff">0</span>   300G  <span style="color:#ae81ff">0</span> dm
+loop2                 7:2    <span style="color:#ae81ff">0</span>   300G  <span style="color:#ae81ff">0</span> loop
+└─live-overlay-pool 254:2    <span style="color:#ae81ff">0</span>   300G  <span style="color:#ae81ff">0</span> dm
+sda                   8:0    <span style="color:#ae81ff">1</span> 447.1G  <span style="color:#ae81ff">0</span> disk
+├─sda1                8:1    <span style="color:#ae81ff">1</span>   476M  <span style="color:#ae81ff">0</span> part
+│ └─md127             9:127  <span style="color:#ae81ff">0</span>   476M  <span style="color:#ae81ff">0</span> raid1
+├─sda2                8:2    <span style="color:#ae81ff">1</span>  92.7G  <span style="color:#ae81ff">0</span> part
+│ └─md126             9:126  <span style="color:#ae81ff">0</span>  92.6G  <span style="color:#ae81ff">0</span> raid1 /run/initramfs/live
+└─sda3                8:3    <span style="color:#ae81ff">1</span> 279.4G  <span style="color:#ae81ff">0</span> part
+  └─md125             9:125  <span style="color:#ae81ff">0</span> 279.3G  <span style="color:#ae81ff">0</span> raid1 /run/initramfs/overlayfs
+sdb                   8:16   <span style="color:#ae81ff">1</span> 447.1G  <span style="color:#ae81ff">0</span> disk
+├─sdb1                8:17   <span style="color:#ae81ff">1</span>   476M  <span style="color:#ae81ff">0</span> part
+│ └─md127             9:127  <span style="color:#ae81ff">0</span>   476M  <span style="color:#ae81ff">0</span> raid1
+├─sdb2                8:18   <span style="color:#ae81ff">1</span>  92.7G  <span style="color:#ae81ff">0</span> part
+│ └─md126             9:126  <span style="color:#ae81ff">0</span>  92.6G  <span style="color:#ae81ff">0</span> raid1 /run/initramfs/live
+└─sdb3                8:19   <span style="color:#ae81ff">1</span> 279.4G  <span style="color:#ae81ff">0</span> part
+  └─md125             9:125  <span style="color:#ae81ff">0</span> 279.3G  <span style="color:#ae81ff">0</span> raid1 /run/initramfs/overlayfs
+sdc                   8:32   <span style="color:#ae81ff">1</span> 447.1G  <span style="color:#ae81ff">0</span> disk
+└─ETCDLVM           254:0    <span style="color:#ae81ff">0</span> 447.1G  <span style="color:#ae81ff">0</span> crypt
+  └─etcdvg0-ETCDK8S 254:1    <span style="color:#ae81ff">0</span>    32G  <span style="color:#ae81ff">0</span> lvm   /run/lib-etcd
+</code></pre></div><h3 id="overlayfs-example">Persistent Directories</h3>
+<p><strong>Not all directories are persistent!</strong></p>
+<p>Only the following directories are persistent <em>by default</em>:</p>
+<ul>
+<li><code>etc</code></li>
+<li><code>home</code></li>
+<li><code>root</code></li>
+<li><code>srv</code></li>
+<li><code>tmp</code></li>
+<li><code>var</code></li>
+<li><code>/run/containerd</code></li>
+<li><code>/run/lib-containerd</code></li>
+<li><code>/run/lib-etcd</code></li>
+<li><code>/run/lib/kubelet</code></li>
+</ul>
+<p>More directories can be added, but mileage varies. The initial set is actually managed by dracut, when
+using a reset toggle the above list is &ldquo;reset/cleared&rdquo;. If more directories are added, they will be eradicated when
+enabling a reset toggle.</p>
+<p>These are all provided through the Overlay from <code>/run/overlayfs</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ncn-m001:/run/overlayfs <span style="color:#75715e"># ls -l</span>
+total <span style="color:#ae81ff">0</span>
+drwxr-xr-x <span style="color:#ae81ff">8</span> root root <span style="color:#ae81ff">290</span> Oct <span style="color:#ae81ff">15</span> 22:41 etc
+drwxr-xr-x <span style="color:#ae81ff">3</span> root root  <span style="color:#ae81ff">18</span> Oct <span style="color:#ae81ff">15</span> 22:41 home
+drwx------ <span style="color:#ae81ff">3</span> root root  <span style="color:#ae81ff">39</span> Oct <span style="color:#ae81ff">13</span> 16:53 root
+drwxr-xr-x <span style="color:#ae81ff">3</span> root root  <span style="color:#ae81ff">18</span> Oct  <span style="color:#ae81ff">5</span> 19:16 srv
+drwxrwxrwt <span style="color:#ae81ff">2</span> root root  <span style="color:#ae81ff">85</span> Oct <span style="color:#ae81ff">16</span> 14:50 tmp
+drwxr-xr-x <span style="color:#ae81ff">8</span> root root  <span style="color:#ae81ff">76</span> Oct <span style="color:#ae81ff">13</span> 16:52 var
+</code></pre></div><blockquote>
+<p>Remember: <code>/run/overlayfs</code> is a symbolic link to the real disk <code>/run/initramfs/overlayfs/*</code>.</p>
+</blockquote>
+<h5 id="layering---upperdir-and-lowerdirs">Layering - Upperdir and Lowerdir(s)</h5>
+<p>The file-system the user is working on is really two layered file-systems (overlays).</p>
+<ul>
+<li>The lower layer is the SquashFS image itself, read-only, which provides all that we need to run.</li>
+<li>The upper layer is the OverlayFS, read-write, which does a bit-wise <code>xor</code> with the lower-layer</li>
+<li>Anything in the upper-layer takes precedence by default.</li>
+</ul>
+<blockquote>
+<p>There are fancier options for overlays, such as multiple lower-layers, copy-up (lower-layer precedence),
+and opaque (removing a directory in the upper layer hides it in the lower layer). You can read more [here|https://www.kernel.org/doc/html/latest/filesystems/overlayfs.html#inode-properties]</p>
+</blockquote>
+<h5 id="layering-real-world-example">Layering Real World Example</h5>
+<p>Let us take <code>/root</code> for example, we can see in the upper-dir (the overlay) we have these files:</p>
+<p>The upper-dir has these files:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ncn-m001# ls -l /run/overlayfs/root/
+total <span style="color:#ae81ff">4</span>
+-rw------- <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">252</span> Nov  <span style="color:#ae81ff">4</span> 18:23 .bash_history
+drwxr-x--- <span style="color:#ae81ff">4</span> root root  <span style="color:#ae81ff">37</span> Nov  <span style="color:#ae81ff">4</span> 04:35 .kube
+drwx------ <span style="color:#ae81ff">2</span> root root  <span style="color:#ae81ff">29</span> Oct <span style="color:#ae81ff">21</span> 21:57 .ssh
+</code></pre></div><p>Then in the squashFS image (lower-dir) we have these&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ncn-m001# ls -l /run/rootfsbase/root/
+total <span style="color:#ae81ff">1</span>
+-rw------- <span style="color:#ae81ff">1</span> root root   <span style="color:#ae81ff">0</span> Oct <span style="color:#ae81ff">19</span> 15:31 .bash_history
+drwxr-xr-x <span style="color:#ae81ff">2</span> root root   <span style="color:#ae81ff">3</span> May <span style="color:#ae81ff">25</span>  <span style="color:#ae81ff">2018</span> bin
+drwx------ <span style="color:#ae81ff">3</span> root root  <span style="color:#ae81ff">26</span> Oct <span style="color:#ae81ff">21</span> 22:07 .cache
+drwx------ <span style="color:#ae81ff">2</span> root root   <span style="color:#ae81ff">3</span> May <span style="color:#ae81ff">25</span>  <span style="color:#ae81ff">2018</span> .gnupg
+drwxr-xr-x <span style="color:#ae81ff">4</span> root root  <span style="color:#ae81ff">57</span> Oct <span style="color:#ae81ff">19</span> 15:23 inst-sys
+drwxr-xr-x <span style="color:#ae81ff">2</span> root root  <span style="color:#ae81ff">33</span> Oct <span style="color:#ae81ff">19</span> 15:33 .kbd
+drwxr-xr-x <span style="color:#ae81ff">5</span> root root  <span style="color:#ae81ff">53</span> Oct <span style="color:#ae81ff">19</span> 15:34 spire
+drwx------ <span style="color:#ae81ff">2</span> root root  <span style="color:#ae81ff">70</span> Oct <span style="color:#ae81ff">21</span> 21:57 .ssh
+-rw-r--r-- <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">172</span> Oct <span style="color:#ae81ff">26</span> 15:25 .wget-hsts
+</code></pre></div><ul>
+<li>Notice how the <code>.bash_history</code> file in the lower-dir is <code>0</code> bytes, but it is <code>252</code> bytes in the upperdir?</li>
+<li>Notice the <code>.kube</code> dir exists in the upper, but not the lower?</li>
+</ul>
+<p>Finally, looking at <code>/root</code> we see the magic:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ncn-m001# ls -l /root
+total <span style="color:#ae81ff">5</span>
+-rw------- <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">252</span> Nov  <span style="color:#ae81ff">4</span> 18:23 .bash_history
+drwxr-xr-x <span style="color:#ae81ff">2</span> root root   <span style="color:#ae81ff">3</span> May <span style="color:#ae81ff">25</span>  <span style="color:#ae81ff">2018</span> bin
+drwx------ <span style="color:#ae81ff">3</span> root root  <span style="color:#ae81ff">26</span> Oct <span style="color:#ae81ff">21</span> 22:07 .cache
+drwx------ <span style="color:#ae81ff">2</span> root root   <span style="color:#ae81ff">3</span> May <span style="color:#ae81ff">25</span>  <span style="color:#ae81ff">2018</span> .gnupg
+drwxr-xr-x <span style="color:#ae81ff">4</span> root root  <span style="color:#ae81ff">57</span> Oct <span style="color:#ae81ff">19</span> 15:23 inst-sys
+drwxr-xr-x <span style="color:#ae81ff">2</span> root root  <span style="color:#ae81ff">33</span> Oct <span style="color:#ae81ff">19</span> 15:33 .kbd
+drwxr-x--- <span style="color:#ae81ff">4</span> root root  <span style="color:#ae81ff">37</span> Nov  <span style="color:#ae81ff">4</span> 04:35 .kube
+drwxr-xr-x <span style="color:#ae81ff">5</span> root root  <span style="color:#ae81ff">53</span> Oct <span style="color:#ae81ff">19</span> 15:34 spire
+drwx------ <span style="color:#ae81ff">1</span> root root  <span style="color:#ae81ff">29</span> Oct <span style="color:#ae81ff">21</span> 21:57 .ssh
+-rw-r--r-- <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">172</span> Oct <span style="color:#ae81ff">26</span> 15:25 .wget-hsts
+</code></pre></div><ul>
+<li>Notice how <code>.bash_history</code> matches the upper-dir?</li>
+<li>Notice how <code>.kube</code> exists here?</li>
+</ul>
+<p>The take-away here is: any change done to <code>/root/</code> will persist through <code>/run/overlayfs/root</code> and will take precedence to the squashFS image root.</p>
+<h2 id="overlayfs-control">OverlayFS Control</h2>
+<p>These features or toggles are passable on the kernel command line, and change the behavior of the overlayFS.</p>
+<h3 id="reset-toggles">Reset Toggles</h3>
+<p>The overlay FS provides a few reset toggles to clear out the persistence directories without reinstall.</p>
+<p><strong>The toggles require rebooting.</strong></p>
+<h4 id="reset-on-next-boot">Reset On Next Boot</h4>
+<p>The preferred way to reset persistent storage is to use the overlayFS reset toggle.</p>
+<p>Modify the boot command line on the PXE server, adding this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Reset the overlay on boot</span>
+rd.live.overlay.reset<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</code></pre></div><p>Once reset, you may want to enable persistence again. Simply revert your change and the next reboot
+will persist.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Cease resetting the overlayFS</span>
+rd.live.overlay.reset<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</code></pre></div><h4 id="reset-on-every-boot">Reset on Every Boot</h4>
+<p>There are two options one can leave enabled to accomplish this:</p>
+<ol>
+<li><code>rd.live.overlay.reset=1</code> will eradicate/recreate the overlay every reboot.</li>
+<li><code>rd.live.overlayr.readonly=1</code> will clear the overlay on every reboot.</li>
+</ol>
+<p>For long-term usage, <code>rd.live.overlay.readonly=1</code> should be added to the command line.</p>
+<p>The <code>reset=1</code> toggle is usually used to fix a side-ways overlay, if you want to completely refresh
+and purge the overlay then  <code>rd.live.overlay.reset</code> is your friend.</p>
+<pre><code># Authorize METAL to purge
+metal.no-wipe=0 rd.live.overlay.reset=1
+</code></pre><blockquote>
+<p>Note: <code>metal.no-wipe=1</code> does not protect against <code>rd.live.overlay.reset</code>, <code>metal.no-wipe</code> is not
+a feature of dmsquash-live.</p>
+</blockquote>
+<h3 id="re-sizing-the-persistent-overlay">Re-sizing the Persistent Overlay</h3>
+<ul>
+<li>Default Size: 300 GiB</li>
+<li>File System: XFS</li>
+</ul>
+<p>The overlay can be resized to fit a variety of needs or use cases. The size is provided directly
+on the command line. Any value can be provided, but it must be in <em>megabytes</em>.</p>
+<p>If you are resetting the overlay on a deployed node, you will need to also set <code>rd.live.overlay.reset=1</code>.</p>
+<p>It is recommended to set the size before deployment. There is a linkage between the metal-dracut module and the
+live-module that makes this inflexible.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Use a 300 GiB overlayFS (default)</span>
+rd.live.overlay.size<span style="color:#f92672">=</span><span style="color:#ae81ff">307200</span>
+
+<span style="color:#75715e"># Use a 1 TiB overlayFS</span>
+rd.live.overlay.size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000000</span>
+</code></pre></div><h3 id="thin-overlay-feature">Thin Overlay Feature</h3>
+<p>The persistent overlayFS leverages newer, &ldquo;thin&rdquo; overlays that support discards and that will
+free blocks that are not claimed by the file system. This means that memory is free/released
+when the filesystem does not claim it anymore.</p>
+<p>Thin overlays can be disabled, and instead classic DM Snapshots can be used to manage the overlay. This
+will use more RAM. It is not recommended, since dmraid is not included in the initrd.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># Enable (default)</span>
+rd.live.overlay.thin<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#75715e"># Disable (not recommended; undesirable RAM waste)</span>
+rd.live.overlay.thin<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</code></pre></div><h2 id="systemd-metalfs">SystemD MetalFS</h2>
+<p>The <code>metalfs</code> systemd service will try to mount any metal created partitions.</p>
+<p>This runs against the <code>/run/initramfs/overlayfs/fstab.metal</code> when it exists. This file is dynamically created by most metal dracut modules.</p>
+<p>The service will continuously attempt to mount the partitions, if problems arise please stop the service:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ncn# systemctl stop metalfs
+</code></pre></div><h1 id="oldretired-fs-labels">Old/Retired FS-Labels</h1>
+<p>Deprecated FS labels/partitions from Shasta 1.3.X (no longer in Shasta 1.4.0 and onwards).</p>
+<table>
+<thead>
+<tr>
+<th>FS Label</th>
+<th>Partitions</th>
+<th>Nodes</th>
+<th>Device</th>
+<th>Size on Disk</th>
+<th>Work Order</th>
+<th>Memo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>K8SKUBE</code></td>
+<td><code>/var/lib/kubelet</code></td>
+<td>ncn-w001, ncn-w002</td>
+<td>Ephemeral</td>
+<td>Max/Remainder</td>
+<td><a href="https://connect.us.cray.com/jira/browse/CASMPET-338">CASMPET-338</a> <a href="https://connect.us.cray.com/jira/browse/CASMPET-342">CASMPET-342</a></td>
+<td>No longer mounted/used in shasta-1.4</td>
+</tr>
+<tr>
+<td><code>K8SEPH</code></td>
+<td><code>/var/lib/cray/k8s_ephemeral</code></td>
+<td>ncn-w001, ncn-w002</td>
+<td>Ephemeral</td>
+<td>Max/Remainder</td>
+<td><a href="https://connect.us.cray.com/jira/browse/CASMPET-338">CASMPET-338</a> <a href="https://connect.us.cray.com/jira/browse/CASMPET-342">CASMPET-342</a></td>
+<td>No longer mounted/used in shasta-1.4</td>
+</tr>
+<tr>
+<td><code>CRAYINSTALL</code></td>
+<td><code>/var/cray/vfat</code></td>
+<td>ncn-w001, ncn-w002</td>
+<td>Ephemeral</td>
+<td><code>12 GiB</code></td>
+<td><a href="https://connect.us.cray.com/jira/browse/CASMPET-338">CASMPET-338</a> <a href="https://connect.us.cray.com/jira/browse/CASMPET-342">CASMPET-342</a></td>
+<td>No longer mounted/used in shasta-1.4</td>
+</tr>
+<tr>
+<td><code>CRAYVBIS</code></td>
+<td><code>/var/cray/vbis</code></td>
+<td>ncn-w001, ncn-w002</td>
+<td>Ephemeral</td>
+<td><code>900 GiB</code></td>
+<td><a href="https://connect.us.cray.com/jira/browse/CASMPET-338">CASMPET-338</a> <a href="https://connect.us.cray.com/jira/browse/CASMPET-342">CASMPET-342</a></td>
+<td>No longer mounted/used in shasta-1.4</td>
+</tr>
+<tr>
+<td><code>CRAYNFS</code></td>
+<td><code>/var/lib/nfsroot/nmd</code></td>
+<td>ncn-w001, ncn-w002</td>
+<td>Ephemeral</td>
+<td><code>12 GiB</code></td>
+<td><a href="https://connect.us.cray.com/jira/browse/CASMPET-338">CASMPET-338</a> <a href="https://connect.us.cray.com/jira/browse/CASMPET-342">CASMPET-342</a></td>
+<td>No longer mounted/used in shasta-1.4</td>
+</tr>
+</tbody>
+</table>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/docs-csm/js/clipboard.min.js?1675739395"></script>
+    <script src="/docs-csm/js/perfect-scrollbar.min.js?1675739395"></script>
+    <script src="/docs-csm/js/perfect-scrollbar.jquery.min.js?1675739395"></script>
+    <script src="/docs-csm/js/jquery.sticky.js?1675739395"></script>
+    <script src="/docs-csm/js/featherlight.min.js?1675739395"></script>
+    <script src="/docs-csm/js/highlight.pack.js?1675739395"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/docs-csm/js/modernizr.custom-3.6.0.js?1675739395"></script>
+    <script src="/docs-csm/js/learn.js?1675739395"></script>
+    <script src="/docs-csm/js/hugo-learn.js?1675739395"></script>
+    
+        
+            <script src="/docs-csm/mermaid/mermaid.js?1675739395"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

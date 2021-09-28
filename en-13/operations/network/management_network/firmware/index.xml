@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Firmware on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-13/operations/network/management_network/firmware/</link>
+    <description>Recent content in Firmware on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:09:11 +0000</lastBuildDate><atom:link href="/docs-csm/en-13/operations/network/management_network/firmware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update Management Network Firmware</title>
+      <link>/docs-csm/en-13/operations/network/management_network/firmware/update_management_network_firmware/</link>
+      <pubDate>Tue, 07 Feb 2023 03:07:35 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/operations/network/management_network/firmware/update_management_network_firmware/</guid>
+      <description>Update Management Network Firmware This page describes how to update firmware on the management network switches. More details and other options to upgrade firmware can be found in the switch External User Guides.
+Prerequisites  Access to the switches. Firmware in a location that the switches can reach.  All firmware can be found in the HFP package provided with the Shasta release.
+Switch Firmware    Model software version     Aruba 8320 Switch Series 10.</description>
+    </item>
+    
+  </channel>
+</rss>

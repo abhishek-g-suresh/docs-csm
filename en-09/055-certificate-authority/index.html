@@ -1,0 +1,4662 @@
+<!DOCTYPE html>
+<html lang="en-09" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/docs-csm/images/favicon.png" type="image/png">
+
+    <title>Overview :: Cray System Management (CSM)</title>
+
+    
+    <link href="/docs-csm/css/nucleus.css?1675739394" rel="stylesheet">
+    <link href="/docs-csm/css/fontawesome-all.min.css?1675739394" rel="stylesheet">
+    <link href="/docs-csm/css/hybrid.css?1675739394" rel="stylesheet">
+    <link href="/docs-csm/css/featherlight.min.css?1675739394" rel="stylesheet">
+    <link href="/docs-csm/css/perfect-scrollbar.min.css?1675739394" rel="stylesheet">
+    <link href="/docs-csm/css/auto-complete.css?1675739394" rel="stylesheet">
+    <link href="/docs-csm/css/atom-one-dark-reasonable.css?1675739394" rel="stylesheet">
+    <link href="/docs-csm/css/theme.css?1675739394" rel="stylesheet">
+    <link href="/docs-csm/css/tabs.css?1675739394" rel="stylesheet">
+    <link href="/docs-csm/css/hugo-theme.css?1675739394" rel="stylesheet">
+    
+    <link href="/docs-csm/css/theme-blue.css?1675739394" rel="stylesheet">
+    
+    
+
+    <script src="/docs-csm/js/jquery-3.3.1.min.js?1675739394"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/docs-csm/en-09/055-certificate-authority/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href='/docs-csm/en-09'>
+  Cray System Management
+</a>
+
+    </div>
+
+    
+    <section>
+      <ul>
+      
+        <li>
+          <div class="select-style padding">
+          v <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en-09" value="/docs-csm/en-09/055-certificate-authority/" selected>0.9</option>
+                    
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </li>
+      
+
+      
+      </ul>
+    </section>
+  
+
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/docs-csm/js/lunr.min.js?1675739394"></script>
+<script type="text/javascript" src="/docs-csm/js/auto-complete.js?1675739394"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/docs-csm\/\/en-09";
+    
+</script>
+<script type="text/javascript" src="/docs-csm/js/search.js?1675739394"></script>
+
+    
+  </div>
+
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/421-mgmt-net-cabling-checklist/" title="1.4 Management Network Cabling Checklist" class="dd-item ">
+        <a href="/docs-csm/en-09/421-mgmt-net-cabling-checklist/">
+        1.4 Management Network Cabling Checklist
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/308-application-node-config/" title="Application Node Config" class="dd-item ">
+        <a href="/docs-csm/en-09/308-application-node-config/">
+        Application Node Config
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/310-cabinets/" title="Cabinets" class="dd-item ">
+        <a href="/docs-csm/en-09/310-cabinets/">
+        Cabinets
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/416-mgmt-net-cabling/" title="Cabling" class="dd-item ">
+        <a href="/docs-csm/en-09/416-mgmt-net-cabling/">
+        Cabling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/066-ceph-csi/" title="Ceph Csi Verification" class="dd-item ">
+        <a href="/docs-csm/en-09/066-ceph-csi/">
+        Ceph Csi Verification
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/302-ncn-metadata-bondx/" title="Collecting NCN Mac Addresses" class="dd-item ">
+        <a href="/docs-csm/en-09/302-ncn-metadata-bondx/">
+        Collecting NCN Mac Addresses
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/301-ncn-metadata-bmc/" title="Collecting The BMC Mac Addresses" class="dd-item ">
+        <a href="/docs-csm/en-09/301-ncn-metadata-bmc/">
+        Collecting The BMC Mac Addresses
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/257-firmware-action-service-cray-windom-compute-node-bios-workaround/" title="Compute Node Bios Workaround For Wnc-rome Aka HPE Cray Ex425" class="dd-item ">
+        <a href="/docs-csm/en-09/257-firmware-action-service-cray-windom-compute-node-bios-workaround/">
+        Compute Node Bios Workaround For Wnc-rome Aka HPE Cray Ex425
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/000-info/" title="Cray Guide Contribution" class="dd-item ">
+        <a href="/docs-csm/en-09/000-info/">
+        Cray Guide Contribution
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/063-csi-files/" title="Cray Site Init Files" class="dd-item ">
+        <a href="/docs-csm/en-09/063-csi-files/">
+        Cray Site Init Files
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/readme/" title="Cray System Management - Guides And References" class="dd-item ">
+        <a href="/docs-csm/en-09/readme/">
+        Cray System Management - Guides And References
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/release_notes/" title="Cray System Management - Release Notes" class="dd-item ">
+        <a href="/docs-csm/en-09/release_notes/">
+        Cray System Management - Release Notes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/051-disk-cleanslate/" title="Disk Cleanslate" class="dd-item ">
+        <a href="/docs-csm/en-09/051-disk-cleanslate/">
+        Disk Cleanslate
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/001-guides/" title="Documentation Guide" class="dd-item ">
+        <a href="/docs-csm/en-09/001-guides/">
+        Documentation Guide
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/256-firmware-action-service-fas-recipes/" title="Firmware Action Service (FAS) Administration Guide" class="dd-item ">
+        <a href="/docs-csm/en-09/256-firmware-action-service-fas-recipes/">
+        Firmware Action Service (FAS) Administration Guide
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/255-firmware-action-service-fas/" title="Firmware Action Service (FAS) | User Procedures" class="dd-item ">
+        <a href="/docs-csm/en-09/255-firmware-action-service-fas/">
+        Firmware Action Service (FAS) | User Procedures
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/250-firmware/" title="Firmware Checkout" class="dd-item ">
+        <a href="/docs-csm/en-09/250-firmware/">
+        Firmware Checkout
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/010-firmware-update-with-fas/" title="Firmware Update The System With FAS" class="dd-item ">
+        <a href="/docs-csm/en-09/010-firmware-update-with-fas/">
+        Firmware Update The System With FAS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/254-ncn-firmware-gb/" title="Gigabyte Firmware Bug" class="dd-item ">
+        <a href="/docs-csm/en-09/254-ncn-firmware-gb/">
+        Gigabyte Firmware Bug
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/304-ncn-pcie-net-boot-and-re-cable/" title="Guide Netboot An NCN From A Spine" class="dd-item ">
+        <a href="/docs-csm/en-09/304-ncn-pcie-net-boot-and-re-cable/">
+        Guide Netboot An NCN From A Spine
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/068-harvest-13-config/" title="Harvest 13 Config" class="dd-item ">
+        <a href="/docs-csm/en-09/068-harvest-13-config/">
+        Harvest 13 Config
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/307-hmn-connections/" title="Hmn Connections File" class="dd-item ">
+        <a href="/docs-csm/en-09/307-hmn-connections/">
+        Hmn Connections File
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/002-csm-install/" title="Install" class="dd-item ">
+        <a href="/docs-csm/en-09/002-csm-install/">
+        Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/007-csm-install-reboot/" title="Install Reboot - Final NCN Install" class="dd-item ">
+        <a href="/docs-csm/en-09/007-csm-install-reboot/">
+        Install Reboot - Final NCN Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/008-csm-validation/" title="Install Validation And Health Checks" class="dd-item ">
+        <a href="/docs-csm/en-09/008-csm-validation/">
+        Install Validation And Health Checks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/418-mgmt-net-ip-helper/" title="Ip-helper Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/418-mgmt-net-ip-helper/">
+        Ip-helper Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/061-livecd-metal-basecamp/" title="Livecd - Metal Basecamp" class="dd-item ">
+        <a href="/docs-csm/en-09/061-livecd-metal-basecamp/">
+        Livecd - Metal Basecamp
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/060-livecd-1.3-rollback/" title="Livecd 1.3 Rollback" class="dd-item ">
+        <a href="/docs-csm/en-09/060-livecd-1.3-rollback/">
+        Livecd 1.3 Rollback
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/059-livecd-backup/" title="Livecd Re-installs" class="dd-item ">
+        <a href="/docs-csm/en-09/059-livecd-backup/">
+        Livecd Re-installs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/058-livecd-troubleshooting/" title="Livecd Recovery" class="dd-item ">
+        <a href="/docs-csm/en-09/058-livecd-troubleshooting/">
+        Livecd Recovery
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/004-csm-remote-livecd/" title="Livecd Remote Iso Install" class="dd-item ">
+        <a href="/docs-csm/en-09/004-csm-remote-livecd/">
+        Livecd Remote Iso Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/062-livecd-virtual-iso-boot/" title="Livecd Virtual Iso Boot" class="dd-item ">
+        <a href="/docs-csm/en-09/062-livecd-virtual-iso-boot/">
+        Livecd Virtual Iso Boot
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/405-mgmt-net-port-config/" title="Management Network Access Port Configurations." class="dd-item ">
+        <a href="/docs-csm/en-09/405-mgmt-net-port-config/">
+        Management Network Access Port Configurations.
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/406-mgmt-net-acl-config/" title="Management Network ACL Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/406-mgmt-net-acl-config/">
+        Management Network ACL Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/402-mgmt-net-base-config/" title="Management Network Base Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/402-mgmt-net-base-config/">
+        Management Network Base Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/408-mgmt-net-can-config/" title="Management Network CAN Setup" class="dd-item ">
+        <a href="/docs-csm/en-09/408-mgmt-net-can-config/">
+        Management Network CAN Setup
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/412-mgmt-net-dell-mellanox-upgrades/" title="Management Network Dell And Mellanox Upgrades" class="dd-item ">
+        <a href="/docs-csm/en-09/412-mgmt-net-dell-mellanox-upgrades/">
+        Management Network Dell And Mellanox Upgrades
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/413-mgmt-net-example-config/" title="Management Network Example Config" class="dd-item ">
+        <a href="/docs-csm/en-09/413-mgmt-net-example-config/">
+        Management Network Example Config
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/409-mgmt-net-firmware-update/" title="Management Network Firmware Update" class="dd-item ">
+        <a href="/docs-csm/en-09/409-mgmt-net-firmware-update/">
+        Management Network Firmware Update
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/417-mgmt-net-flow-control/" title="Management Network Flow Control Settings" class="dd-item ">
+        <a href="/docs-csm/en-09/417-mgmt-net-flow-control/">
+        Management Network Flow Control Settings
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/411-mgmt-net-layer3-config/" title="Management Network Layer3 Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/411-mgmt-net-layer3-config/">
+        Management Network Layer3 Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/404-mgmt-net-mlag-config/" title="Management Network Mlag Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/404-mgmt-net-mlag-config/">
+        Management Network Mlag Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/414-mgmt-net-ntp-config/" title="Management Network NTP Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/414-mgmt-net-ntp-config/">
+        Management Network NTP Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/407-mgmt-net-snmp-config/" title="Management Network Snmp Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/407-mgmt-net-snmp-config/">
+        Management Network Snmp Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/419-mgmt-net-stp/" title="Management Network Spanning-tree Configuration." class="dd-item ">
+        <a href="/docs-csm/en-09/419-mgmt-net-stp/">
+        Management Network Spanning-tree Configuration.
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/415-mgmt-net-switch-rename/" title="Management Network Switch Rename" class="dd-item ">
+        <a href="/docs-csm/en-09/415-mgmt-net-switch-rename/">
+        Management Network Switch Rename
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/410-mgmt-net-uplink-config/" title="Management Network Uplink Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/410-mgmt-net-uplink-config/">
+        Management Network Uplink Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/403-mgmt-net-vlan-config/" title="Management Network Vlan Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/403-mgmt-net-vlan-config/">
+        Management Network Vlan Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/306-sls-add-uan-alias/" title="Manually Add UAN Aliases To SLS" class="dd-item ">
+        <a href="/docs-csm/en-09/306-sls-add-uan-alias/">
+        Manually Add UAN Aliases To SLS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/005-csm-metal-install/" title="Metal Install" class="dd-item ">
+        <a href="/docs-csm/en-09/005-csm-metal-install/">
+        Metal Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/309-move-site-connections/" title="Move Site Connections" class="dd-item ">
+        <a href="/docs-csm/en-09/309-move-site-connections/">
+        Move Site Connections
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/200-ncn-bios-pref/" title="NCN Bios Preferences" class="dd-item ">
+        <a href="/docs-csm/en-09/200-ncn-bios-pref/">
+        NCN Bios Preferences
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/101-ncn-booting/" title="NCN Booting" class="dd-item ">
+        <a href="/docs-csm/en-09/101-ncn-booting/">
+        NCN Booting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/107-ncn-devel/" title="NCN Development" class="dd-item ">
+        <a href="/docs-csm/en-09/107-ncn-devel/">
+        NCN Development
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/253-ncn-hw-swap/" title="NCN Hardware Swaps" class="dd-item ">
+        <a href="/docs-csm/en-09/253-ncn-hw-swap/">
+        NCN Hardware Swaps
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/110-ncn-image-customization/" title="NCN Image Customization" class="dd-item ">
+        <a href="/docs-csm/en-09/110-ncn-image-customization/">
+        NCN Image Customization
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/303-ncn-metadata-usb-serial/" title="NCN Metadata Over Usb-serial Cable" class="dd-item ">
+        <a href="/docs-csm/en-09/303-ncn-metadata-usb-serial/">
+        NCN Metadata Over Usb-serial Cable
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/106-ncn-sles/" title="NCN Operating System Release" class="dd-item ">
+        <a href="/docs-csm/en-09/106-ncn-sles/">
+        NCN Operating System Release
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/105-ncn-packages/" title="NCN Packages" class="dd-item ">
+        <a href="/docs-csm/en-09/105-ncn-packages/">
+        NCN Packages
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/104-ncn-partitioning/" title="NCN Partitions" class="dd-item ">
+        <a href="/docs-csm/en-09/104-ncn-partitioning/">
+        NCN Partitions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/009-ncn-locking/" title="NCN/management Node Locking" class="dd-item ">
+        <a href="/docs-csm/en-09/009-ncn-locking/">
+        NCN/management Node Locking
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/251-firmware-network/" title="Network Firmware" class="dd-item ">
+        <a href="/docs-csm/en-09/251-firmware-network/">
+        Network Firmware
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/052-network-stack/" title="Network Stack (software And Hardware)" class="dd-item ">
+        <a href="/docs-csm/en-09/052-network-stack/">
+        Network Stack (software And Hardware)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/103-ncn-networking/" title="Networking" class="dd-item ">
+        <a href="/docs-csm/en-09/103-ncn-networking/">
+        Networking
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/252-firmware-ncn/" title="Node Firmware" class="dd-item ">
+        <a href="/docs-csm/en-09/252-firmware-ncn/">
+        Node Firmware
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/100-ncn-images/" title="Non-compute Node Images" class="dd-item ">
+        <a href="/docs-csm/en-09/100-ncn-images/">
+        Non-compute Node Images
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/108-ncn-ntp/" title="NTP On NCNs" class="dd-item ">
+        <a href="/docs-csm/en-09/108-ncn-ntp/">
+        NTP On NCNs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/" title="Operations" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/">
+          Operations
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/fas_loader/" title="FAS Loader" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/fas_loader/">
+          FAS Loader
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/fas_loader/fas_loader_fails/" title="Troubleshooting FAS Loader Fails" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/fas_loader/fas_loader_fails/">
+        Troubleshooting FAS Loader Fails
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/kubernetes/" title="Kubernetes" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/kubernetes/">
+          Kubernetes
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/kubernetes/cert_renewal_for_kubernetes_and_bare_metal_etcd/" title="Kubernetes And Bare Metal Etcd Certificate Renewal" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/kubernetes/cert_renewal_for_kubernetes_and_bare_metal_etcd/">
+        Kubernetes And Bare Metal Etcd Certificate Renewal
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/node_management/" title="Node Management" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/node_management/">
+          Node Management
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/node_management/reboot_ncns/" title="Reboot NCNs" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/node_management/reboot_ncns/">
+        Reboot NCNs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/node_management/removing_a_liquid-cooled_blade_from_a_system/" title="Removing A Liquid-cooled Blade From A System" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/node_management/removing_a_liquid-cooled_blade_from_a_system/">
+        Removing A Liquid-cooled Blade From A System
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/node_management/adding_a_liquid-cooled_blade_to_a_system/" title="Adding A Liquid-cooled Blade To A System" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/node_management/adding_a_liquid-cooled_blade_to_a_system/">
+        Adding A Liquid-cooled Blade To A System
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/node_management/check_and_set_the_metalno-wipe_setting_on_ncns/" title="Check And Set The Metal.no-wipe Setting On NCNs" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/node_management/check_and_set_the_metalno-wipe_setting_on_ncns/">
+        Check And Set The Metal.no-wipe Setting On NCNs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/node_management/enable_kdump/" title="Enable Kdump" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/node_management/enable_kdump/">
+        Enable Kdump
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/configuration_management/" title="Configuration Management" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/configuration_management/">
+          Configuration Management
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/configuration_management/configuration_layers/" title="Configuration Layers" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/configuration_management/configuration_layers/">
+        Configuration Layers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/network/" title="Network" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/network/">
+          Network
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/network/metallb_bgp/" title="Metallb BGP" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/network/metallb_bgp/">
+          Metallb BGP
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/network/metallb_bgp/check_bgp_status_and_reset_sessions/" title="Check BGP Status And Reset Sessions" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/network/metallb_bgp/check_bgp_status_and_reset_sessions/">
+        Check BGP Status And Reset Sessions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/boot_orchestration/" title="Boot Orchestration" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/boot_orchestration/">
+          Boot Orchestration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/boot_orchestration/stage_changes_without_bos/" title="Stage Changes Without BOS" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/boot_orchestration/stage_changes_without_bos/">
+        Stage Changes Without BOS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/boot_orchestration/upload_node_boot_information_to_boot_script_service_bss/" title="Upload Node Boot Information To Boot Script Service (bss)" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/boot_orchestration/upload_node_boot_information_to_boot_script_service_bss/">
+        Upload Node Boot Information To Boot Script Service (bss)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/" title="Security And Authentication" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/security_and_authentication/">
+          Security And Authentication
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/restrict_access_to_ncn_images_s3_bucket/" title="Restrict Network Access To The NCN-images S3 Bucket" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/restrict_access_to_ncn_images_s3_bucket/">
+        Restrict Network Access To The NCN-images S3 Bucket
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/update_default_air-cooled_bmc_and_leaf_switch_snmp_credentials/" title="Update Default Air-cooled BMC And Leaf Switch Snmp Credentials" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/update_default_air-cooled_bmc_and_leaf_switch_snmp_credentials/">
+        Update Default Air-cooled BMC And Leaf Switch Snmp Credentials
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/update_default_servertech_pdu_credentials_used_by_the_redfish_translation_service/" title="Update Default Servertech Pdu Credentials Used By The Redfish Translation Service (rts)" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/update_default_servertech_pdu_credentials_used_by_the_redfish_translation_service/">
+        Update Default Servertech Pdu Credentials Used By The Redfish Translation Service (rts)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/update_ncn_passwords/" title="Update NCN Passwords" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/update_ncn_passwords/">
+        Update NCN Passwords
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/updating_the_liquid-cooled_ex_cabinet_default_credentials_after_a_cec_password_change/" title="Updating The Liquid-cooled Ex Cabinet Default Credentials After A Cec Password Change" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/updating_the_liquid-cooled_ex_cabinet_default_credentials_after_a_cec_password_change/">
+        Updating The Liquid-cooled Ex Cabinet Default Credentials After A Cec Password Change
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_ex_cabinet_global_default_password/" title="Change Cray Ex Cabinet Global Default Password" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_ex_cabinet_global_default_password/">
+        Change Cray Ex Cabinet Global Default Password
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_ncn_image_root_password_and_ssh_keys/" title="Change NCN Image Root Password And SSH Keys" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_ncn_image_root_password_and_ssh_keys/">
+        Change NCN Image Root Password And SSH Keys
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_ncn_image_root_password_and_ssh_keys_on_pit_node/" title="Change NCN Image Root Password And SSH Keys On Pit Node" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_ncn_image_root_password_and_ssh_keys_on_pit_node/">
+        Change NCN Image Root Password And SSH Keys On Pit Node
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_smnp_credentials_on_leaf_switches/" title="Change Smnp Credentials On Leaf Switches" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_smnp_credentials_on_leaf_switches/">
+        Change Smnp Credentials On Leaf Switches
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_the_keycloak_admin_password/" title="Change The Keycloak Admin Password" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_the_keycloak_admin_password/">
+        Change The Keycloak Admin Password
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/provisioning_a_liquid-cooled_ex_cabinet_cec_with_default_credentials/" title="Provisioning A Liquid-cooled Ex Cabinet Cec With Default Credentials" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/provisioning_a_liquid-cooled_ex_cabinet_cec_with_default_credentials/">
+        Provisioning A Liquid-cooled Ex Cabinet Cec With Default Credentials
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/add_ldap_user_federation/" title="Add LDAP User Federation" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/add_ldap_user_federation/">
+        Add LDAP User Federation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_air-cooled_node_bmc_credentials/" title="Change Air-cooled Node BMC Credentials" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_air-cooled_node_bmc_credentials/">
+        Change Air-cooled Node BMC Credentials
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/security_and_authentication/change_credentials_on_servertech_pdus/" title="Change Credentials On Servertech Pdus" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/security_and_authentication/change_credentials_on_servertech_pdus/">
+        Change Credentials On Servertech Pdus
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/hmcollector/" title="Hmcollector" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/hmcollector/">
+          Hmcollector
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/hmcollector/adjust_hmcollector_resource_limits_requests/" title="Adjust Hm Collector Resource Limits And Requests" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/hmcollector/adjust_hmcollector_resource_limits_requests/">
+        Adjust Hm Collector Resource Limits And Requests
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/csm_product_management/" title="Product Management" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/csm_product_management/">
+          Product Management
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/csm_product_management/change_passwords_and_credentials/" title="Change Passwords And Credentials" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/csm_product_management/change_passwords_and_credentials/">
+        Change Passwords And Credentials
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/csm_product_management/apply_security_hardening/" title="Security Hardening" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/csm_product_management/apply_security_hardening/">
+        Security Hardening
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/operations/system_management_health/" title="System Management Health" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/operations/system_management_health/">
+          System Management Health
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/operations/system_management_health/troubleshoot_prometheus_alerts/" title="Troubleshoot Prometheus Alerts" class="dd-item ">
+        <a href="/docs-csm/en-09/operations/system_management_health/troubleshoot_prometheus_alerts/">
+        Troubleshoot Prometheus Alerts
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/401-management-network-install/" title="Overview" class="dd-item ">
+        <a href="/docs-csm/en-09/401-management-network-install/">
+        Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/055-certificate-authority/" title="Overview" class="dd-item active">
+        <a href="/docs-csm/en-09/055-certificate-authority/">
+        Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/006-csm-platform-install/" title="Platform Install" class="dd-item ">
+        <a href="/docs-csm/en-09/006-csm-platform-install/">
+        Platform Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/420-mgmt-net-pxe-tshoot/" title="PXE Boot Troubleshooting" class="dd-item ">
+        <a href="/docs-csm/en-09/420-mgmt-net-pxe-tshoot/">
+        PXE Boot Troubleshooting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/065-csm-safeguards/" title="Safeguards" class="dd-item ">
+        <a href="/docs-csm/en-09/065-csm-safeguards/">
+        Safeguards
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/300-service-guides/" title="Service Guides" class="dd-item ">
+        <a href="/docs-csm/en-09/300-service-guides/">
+        Service Guides
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/067-shasta-cfg/" title="Setup Site-init From Shasta-cfg" class="dd-item ">
+        <a href="/docs-csm/en-09/067-shasta-cfg/">
+        Setup Site-init From Shasta-cfg
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/305-switch-metadata/" title="Switch Metadata" class="dd-item ">
+        <a href="/docs-csm/en-09/305-switch-metadata/">
+        Switch Metadata
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/500-uas-uai-admin-and-user-guide/" title="The Shasta User Access Service" class="dd-item ">
+        <a href="/docs-csm/en-09/500-uas-uai-admin-and-user-guide/">
+        The Shasta User Access Service
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/troubleshooting/" title="Troubleshooting Information" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/troubleshooting/">
+          Troubleshooting Information
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/troubleshooting/known_issues/" title="Known Issues" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/troubleshooting/known_issues/">
+          Known Issues
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/troubleshooting/known_issues/orphaned_cfs_pods/" title="Orphaned CFS Pods After Booting Or Rebooting" class="dd-item ">
+        <a href="/docs-csm/en-09/troubleshooting/known_issues/orphaned_cfs_pods/">
+        Orphaned CFS Pods After Booting Or Rebooting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/troubleshooting/known_issues/cfs_sessions_stuck_in_pending/" title="CFS Sessions Are Stuck In Pending State" class="dd-item ">
+        <a href="/docs-csm/en-09/troubleshooting/known_issues/cfs_sessions_stuck_in_pending/">
+        CFS Sessions Are Stuck In Pending State
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/troubleshooting/known_issues/conman_pod_kubernetes_copy_fails/" title="Copying File From The Cray-conman Pod Fails" class="dd-item ">
+        <a href="/docs-csm/en-09/troubleshooting/known_issues/conman_pod_kubernetes_copy_fails/">
+        Copying File From The Cray-conman Pod Fails
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/" title="Upgrade" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/">
+          Upgrade
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/" title="0.9" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/">
+          0.9
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.6/" title="-0.9.6" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.6/">
+          -0.9.6
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.6/readme/" title="0.9.6 Patch Installation Instructions" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.6/readme/">
+        0.9.6 Patch Installation Instructions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/" title="-0.9.5" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/">
+          -0.9.5
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/" title="Operations" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/">
+          Operations
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/node_management/" title="Node Management" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/node_management/">
+          Node Management
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/node_management/check_and_set_the_metalno-wipe_setting_on_ncns/" title="Check And Set The Metal.no-wipe Setting On NCNs" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/node_management/check_and_set_the_metalno-wipe_setting_on_ncns/">
+        Check And Set The Metal.no-wipe Setting On NCNs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/node_management/reboot_ncns/" title="Reboot NCNs" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/node_management/reboot_ncns/">
+        Reboot NCNs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/network/" title="Network" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/network/">
+          Network
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/network/metallb_bgp/" title="Metallb BGP" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/network/metallb_bgp/">
+          Metallb BGP
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/network/metallb_bgp/check_bgp_status_and_reset_sessions/" title="Check BGP Status And Reset Sessions" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/operations/network/metallb_bgp/check_bgp_status_and_reset_sessions/">
+        Check BGP Status And Reset Sessions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/readme/" title="Cve-2021-22555 Cve-2021-33909" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/readme/">
+        Cve-2021-22555 Cve-2021-33909
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/readme/" title="0.9 Patch Release Upgrade Procedures" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/readme/">
+        0.9 Patch Release Upgrade Procedures
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.2/" title="0.9.2 Patch Upgrade Guide" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.2/">
+        0.9.2 Patch Upgrade Guide
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.3/" title="0.9.3 Patch Upgrade Guide" class="dd-item ">
+        <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.3/">
+        0.9.3 Patch Upgrade Guide
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/docs-csm/en-09/upgrade/0.9/csm-0.9.4/" title="0.9.4 Patch Upgrade Guide" class="dd-item
+        
+        
+        
+        ">
+      <a href="/docs-csm/en-09/upgrade/0.9/csm-0.9.4/">
+          0.9.4 Patch Upgrade Guide
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/069-upgrade-workarounds-rpm/" title="Upgrade Install Workarounds Rpm" class="dd-item ">
+        <a href="/docs-csm/en-09/069-upgrade-workarounds-rpm/">
+        Upgrade Install Workarounds Rpm
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/003-csm-usb-livecd/" title="Usb Livecd - Creation And Configuration" class="dd-item ">
+        <a href="/docs-csm/en-09/003-csm-usb-livecd/">
+        Usb Livecd - Creation And Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/070-usp-install-workarounds/" title="Utility Storage Installation Troubleshooting" class="dd-item ">
+        <a href="/docs-csm/en-09/070-usp-install-workarounds/">
+        Utility Storage Installation Troubleshooting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+      
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/docs-csm/en-09/400-switch-bgp-neighbors/" title="Verify And Update BGP Neighbors" class="dd-item ">
+        <a href="/docs-csm/en-09/400-switch-bgp-neighbors/">
+        Verify And Update BGP Neighbors
+        
+        </a>
+    </li>
+     
+  
+ 
+
+      
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/docs-csm/en-09/'>0.9</a> > Overview
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+            </h1>
+          
+
+        
+
+
+<h1 id="overview">Overview</h1>
+<p>At <em>install time</em>, a PKI certificate authority (CA) can either be generated for a system, or a customer can opt to supply their own (intermediate) CA.</p>
+<blockquote>
+<p>Outside of a new installation, there is currently no supported method to rotate (change) the platform CA. The ability to rotate CAs is anticipated as part of a future release.</p>
+</blockquote>
+<p>Sealed Secrets, part of shasta-cfg, are used by the installation process to inject CA material in an encrypted form. Vault (cray-vault instance) ultimately sources and stores the CA from a K8S secret (result of decrypting the corresponding Sealed Secret).</p>
+<p>The resulting CA will be used to sign multiple workloads on the platform (Ingress, mTLS for PostgreSQL Clusters, Spire, &hellip;).</p>
+<blockquote>
+<p>Management of Sealed Secrets should ideally take place on a secure workstation.</p>
+</blockquote>
+<h1 id="using-default-platform-generated-ca">Using Default Platform Generated CA</h1>
+<p>In shasta-cfg, there is a Sealed Secret generator named <code>platform_ca</code>. By default, the <code>customizations.yaml</code> file will contain a generation template to use this generator, and will create a sealed secret named <code>generated-platform-ca-1</code>. The <code>cray-vault</code> overrides in <code>customizations.yaml</code> contain a) a templated reference to expand the <code>generated-platform-ca-1</code> Sealed Secret and b) directives instructing vault to load the CA material on start-up &ndash; ultimately initializing a Hashicorp Vault PKI Engine instance with the material.</p>
+<blockquote>
+<p>Note: the intermediate CA gets installed into Vault, not the root CA (as generated). Use of a root CA is not recommended.</p>
+</blockquote>
+<p>The resulting default configuration (prior to seeding customizations) should look like the following <code>customizations.yaml</code> snippet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">spec</span>:
+  <span style="color:#ae81ff">...</span>
+  <span style="color:#f92672">kubernetes</span>:
+    <span style="color:#f92672">sealed_secrets</span>:
+      <span style="color:#ae81ff">...</span>
+      <span style="color:#f92672">gen_platform_ca_1</span>:
+        <span style="color:#f92672">generate</span>:
+          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">generated-platform-ca-1</span>
+          <span style="color:#f92672">data</span>:
+          - <span style="color:#f92672">type</span>: <span style="color:#ae81ff">platform_ca</span>
+            <span style="color:#f92672">args</span>:
+              <span style="color:#f92672">root_days</span>: <span style="color:#ae81ff">3651</span>
+              <span style="color:#f92672">int_days</span>: <span style="color:#ae81ff">3650</span>
+              <span style="color:#f92672">root_cn</span>: <span style="color:#e6db74">&#34;Platform CA&#34;</span>
+              <span style="color:#f92672">int_cn</span>: <span style="color:#e6db74">&#34;Platform CA - L1&#34;</span>
+    <span style="color:#f92672">services</span>:
+        <span style="color:#ae81ff">...</span>
+        <span style="color:#f92672">cray-vault</span>:
+            <span style="color:#f92672">sealedSecrets</span>:
+            - <span style="color:#e6db74">&#34;{{ kubernetes.sealed_secrets.gen_platform_ca_1 | toYaml }}&#34;</span>
+            <span style="color:#f92672">pki</span>:
+                <span style="color:#f92672">customCA</span>:
+                    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+                    <span style="color:#f92672">secret</span>: <span style="color:#ae81ff">generated-platform-ca-1</span>
+                    <span style="color:#f92672">private_key</span>: <span style="color:#ae81ff">int_ca.key</span>
+                    <span style="color:#f92672">certificate</span>: <span style="color:#ae81ff">int_ca.crt</span>
+                    <span style="color:#f92672">ca_bundle</span>: <span style="color:#ae81ff">root_ca.crt</span>
+            <span style="color:#ae81ff">...</span>
+</code></pre></div><blockquote>
+<p>The <code>platform_ca</code> generator will produce RSA CAs with a 3072-bit modulus, using SHA256 as the base signature algorithm.</p>
+</blockquote>
+<h1 id="customize-platform-generated-ca">Customize Platform Generated CA</h1>
+<p>The <code>platform_ca</code> generator inputs can be customized, if desired. Notably, the <code>root_days</code>, <code>int_days</code>, <code>root_cn</code> and <code>int_cn</code> fields can be modified. While the shasta-cfg documentation on the use of generators supplies additional detail, the <code>*_days</code> settings control the validity period and the <code>*_cn</code> settings control the common name value for the resulting CA certificates. Ensure the Sealed Secret name reference in <code>spec.kubernetes.services.cray-vault.sealedSecrets</code> is updated if you opt to use a different name.</p>
+<blockquote>
+<p>Outside of a new installation, there is currently no supported method to rotate (change) the platform CA. Please set validity periods accordingly. The ability to rotate CAs is anticipated as part of a future release.</p>
+</blockquote>
+<h1 id="use-an-external-ca">Use an External CA</h1>
+<p>The <code>static_platform_ca</code> generator, part of shasta-cfg, can be used to supply an external CA private key, certificate, and associated upstream CAs that form the trust chain. The generator will attempt to prevent you from supplying a root CA. You must also supply the entire trust chain up to the root CA certificate.</p>
+<blockquote>
+<p>Outside of a new installation, there is currently no supported method to rotate (change) the platform CA. Please ensure validity periods are set accordingly for external CAs you use in this process. The ability to rotate CAs is anticipated as part of a future release.</p>
+</blockquote>
+<p>Here is an example <code>customizations.yaml</code> snippet illustrating the generator input to inject a static CA:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">spec</span>:
+  <span style="color:#ae81ff">...</span>
+  <span style="color:#f92672">kubernetes</span>:
+    <span style="color:#f92672">sealed_secrets</span>:
+      <span style="color:#ae81ff">...</span>
+      <span style="color:#f92672">external_platform_ca_1</span>:
+        <span style="color:#f92672">generate</span>:
+          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">external-platform-ca-1</span>
+          <span style="color:#f92672">data</span>:
+          - <span style="color:#f92672">type</span>: <span style="color:#ae81ff">static_platform_ca</span>
+            <span style="color:#f92672">args</span>:
+              <span style="color:#f92672">key</span>: |-<span style="color:#e6db74">
+</span><span style="color:#e6db74">                  -----BEGIN PRIVATE KEY-----
+</span><span style="color:#e6db74">                  MIIG/gIBADANBgkqhkiG9w0BAQEFAASCBugwggbkAgEAAoIBgQDvhzXCUmGalTDo
+</span><span style="color:#e6db74">                  uswnppXbM+E+OwU79xvaZBsiGEDPpERPZfizpSO3/6IWnYvCUCrb1V4rIhkSKGYq
+</span><span style="color:#e6db74">                  LLVMhmEkfiEImDnx+ksbZau3/w23ogP4qj+BpbTRF707//IOfXgRSD1Q+mVQ7MVo
+</span><span style="color:#e6db74">                  crOt8e/hR4DqZjbkWOrw9pdrfvV159o6x9RVpip33BkAtDzONYApY6ePhzS1BFmo
+</span><span style="color:#e6db74">                  I9R0zMGNeVpy7I2m47YUwpyGAWjRoof0P2BFHX7vdEoJE/TWAlbbiqlM9OHmR85J
+</span><span style="color:#e6db74">                  I/O0MwP63C2Eqn9HajbF1GPVw2IvGN6fE3THtmVDVwxD17cFsKxtVl8gMHljkw9V
+</span><span style="color:#e6db74">                  I+U5piuIfDPvaCoUIC3hlv7jsQs9j52LyZZF3sOKP3xsGG4a5ThqK08EKEgrFovg
+</span><span style="color:#e6db74">                  MYsQrt8aSx7o/7K6IzDOD9QVf7dmkFVxlbPGAjR6nlQ5aW7gFEOAr1CbbZFS+lKi
+</span><span style="color:#e6db74">                  KGjHGraIv93MTqqToE7yRJ6Sv0yP7U9clCi6MNi89AWFfZDkLAsCAwEAAQKCAYAW
+</span><span style="color:#e6db74">                  R61odeE+T8JM45M53PTzfs/kyfiiq0mb9tPPSBI/Pjhcak/H5gR8iPq6v8zQNkTG
+</span><span style="color:#e6db74">                  TgKEYJeUaM2X/rCefaFrk4/fDMnXCEEUO1DNvJu6CQf1iWB+3rsC+AJSImyRjHou
+</span><span style="color:#e6db74">                  oVmSvrfN3zg9ju3HsElv2wbSxs80TlEMOOO8zAJpBTf3X78QeHRa0c5BkoJVbASP
+</span><span style="color:#e6db74">                  1QUxBJKSg+UTDsIkWydl0XPoXLiQXX4CUFfe3yKw3T1oKrz5sNSt0VNRpNmRToY3
+</span><span style="color:#e6db74">                  s96Teuv2iBUnN4UciuFajgjlP0Wt2YvntWoYcwJ7mOjwo6Ru5IXdPMeLBx/xKeLF
+</span><span style="color:#e6db74">                  j2SnPiozSAg2OV8G+yffOIcV7598s2Jh9LpgEX0S2NWPdSrjp33IWM9clivzQXaV
+</span><span style="color:#e6db74">                  fFZtFcb3dkrXTt2jVuj6hQR5dsVMC/D/sfORPuAudejmUkAYmozTI9vgcOJpWw3h
+</span><span style="color:#e6db74">                  AT8KBZ6xR3ifr3/GwJk9eosFMeLCTnUprhgbMzM9sde31NOzgYPhiPrN4GJRp4EC
+</span><span style="color:#e6db74">                  gcEA+e3m7HNrSY766GOaiYwiVdzLftL7i6Ie0QTHqJLLESu2/XyxuoML6IRXc+Df
+</span><span style="color:#e6db74">                  A/HVtuwJMqxEe3APvOcwS/Qs6qnPhh0WNz9vJ+3D/uo7Om3cbIR8J6QlsQID9Kas
+</span><span style="color:#e6db74">                  /OAOqxcbtedkkiDSzVM1SPzNh+R85FBDK2xBM433Eu9xET0V8YZegT99SWg72l8+
+</span><span style="color:#e6db74">                  M37/EhGvtyQpYpY8lYs8pI3Xj7IRLt+jkPKu59uDdATMvVntOMheddpTwYW7XdUI
+</span><span style="color:#e6db74">                  M67VAoHBAPVYodD9Hoe5AcUBrahM7trGzAw3z8fom5lf/wmzJ6Mow8lgH6tliwCs
+</span><span style="color:#e6db74">                  4NS5PR45olONhK7o7vd/PXvzP1QSIHLNbInveCH29O0ZmBasDlF/eDT+Hcdzq0sw
+</span><span style="color:#e6db74">                  YWUR+9mX5kNS3DuZaWy6f2PDQC+mzPn1yxGmwL2yW0sY6ExfKjmFVSjqG7Mt/oMo
+</span><span style="color:#e6db74">                  BriKaANd3ctge3aRm2MHniXOPq+jC2Zq1rRopWgWIWDzchQsyl4e6iHs5s80nQsE
+</span><span style="color:#e6db74">                  R9nrC6CfXwKBwQDMlwLB7HmW7YRXV7HZhu1UfDnYx71CwKOZVuBaDlBM7gwN1VVn
+</span><span style="color:#e6db74">                  6H6HCE7OfPYStJTN+MpOwNYOdd1sNZRDmM5sCjXnA0h8UWEcvnYC5ps1aVlXO9ym
+</span><span style="color:#e6db74">                  VqjEDXJPg2F4X7GiPHhin9ikBlqJ2eN0q/1TkKbr/wf9M9Dr8vqedYOJKQgdfnE+
+</span><span style="color:#e6db74">                  PErDHKBiUjUI0pzanb/Jm8CFA5b0k9ZAnhwndQy74jZzITYsdnVVM9il6EdYhC1P
+</span><span style="color:#e6db74">                  LDoD4QVP+mOMa0ECgcEA0ZCKb4O1j0Kk000ysx47q53A7vLBRUVXmzOXGgbwZXpN
+</span><span style="color:#e6db74">                  efXkNze9+q6wQKOVI/sgv3OTEQAgFkGWGAjXYA03sDftbQiiOYjC/r8s3LjMZiqW
+</span><span style="color:#e6db74">                  V9VzREl11/yURIuO7vbDlV/yg+nvVhMa+vDtI4a7cQrVENe5rI7rUgMNcSacX5OX
+</span><span style="color:#e6db74">                  ASKu1GcGDaujyf9XBwEnkS9xZf7LllQMbshzXPzMoQfDK0hzeKvmiPSIzdjQZoLL
+</span><span style="color:#e6db74">                  hHzhTb3oIl/eq7IMNX/LAoHAYuVeWbSXROyXITXrYcYMwgtYjjUWThQmrLQImJjj
+</span><span style="color:#e6db74">                  HDUNMqq8w8OaQsV+JpZ0lwukeYst3d8vH8Eb4UczUaR+oJpBeEmXjXCGYG4Ec1EQ
+</span><span style="color:#e6db74">                  H72VrrZoJowoqORDSp88h+akcF6+vPJPuNC/Ea7+eAeiYqgxOX5nc2uLjZxBt4OC
+</span><span style="color:#e6db74">                  AhKMY5mnBN2pfAkGVpuyUw3dqGctTSCT0jnxvFPXpldgdAmXi2NTPqPd0IzmLKNG
+</span><span style="color:#e6db74">                  jja1TCeqn9XRTy+EArf1bYi+
+</span><span style="color:#e6db74">                  -----END PRIVATE KEY-----</span>                  
+                <span style="color:#f92672">cert</span>: |-<span style="color:#e6db74">
+</span><span style="color:#e6db74">                  -----BEGIN CERTIFICATE-----
+</span><span style="color:#e6db74">                  MIIEZTCCAs2gAwIBAgIJAKnqv1FyMOp/MA0GCSqGSIb3DQEBCwUAMFsxDzANBgNV
+</span><span style="color:#e6db74">                  BAoMBlNoYXN0YTERMA8GA1UECwwIUGxhdGZvcm0xGjAYBgNVBAMMEVJvb3QgR2Vu
+</span><span style="color:#e6db74">                  ZXJhdGVkIENBMRkwFwYDVQQDDBBQbGF0Zm9ybSBSb290IENBMB4XDTIwMDcwMTIz
+</span><span style="color:#e6db74">                  MjU1MVoXDTIwMDcxMTIzMjU1MVowJDEPMA0GA1UECgwGU2hhc3RhMREwDwYDVQQL
+</span><span style="color:#e6db74">                  DAhQbGF0Zm9ybTCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAO+HNcJS
+</span><span style="color:#e6db74">                  YZqVMOi6zCemldsz4T47BTv3G9pkGyIYQM+kRE9l+LOlI7f/ohadi8JQKtvVXisi
+</span><span style="color:#e6db74">                  GRIoZiostUyGYSR+IQiYOfH6Sxtlq7f/DbeiA/iqP4GltNEXvTv/8g59eBFIPVD6
+</span><span style="color:#e6db74">                  ZVDsxWhys63x7+FHgOpmNuRY6vD2l2t+9XXn2jrH1FWmKnfcGQC0PM41gCljp4+H
+</span><span style="color:#e6db74">                  NLUEWagj1HTMwY15WnLsjabjthTCnIYBaNGih/Q/YEUdfu90SgkT9NYCVtuKqUz0
+</span><span style="color:#e6db74">                  4eZHzkkj87QzA/rcLYSqf0dqNsXUY9XDYi8Y3p8TdMe2ZUNXDEPXtwWwrG1WXyAw
+</span><span style="color:#e6db74">                  eWOTD1Uj5TmmK4h8M+9oKhQgLeGW/uOxCz2PnYvJlkXew4o/fGwYbhrlOGorTwQo
+</span><span style="color:#e6db74">                  SCsWi+AxixCu3xpLHuj/srojMM4P1BV/t2aQVXGVs8YCNHqeVDlpbuAUQ4CvUJtt
+</span><span style="color:#e6db74">                  kVL6UqIoaMcatoi/3cxOqpOgTvJEnpK/TI/tT1yUKLow2Lz0BYV9kOQsCwIDAQAB
+</span><span style="color:#e6db74">                  o2MwYTAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNVHQ4EFgQU
+</span><span style="color:#e6db74">                  uNa6qcbJsHdxo6k8kaR5o53DNbIwHwYDVR0jBBgwFoAU/SFNwDBMcAYWBC2SCsDf
+</span><span style="color:#e6db74">                  OyZJbEMwDQYJKoZIhvcNAQELBQADggGBAD8O1Vg9WLFem0RZiZWjtXiNOTZmaksE
+</span><span style="color:#e6db74">                  +a49CE7yGqyETljlVOvbkTUTr4eJnzq2prYJUF8QavSBs38OahcxkTU2GOawZa09
+</span><span style="color:#e6db74">                  hFc1aBiGSPAxTxJqdHV+G3QZcce1CG2e9VyrxqNudosNRNBEPMOsgg4LpvlRqMfm
+</span><span style="color:#e6db74">                  QhPEJcfvVaCopDZBFXLBPxqmt9BckWFmTSsK09xnrCE/40YD69hdUQ6USJaz9/cd
+</span><span style="color:#e6db74">                  UfNm0HIugRUMvFUP2ytdJmbV+1YQbfVsFrKU4aClrMg+ECX83od5N1TUNQwMePLh
+</span><span style="color:#e6db74">                  IizLGoGDF353eRVKxlzyI724Ni9W82rMW66TQdA7vU6liItHYrhDmcZ+mK2R0F5B
+</span><span style="color:#e6db74">                  ZuYjsLf/BCQ1uDv/bsVG40ogjH/eI/qfhRIzbgVVTF74uKG97pOakp2iQaG9USFd
+</span><span style="color:#e6db74">                  9/s6ouQQXfkDZ2a/vzs8SBD4eIx7vmeABPRqlHTE8VzohxugxMbJNMdZRPGrEeH6
+</span><span style="color:#e6db74">                  uddqVNpMH9ehQtsDdt0nmfVIy9/An3BKFw==
+</span><span style="color:#e6db74">                  -----END CERTIFICATE-----</span>                  
+                <span style="color:#f92672">ca_bundle</span>: |-<span style="color:#e6db74">
+</span><span style="color:#e6db74">                  -----BEGIN CERTIFICATE-----
+</span><span style="color:#e6db74">                  MIIEezCCAuOgAwIBAgIJAMjuQjQKUpUtMA0GCSqGSIb3DQEBCwUAMFsxDzANBgNV
+</span><span style="color:#e6db74">                  BAoMBlNoYXN0YTERMA8GA1UECwwIUGxhdGZvcm0xGjAYBgNVBAMMEVJvb3QgR2Vu
+</span><span style="color:#e6db74">                  ZXJhdGVkIENBMRkwFwYDVQQDDBBQbGF0Zm9ybSBSb290IENBMB4XDTIwMDcwMTIz
+</span><span style="color:#e6db74">                  MjU1MVoXDTIwMDcxMTIzMjU1MVowWzEPMA0GA1UECgwGU2hhc3RhMREwDwYDVQQL
+</span><span style="color:#e6db74">                  DAhQbGF0Zm9ybTEaMBgGA1UEAwwRUm9vdCBHZW5lcmF0ZWQgQ0ExGTAXBgNVBAMM
+</span><span style="color:#e6db74">                  EFBsYXRmb3JtIFJvb3QgQ0EwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIB
+</span><span style="color:#e6db74">                  gQDQ0DTdZmqCOfrWb8KTXJ0hT1r2G51rRE5eAp8d/PoVCgV1gg5h1+jbiv3yYd2R
+</span><span style="color:#e6db74">                  BgM/CPZPvEJaL03wR1gO9NiGEXh1ALd8+yv1O1VRKNb6JuB5cPZFHE3Z8El6aGMc
+</span><span style="color:#e6db74">                  zrqN1ZekRPrZMM1W5Iw78olOMZvsxYw0ZIJqfKOWYB9jYUNM1KohHVj65f/HD/Em
+</span><span style="color:#e6db74">                  kC+9VFhepRV9z21q6fBU13bMz6/NlW19omvbTMwrVSPbYi2nSzqOfi00GXmVh/9Q
+</span><span style="color:#e6db74">                  WElBrAeiGLOsjWkeQ8sFF8ab4SSvzLAAilyQqkBhz2jIxB4L7iG+b9KEgVLeOoMH
+</span><span style="color:#e6db74">                  1Rs7RhduOMEQypZGVA/vsu/86/5ctM1Cu60mZP+s5B7oT2rwypz0ihLiVCaDCcS5
+</span><span style="color:#e6db74">                  lDK7PPT5GxZPD8TAqX0SgtaxJnSB/RzavGPSS7efFvlWXh18frwlwa+FgOnyCw1/
+</span><span style="color:#e6db74">                  qR3BHarcZX9XZivBQSupxQAaUNPMlk0N4wYi6oWrmf21zwd7NtZAinxC2F98J1sn
+</span><span style="color:#e6db74">                  sK8CAwEAAaNCMEAwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYwHQYD
+</span><span style="color:#e6db74">                  VR0OBBYEFP0hTcAwTHAGFgQtkgrA3zsmSWxDMA0GCSqGSIb3DQEBCwUAA4IBgQAp
+</span><span style="color:#e6db74">                  ApgLdQBK6fZ7CWlEWwXSKxcjv3akuSqf1NXfn/J9e1rAqqyYoTDE9DXG9dYHL9OA
+</span><span style="color:#e6db74">                  p78KLsLy9fQmrLMmjacXw49bpXDG6XN1WLJfhgQg3j7lXvOvXyxynOgKDtBlroiU
+</span><span style="color:#e6db74">                  nMoK+or9lF2lBIuY34GPyZCL/+vB8s1tu0dGBDgHMUL8/k5d27sdGZZUljC7CgcC
+</span><span style="color:#e6db74">                  k+ABrv19IygDpZpZ6m5N27xajnKpJSjXOfpMCPdhCuNRMgMTX6x8bxZzVAx9ogQ8
+</span><span style="color:#e6db74">                  16ZzAziB4iMXeCggaY/+YnoEstzTDPXB8FuqeGEVt63Y9ZA7NgWYvVExtKFGGhOL
+</span><span style="color:#e6db74">                  lnEhCLjQyu6/LgOJNfNM9EofaE/IU+i0talgFA+ygSChmYdXzFJn4EfAY9XbwEwV
+</span><span style="color:#e6db74">                  Pw+NHbkpv82jIpc+mopuMRdDO5OyFb+IGkn7ITUFE9N+u97oz2PjD5nQ/Z5DGjBu
+</span><span style="color:#e6db74">                  y3sefnrlqaRanHYkmOnOBTwImPSq8RE8eJP2aRrnu+2YrnoACXxS+XWUXtNhXJ4=
+</span><span style="color:#e6db74">                  -----END CERTIFICATE-----</span>                  
+    <span style="color:#f92672">services</span>:
+        <span style="color:#ae81ff">...</span>
+        <span style="color:#f92672">cray-vault</span>:
+            <span style="color:#f92672">sealedSecrets</span>:
+            - <span style="color:#e6db74">&#34;{{ kubernetes.sealed_secrets.external_platform_ca_1 | toYaml }}&#34;</span>
+            <span style="color:#f92672">pki</span>:
+                <span style="color:#f92672">customCA</span>:
+                    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+                    <span style="color:#f92672">secret</span>: <span style="color:#ae81ff">external-platform-ca-1</span>
+                    <span style="color:#f92672">private_key</span>: <span style="color:#ae81ff">int_ca.key</span>
+                    <span style="color:#f92672">certificate</span>: <span style="color:#ae81ff">int_ca.crt</span>
+                    <span style="color:#f92672">ca_bundle</span>: <span style="color:#ae81ff">ca_bundle.crt</span>
+            <span style="color:#ae81ff">...</span>
+</code></pre></div><blockquote>
+<p>Only RSA-based CAs with 3072- or 4096-bit moduli, using RSA256 as a signature/digest algorithm have been tested/are supported. Also note, the generator does not support password-protected private keys.</p>
+</blockquote>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/docs-csm/js/clipboard.min.js?1675739394"></script>
+    <script src="/docs-csm/js/perfect-scrollbar.min.js?1675739394"></script>
+    <script src="/docs-csm/js/perfect-scrollbar.jquery.min.js?1675739394"></script>
+    <script src="/docs-csm/js/jquery.sticky.js?1675739394"></script>
+    <script src="/docs-csm/js/featherlight.min.js?1675739394"></script>
+    <script src="/docs-csm/js/highlight.pack.js?1675739394"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/docs-csm/js/modernizr.custom-3.6.0.js?1675739394"></script>
+    <script src="/docs-csm/js/learn.js?1675739394"></script>
+    <script src="/docs-csm/js/hugo-learn.js?1675739394"></script>
+    
+        
+            <script src="/docs-csm/mermaid/mermaid.js?1675739394"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

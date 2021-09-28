@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Troubleshooting Information on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-13/troubleshooting/</link>
+    <description>Recent content in Troubleshooting Information on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:08:31 +0000</lastBuildDate><atom:link href="/docs-csm/en-13/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PXE Booting Runbook</title>
+      <link>/docs-csm/en-13/troubleshooting/pxe_runbook/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:36 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/troubleshooting/pxe_runbook/</guid>
+      <description>PXE Booting Runbook PXE booting is a key component of a working Shasta system. There are a lot of different components involved, which increases the complexity. This guide runs through the most common issues and shows what is needed in order to have a successful PXE boot.
+ NCNs on install ncn-m001 on reboot or NCN boot 2.1. Verify DHCP packets can be forwarded from the workers to the MTL network (VLAN1) 2.</description>
+    </item>
+    
+    <item>
+      <title>Interpreting Hms Health Check Results</title>
+      <link>/docs-csm/en-13/troubleshooting/interpreting_hms_health_check_results/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:31 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/troubleshooting/interpreting_hms_health_check_results/</guid>
+      <description>Interpreting HMS Health Check Results Table of contents  Introduction Overview Execution Failure analysis  Smoke test failure Functional test failure   Tavern output Additional troubleshooting  run_hms_ct_tests.sh  cray-hms-smd-test-functional cray-hms-firmware-action-test-functional   hsm_discovery_status_test.sh  HTTPsGetFailed ChildVerificationFailed DiscoveryStarted     Install blocking vs. Non-blocking failures  Introduction This document describes how to interpret the results of the HMS Health Check scripts and techniques for troubleshooting when failures occur.</description>
+    </item>
+    
+    <item>
+      <title>Runbook - DHCP Troubleshooting</title>
+      <link>/docs-csm/en-13/troubleshooting/dhcp_runbook/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:31 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/troubleshooting/dhcp_runbook/</guid>
+      <description>Runbook - DHCP Troubleshooting  Get an API token 1 Confirm the status of the cray-dhcp-kea services  Check cray-dchp-kea pods Check cray-dhcp-kea service endpoints Verify that cray-dhcp-kea configuration is valid Review cray-dhcp-kea running configuration Verify that cray-dhcp-kea has active DHCP leases Check dhcp-helper.py output Check cray-dhcp-kea logs   2 Troubleshooting DHCP for a specific node  Check current DHCP leases Check the Hardware State Manager  System Layout Service State Manager Daemon   Duplicate IP address Numerous DHCP decline messages during node boot   3 Network troubleshooting  Check BGP/MetalLB  Mellanox spine switches Aruba spine switches   tcpdump  Dell/Leaf CDU switches      Get an API token (ncn-mw#) Some of the commands in these procedures require an API token to be acquired and stored in the TOKEN environment variable.</description>
+    </item>
+    
+    <item>
+      <title>Runbook - DNS Troubleshooting</title>
+      <link>/docs-csm/en-13/troubleshooting/dns_runbook/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:31 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/troubleshooting/dns_runbook/</guid>
+      <description>Runbook - DNS Troubleshooting 1. Confirm the status of the cray-dns-unbound pods/services 1.1 Confirm cray-dns-unbound pods On any worker/manager, run:
+kubectl get -n services pods | grep unbound |grep -v unbound-manager You should see the following services as output:
+NAME READY STATUS RESTARTS AGE cray-dns-unbound-6d7cdf6cdb-8cwlw 2/2 Running 0 2d13h cray-dns-unbound-6d7cdf6cdb-nn96q 2/2 Running 0 2d13h cray-dns-unbound-6d7cdf6cdb-xsxrr 2/2 Running 0 2d13h  Confirm Running status for pods  1.3 Confirm cray-dnspunbound-coredns Job kubectl get job -n services -l app.</description>
+    </item>
+    
+    <item>
+      <title>Running Hms Ct Tests Manually</title>
+      <link>/docs-csm/en-13/troubleshooting/hms_ct_manual_run/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:31 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/troubleshooting/hms_ct_manual_run/</guid>
+      <description>Running HMS CT Tests Manually Use the following commands to run the HMS CT tests manually. These are the same tests that run as part of the CSM health validation procedures.
+Note: The information in this documentation generally, and on this page in particular, differs based on the version of CSM installed on the system. If viewing this documentation online, be sure that the CSM version of this documentation matches the CSM version on the system.</description>
+    </item>
+    
+    <item>
+      <title>Manual SSH Key Setting Process</title>
+      <link>/docs-csm/en-13/troubleshooting/bmc_ssh_key_manual_fixup/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:30 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/troubleshooting/bmc_ssh_key_manual_fixup/</guid>
+      <description>Manual SSH Key Setting Process If for whatever reason this script fails, SSH keys can be set manually using the following process:
+  Save the public SSH key for the root user.
+export SCSD_SSH_KEY=$(cat /root/.ssh/id_rsa.pub | sed &amp;#39;s/[[:space:]]*$//&amp;#39;) If a different SSH key is to be used (for example from conman) set the SCSD_SSH_KEY environment variable to that key value.
+  Generate a System Configuration Service configuration via the scsd tool.</description>
+    </item>
+    
+    <item>
+      <title>Troubleshoot The Cms Barebones Image Boot Test</title>
+      <link>/docs-csm/en-13/troubleshooting/cms_barebones_image_boot/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:30 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/troubleshooting/cms_barebones_image_boot/</guid>
+      <description>Troubleshoot the CMS Barebones Image Boot Test The CSM barebones image boot test verifies that the CSM services needed to boot a node are available and working properly. This test is very important to run, particularly during the CSM install prior to rebooting the PIT node, because it validates all of the services required for nodes to PXE boot from the cluster.
+This page gives some information about the CSM barebones image, describes how the barebonesImageTest script works, explains how to interpret the results of the script, and provides a procedure to manually perform the test, if needed.</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting Information</title>
+      <link>/docs-csm/en-13/troubleshooting/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:30 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/troubleshooting/readme/</guid>
+      <description>CSM Troubleshooting Information This document provides links to troubleshooting information for services and functionality provided by CSM.
+Helpful tips for navigating the CSM repository In the main repository landing page, change the branch to the CSM version being used on the system (for example, release/1.0, release/1.2, release/1.3).
+Use the pre-populated GitHub &amp;ldquo;Search or jump to&amp;hellip;&amp;rdquo; function in the upper left hand side of the page and append keywords related to the exiting problem seen into the existing search.</description>
+    </item>
+    
+  </channel>
+</rss>

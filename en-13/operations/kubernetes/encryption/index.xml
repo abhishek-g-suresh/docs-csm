@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes Encryption on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-13/operations/kubernetes/encryption/</link>
+    <description>Recent content in Kubernetes Encryption on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:07:04 +0000</lastBuildDate><atom:link href="/docs-csm/en-13/operations/kubernetes/encryption/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes Encryption</title>
+      <link>/docs-csm/en-13/operations/kubernetes/encryption/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:07:04 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/operations/kubernetes/encryption/readme/</guid>
+      <description>Kubernetes Encryption Beginning in CSM 1.3, support is enabled for data encryption in etcd for Kubernetes secrets at rest.
+This controller is deployed by default in CSM with the cray-kubernetes-encryption Helm chart.
+By default, encryption is not enabled and must be enabled after install.
+Note that control plane is used in this document elsewhere master or management nodes may be used. Control plane is used to be consistent with upstream Kubernetes documentation.</description>
+    </item>
+    
+  </channel>
+</rss>

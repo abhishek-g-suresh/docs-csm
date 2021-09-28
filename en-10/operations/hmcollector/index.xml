@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hmcollector on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-10/operations/hmcollector/</link>
+    <description>Recent content in Hmcollector on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:08:02 +0000</lastBuildDate><atom:link href="/docs-csm/en-10/operations/hmcollector/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adjust Hm Collector Resource Limits And Requests</title>
+      <link>/docs-csm/en-10/operations/hmcollector/adjust_hmcollector_resource_limits_requests/</link>
+      <pubDate>Tue, 07 Feb 2023 03:06:53 +0000</pubDate>
+      
+      <guid>/docs-csm/en-10/operations/hmcollector/adjust_hmcollector_resource_limits_requests/</guid>
+      <description>Adjust HM Collector resource limits and requests  Resource Limit Tuning Guidance Customize cray-hms-hmcollector resource limits and requests in customizations.yaml Redeploy cray-hms-hmcollector with new resource limits and requests  Resource Limit Tuning Guidance Inspect current resource usage in the cray-hms-hmcollector pod View resource usage of the containers in the cray-hms-hmcollector pod:
+ncn-m001# kubectl -n services top pod -l app.kubernetes.io/name=cray-hms-hmcollector --containers POD NAME CPU(cores) MEMORY(bytes) cray-hms-hmcollector-7c5b797c5c-zxt67 istio-proxy 187m 275Mi cray-hms-hmcollector-7c5b797c5c-zxt67 cray-hms-hmcollector 4398m 296Mi The default resource limits for the cray-hms-hmcollector container are:</description>
+    </item>
+    
+  </channel>
+</rss>

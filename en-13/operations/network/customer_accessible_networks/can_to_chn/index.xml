@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CAN To Chn on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-13/operations/network/customer_accessible_networks/can_to_chn/</link>
+    <description>Recent content in CAN To Chn on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:09:12 +0000</lastBuildDate><atom:link href="/docs-csm/en-13/operations/network/customer_accessible_networks/can_to_chn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Customer Access Networks</title>
+      <link>/docs-csm/en-13/operations/network/customer_accessible_networks/can_to_chn/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:07:08 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/operations/network/customer_accessible_networks/can_to_chn/readme/</guid>
+      <description>Customer Access Networks Customer access to Shasta services is provided by a Customer Access Network (CAN).
+Enabling Customer High-speed Network Routing By default, the Customer Access Network (CAN) is provided by the Node Management Network (NMN). CSM 1.3 allows for the system to be optionally configured to allow the CAN to be provided by the High-speed Network (HSN). When customer access is provided by the HSN, this is called the Customer High-speed Network (CHN).</description>
+    </item>
+    
+  </channel>
+</rss>

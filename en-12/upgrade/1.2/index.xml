@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1.2 on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-12/upgrade/1.2/</link>
+    <description>Recent content in 1.2 on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:08:30 +0000</lastBuildDate><atom:link href="/docs-csm/en-12/upgrade/1.2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upgrade Automation</title>
+      <link>/docs-csm/en-12/upgrade/1.2/scripts/upgrade/upgrade_automation/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:29 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/scripts/upgrade/upgrade_automation/</guid>
+      <description>Upgrade Automation This document describes how we automate upgrade process. In a nutshell, an upgrade is:
+ Upload new artifacts into a running system Rebuild each NCN with the newly uploaded images Deploy new charts after all NCNs are upgraded.  Prerequisites Everything we need before upgrading an NCN.
+ NOTE:
+The prerequisites.sh script is required to run on both ncn-m001 and ncn-m002. If an action is only needed to run once, developers must add logic to avoid running this action both times the script is executed.</description>
+    </item>
+    
+    <item>
+      <title>SLS Updater.py TechNICal Details</title>
+      <link>/docs-csm/en-12/upgrade/1.2/scripts/sls/sls_updater.py_technical_details/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:28 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/scripts/sls/sls_updater.py_technical_details/</guid>
+      <description>sls_updater.py Technical Details No action needed. Informational purposes only.
+Actions and order This migration is performed offline for data security. The running SLS file is first dumped, then the migration script is run and a new, migrated output file is created.
+ Migrate switch naming (in order): leaf to leaf-bmc, and agg to leaf. Remove api-gateway entries from HMLB subnets for CSM 1.2 security. Remove kubeapi-vip reservations for all networks except NMN.</description>
+    </item>
+    
+    <item>
+      <title>SLS Updates Expert Mode</title>
+      <link>/docs-csm/en-12/upgrade/1.2/scripts/sls/expert_mode/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:28 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/scripts/sls/expert_mode/</guid>
+      <description>SLS Updates Expert mode The 1.2 SLS Upgrader aims to make the upgrade of SLS from pre-CMS 1.2 to CSM 1.2 as seamless as possible. However, certain system constraints and subnet sizes quickly necessitate overriding standard input.
+ Key takeaways When to use expert mode Minimal input review Forcing preservation of some existing values Expert mode: Overriding defaults and forced guiding of upgrades  Expert mode: Prerequisites Expert mode: Process Expert mode: Example    Key takeaways  Expert mode requires both an iterative (offline) process and command line override values.</description>
+    </item>
+    
+    <item>
+      <title>SLS Utils Library</title>
+      <link>/docs-csm/en-12/upgrade/1.2/scripts/sls/sls_utils/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:28 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/scripts/sls/sls_utils/readme/</guid>
+      <description>sls_utils Library This is a reusable Python library for safely interacting with SLS network data (in JSON format).
+The library has been tested against Python version 3.6 and up.</description>
+    </item>
+    
+    <item>
+      <title>Upgrade SLS Offline From 1.0.x To Csm 1.2</title>
+      <link>/docs-csm/en-12/upgrade/1.2/scripts/sls/readme.sls_upgrade/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:28 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/scripts/sls/readme.sls_upgrade/</guid>
+      <description>Upgrade SLS Offline from CSM 1.0.x to CSM 1.2 Abstract Prior to updating SLS, at a minimum, answers to the following questions must be known:
+  Will user traffic (non-administrative) come in via the CAN or CHN, or is the site air-gapped?
+By default when upgrading to CSM 1.2, non-administrative user traffic is migrated from the CAN to the CHN while minimizing changes. If instead it is desired that the non-administrative user traffic continue to come in via the CAN, or if the site is air-gapped, then this must be explicitly specified during the SLS update.</description>
+    </item>
+    
+    <item>
+      <title>Plan And Coordinate Network Upgrade</title>
+      <link>/docs-csm/en-12/upgrade/1.2/plan_and_coordinate_network_upgrade/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:26 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/plan_and_coordinate_network_upgrade/</guid>
+      <description>Plan and coordinate network upgrade Prior to CSM 1.2, a single Customer Access Network (CAN) carried both the administrative network traffic and the user network traffic. CSM 1.2 introduces bifurcated CAN (BICAN), which is designed to separate administrative network traffic and user network traffic. With BICAN, the pre-1.2 CAN network is split into two separate networks:
+  Customer Management Network (CMN)
+This network allows only system administrative access from the customer site.</description>
+    </item>
+    
+    <item>
+      <title>Stage 1 - Ceph Image Upgrade</title>
+      <link>/docs-csm/en-12/upgrade/1.2/stage_1/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:26 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/stage_1/</guid>
+      <description>Stage 1 - Ceph image upgrade Reminder: If any problems are encountered and the procedure or command output does not provide relevant guidance, see Relevant troubleshooting links for upgrade-related issues.
+Procedure   Apply a workaround for the boot order.
+ncn-m001# /usr/share/doc/csm/scripts/workarounds/boot-order/run.sh   Run ncn-upgrade-ceph-nodes.sh for ncn-s001. Follow output of the script carefully. The script will pause for manual interaction.
+ncn-m001# /usr/share/doc/csm/upgrade/1.2/scripts/upgrade/ncn-upgrade-ceph-nodes.sh ncn-s001  NOTE: The root password for the node may need to be reset after it is rebooted.</description>
+    </item>
+    
+    <item>
+      <title>Stage 2 - Kubernetes Upgrade From 1.19.9 To 1.20.13</title>
+      <link>/docs-csm/en-12/upgrade/1.2/stage_2/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:26 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/stage_2/</guid>
+      <description>Stage 2 - Kubernetes Upgrade from 1.19.9 to 1.20.13 Reminder: If any problems are encountered and the procedure or command output does not provide relevant guidance, see Relevant troubleshooting links for upgrade-related issues.
+Stage 2.1   Run ncn-upgrade-master-nodes.sh for ncn-m002.
+Follow output of the script carefully. The script will pause for manual interaction.
+ncn-m001# /usr/share/doc/csm/upgrade/1.2/scripts/upgrade/ncn-upgrade-master-nodes.sh ncn-m002  NOTE: The root password for the node may need to be reset after it is rebooted.</description>
+    </item>
+    
+    <item>
+      <title>Stage 3 - Service Upgrades</title>
+      <link>/docs-csm/en-12/upgrade/1.2/stage_3/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:26 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/stage_3/</guid>
+      <description>Stage 3 - CSM Service Upgrades Reminder: If any problems are encountered and the procedure or command output does not provide relevant guidance, see Relevant troubleshooting links for upgrade-related issues.
+Prepare assets on ncn-m002   Set the CSM_RELEASE variable to the target CSM version of this upgrade.
+ncn-m002# CSM_RELEASE=csm-1.2.0   Follow either the Direct download or Manual copy procedure.
+ If there is a URL for the CSM tar file that is accessible from ncn-m002, then the Direct download procedure may be used.</description>
+    </item>
+    
+    <item>
+      <title>Stage 4 - Ceph Upgrade</title>
+      <link>/docs-csm/en-12/upgrade/1.2/stage_4/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:26 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/stage_4/</guid>
+      <description>Stage 4 - Ceph Upgrade Reminder: If any problems are encountered and the procedure or command output does not provide relevant guidance, see Relevant troubleshooting links for upgrade-related issues.
+Addresses CVEs  CVE-2021-3531: Swift API denial of service. CVE-2021-3524: HTTP header injects via CORS in RGW.. CVE-2021-3509: Dashboard XSS via token cookie. CVE-2021-20288: Unauthorized global_id reuse in cephx.  The upgrade includes all fixes from v15.2.9 through v15.2.15. See the Ceph version index for details.</description>
+    </item>
+    
+    <item>
+      <title>Stage 5 - Perform NCN Personalization</title>
+      <link>/docs-csm/en-12/upgrade/1.2/stage_5/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:26 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/stage_5/</guid>
+      <description>Stage 5 - Perform NCN Personalization Reminder: If any problems are encountered and the procedure or command output does not provide relevant guidance, see Relevant troubleshooting links for upgrade-related issues.
+Procedure   Set the root user password and SSH keys before running NCN personalization. The location where the password is stored in Vault has changed since previous CSM versions. See Configure the Root Password and Root SSH Keys in Vault.</description>
+    </item>
+    
+    <item>
+      <title>1.0.x To 1.2.x Upgrade Process</title>
+      <link>/docs-csm/en-12/upgrade/1.2/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:25 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/readme/</guid>
+      <description>CSM 1.0.x to 1.2.x Upgrade Process Introduction This document guides an administrator through the upgrade of Cray Systems Management from v1.0.x to v1.2.x. When upgrading a system, follow this top-level file from top to bottom. The content on this top-level page is meant to be terse. For additional reference material on the upgrade processes and scripts mentioned explicitly on this page, see resource material.
+If upgrading from CSM 1.0.x to 1.</description>
+    </item>
+    
+    <item>
+      <title>Stage 0 - Prerequisites And Preflight Checks</title>
+      <link>/docs-csm/en-12/upgrade/1.2/stage_0_prerequisites/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:25 +0000</pubDate>
+      
+      <guid>/docs-csm/en-12/upgrade/1.2/stage_0_prerequisites/</guid>
+      <description>Stage 0 - Prerequisites and Preflight Checks  Reminders:
+ CSM 1.0.1 or higher is required in order to upgrade to CSM 1.2.x. If any problems are encountered and the procedure or command output does not provide relevant guidance, see Relevant troubleshooting links for upgrade-related issues.   Abstract (Stage 0) Stage 0 has several critical procedures which prepares and verify if the environment is ready for upgrade. First, the latest documentation RPM is installed; it includes critical install scripts used in the upgrade procedure.</description>
+    </item>
+    
+  </channel>
+</rss>

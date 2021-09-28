@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nexus-setup on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-14/workflows/iuf/operations/nexus-setup/</link>
+    <description>Recent content in Nexus-setup on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:09:42 +0000</lastBuildDate><atom:link href="/docs-csm/en-14/workflows/iuf/operations/nexus-setup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Argo Templates</title>
+      <link>/docs-csm/en-14/workflows/iuf/operations/nexus-setup/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:46 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/workflows/iuf/operations/nexus-setup/readme/</guid>
+      <description>Argo Templates nexus-setup-template.yaml This template will perform Nexus blobstore and repository setup. In its current form, the template requires a few parameters. Most parameters should be automatically obtained from the product installer&amp;rsquo;s IUF manifest file, but that functionality is not in place yet. The template leverages the cray-nexus-setup container. Since this template is still in development, it is using a specific non-production version of that image to support the IUF.</description>
+    </item>
+    
+  </channel>
+</rss>

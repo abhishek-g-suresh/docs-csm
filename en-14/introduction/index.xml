@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction To Installation on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-14/introduction/</link>
+    <description>Recent content in Introduction To Installation on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:06:12 +0000</lastBuildDate><atom:link href="/docs-csm/en-14/introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Documentation Conventions</title>
+      <link>/docs-csm/en-14/introduction/documentation_conventions/</link>
+      <pubDate>Tue, 07 Feb 2023 03:06:12 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/introduction/documentation_conventions/</guid>
+      <description>Documentation Conventions This outlines conventions and standards that are used in this documentation.
+ Markdown format File formats Typographic conventions Command prompt conventions  Host and user name in command prompts Node abbreviations Command prompt reference Command prompt location Command prompts inside new shells  chroot example kubectl exec example Combined ssh and chroot example   Directory path in command prompt   Ability to pause and resume procedures  Bad example Good example    Markdown format This documentation is in Markdown format.</description>
+    </item>
+    
+    <item>
+      <title>Introduction To Installation</title>
+      <link>/docs-csm/en-14/introduction/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:06:11 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/introduction/readme/</guid>
+      <description>Introduction to CSM Installation This document provides an introduction to the Cray System Management (CSM) installation documentation for an HPE Cray EX system.
+Topics  CSM overview Installing or upgrading CSM CSM product stream updates CSM operational activities Deprecated Features Documentation Conventions  CSM overview The CSM installation prepares and deploys a distributed system across a group of management nodes organized into a Kubernetes cluster which uses Ceph for utility storage.</description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>/docs-csm/en-14/introduction/csm_overview/</link>
+      <pubDate>Tue, 07 Feb 2023 03:06:11 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/introduction/csm_overview/</guid>
+      <description>CSM Overview This CSM Overview describes the Cray System Management ecosystem with its hardware, software, and network. It describes how to access these services and components.
+The CSM installation prepares and deploys a distributed system across a group of management nodes organized into a Kubernetes cluster which uses Ceph for utility storage. These nodes perform their function as Kubernetes master nodes, Kubernetes worker nodes, or utility storage nodes with the Ceph storage.</description>
+    </item>
+    
+  </channel>
+</rss>

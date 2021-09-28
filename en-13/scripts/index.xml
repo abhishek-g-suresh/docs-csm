@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scripts on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-13/scripts/</link>
+    <description>Recent content in Scripts on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:08:30 +0000</lastBuildDate><atom:link href="/docs-csm/en-13/scripts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Boot Order Workaround</title>
+      <link>/docs-csm/en-13/scripts/workarounds/boot-order/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:30 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/scripts/workarounds/boot-order/readme/</guid>
+      <description>Boot Order Workaround This directory includes the script and the library necessary for applying the workaround to all reachable NCNs.
+Usage   Run run.sh.
+ncn# /usr/share/doc/csm/scripts/workarounds/boot-order/run.sh Example output:
+Failed to ping [ncn-w004]; skipping hotfix for [ncn-w004] Uploading new metal-lib.sh to ncn-m001:/srv/cray/scripts/metal/ ... Done Uploading new metal-lib.sh to ncn-m002:/srv/cray/scripts/metal/ ... Done Uploading new metal-lib.sh to ncn-m003:/srv/cray/scripts/metal/ ... Done Uploading new metal-lib.sh to ncn-s001:/srv/cray/scripts/metal/ ... Done Uploading new metal-lib.sh to ncn-s002:/srv/cray/scripts/metal/ .</description>
+    </item>
+    
+  </channel>
+</rss>

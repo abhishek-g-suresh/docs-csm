@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Product Management on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-09/operations/csm_product_management/</link>
+    <description>Recent content in Product Management on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:06:44 +0000</lastBuildDate><atom:link href="/docs-csm/en-09/operations/csm_product_management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Change Passwords And Credentials</title>
+      <link>/docs-csm/en-09/operations/csm_product_management/change_passwords_and_credentials/</link>
+      <pubDate>Tue, 07 Feb 2023 03:06:15 +0000</pubDate>
+      
+      <guid>/docs-csm/en-09/operations/csm_product_management/change_passwords_and_credentials/</guid>
+      <description>Change Passwords and Credentials This is an overarching procedure to change all credentials managed by Cray System Management (CSM) in HPE Cray EX system to new values.
+There are many passwords and credentials used in different contexts to manage the system. These can be changed as needed. Their initial settings are documented, so it is recommended to change them during or soon after a CSM software installation.
+Procedure 1. Change Hardware Credentials   Perform procedures in Change Cray EX Cabinet Global Default Password.</description>
+    </item>
+    
+    <item>
+      <title>Security Hardening</title>
+      <link>/docs-csm/en-09/operations/csm_product_management/apply_security_hardening/</link>
+      <pubDate>Tue, 07 Feb 2023 03:06:15 +0000</pubDate>
+      
+      <guid>/docs-csm/en-09/operations/csm_product_management/apply_security_hardening/</guid>
+      <description>Security Hardening This is an overarching guide to further harden the security posture of a Cray System Management (CSM) system.
+If a subset of the steps in this procedure were completed as a consequence of an install, upgrade, or other guidance, then it is safe to skip that subset following a review.
+Prerequisites None.
+Procedure   Change passwords and credentials.
+Perform procedure(s) in Change Passwords and Credentials.
+  Restrict access to ncn-images S3 Bucket.</description>
+    </item>
+    
+  </channel>
+</rss>

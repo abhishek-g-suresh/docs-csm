@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SLS Utils Library on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-14/operations/network/customer_accessible_networks/can_to_chn/scripts/sls/sls_utils/</link>
+    <description>Recent content in SLS Utils Library on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:07:12 +0000</lastBuildDate><atom:link href="/docs-csm/en-14/operations/network/customer_accessible_networks/can_to_chn/scripts/sls/sls_utils/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SLS Utils Library</title>
+      <link>/docs-csm/en-14/operations/network/customer_accessible_networks/can_to_chn/scripts/sls/sls_utils/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:07:12 +0000</pubDate>
+      
+      <guid>/docs-csm/en-14/operations/network/customer_accessible_networks/can_to_chn/scripts/sls/sls_utils/readme/</guid>
+      <description>sls_utils Library This is a reusable Python library for safely interacting with SLS network data (in JSON format).
+The library has been tested against Python version 3.6 and up.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>-0.9.5 on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-09/upgrade/0.9/csm-0.9.5/</link>
+    <description>Recent content in -0.9.5 on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:06:39 +0000</lastBuildDate><atom:link href="/docs-csm/en-09/upgrade/0.9/csm-0.9.5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cve-2021-22555 Cve-2021-33909</title>
+      <link>/docs-csm/en-09/upgrade/0.9/csm-0.9.5/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:06:23 +0000</pubDate>
+      
+      <guid>/docs-csm/en-09/upgrade/0.9/csm-0.9.5/readme/</guid>
+      <description>CVE-2021-22555 CVE-2021-33909 This procedure covers patching CVE-2021-22555 and CVE-2021-33909 on Shasta V1.4.X (and upgrades CSM to v0.9.5). These special directions are only for Linux dependencies, such as the kernel and internal packages compiled against the kernel.
+A high-level overview of the procedure is as follows:
+ install the new kernel directly to NCNs delete the existing artifacts from S3 upload the new artifacts to S3 reboot NCNs  Procedures:
+ Preparation Run Validation Checks (Pre-Upgrade) Remove zypper RIS services repositories Run CVE Patch Script Reboot NCNs Validate NCNs Running Patched Kernel Upgrade Services Run Validation Checks (Post-Upgrade) Verify CSM Version in Product Catalog Update UAS/UAI Exit Typescript  Preparation   Start a typescript to capture the commands and output from this procedure.</description>
+    </item>
+    
+  </channel>
+</rss>

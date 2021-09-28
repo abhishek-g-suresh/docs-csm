@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1.3.1 on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-13/upgrade/1.3.1/</link>
+    <description>Recent content in 1.3.1 on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:08:41 +0000</lastBuildDate><atom:link href="/docs-csm/en-13/upgrade/1.3.1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.3.1 Patch Installation Instructions</title>
+      <link>/docs-csm/en-13/upgrade/1.3.1/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:37 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/upgrade/1.3.1/readme/</guid>
+      <description>CSM 1.3.1 Patch Installation Instructions Introduction This document guides an administrator through the patch update to Cray Systems Management v1.3.1 from v1.3.0. If upgrading from CSM v1.2.2 directly to v1.3.1, follow the procedures described in Upgrade CSM instead.
+Bug Fixes and Improvements  Update cfs-operator for fixed session memory limits. Fix HSN NIC numbering in SMD for devices managed by HPE Proliant iLO (Redfish). Restrict accessible Keycloak endpoints in OPA Policy.</description>
+    </item>
+    
+  </channel>
+</rss>

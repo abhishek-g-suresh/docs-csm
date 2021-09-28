@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Update Product Stream on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-13/update_product_stream/</link>
+    <description>Recent content in Update Product Stream on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:08:36 +0000</lastBuildDate><atom:link href="/docs-csm/en-13/update_product_stream/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update Product Stream</title>
+      <link>/docs-csm/en-13/update_product_stream/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:36 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/update_product_stream/readme/</guid>
+      <description>Update CSM Product Stream The software included in the CSM product stream is released in more than one way. The initial product release may be augmented with patches, documentation updates, or hotfixes after the release.
+The CSM documentation is included within the CSM product release tarball inside the docs-csm RPM. After the RPM has been installed, the documentation will be available at /usr/share/doc/csm.
+ Download and extract CSM product release Apply patch to CSM release  Prerequisites Procedure   Check for latest documentation Check for field notices about hotfixes  Download and extract CSM product release Acquire a CSM software release tarball for installation on the HPE Cray EX supercomputer.</description>
+    </item>
+    
+  </channel>
+</rss>

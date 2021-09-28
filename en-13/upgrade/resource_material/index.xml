@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resource Materials on Cray System Management (CSM)</title>
+    <link>/docs-csm/en-13/upgrade/resource_material/</link>
+    <description>Recent content in Resource Materials on Cray System Management (CSM)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 07 Feb 2023 03:08:38 +0000</lastBuildDate><atom:link href="/docs-csm/en-13/upgrade/resource_material/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resource Materials</title>
+      <link>/docs-csm/en-13/upgrade/resource_material/readme/</link>
+      <pubDate>Tue, 07 Feb 2023 03:08:38 +0000</pubDate>
+      
+      <guid>/docs-csm/en-13/upgrade/resource_material/readme/</guid>
+      <description>Resource Materials Files in this directory (and its sub-directories) are provided as reference material in support of the automated scripts which are intended to execute as much as possible during the upgrade process.
+Topics  Worker Reference Cephadm Reference  </description>
+    </item>
+    
+  </channel>
+</rss>
