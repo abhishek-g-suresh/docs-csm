@@ -547,6 +547,8 @@ The following actions may be useful if errors are encountered when executing `iu
 
 ## Install and Upgrade Observability Framework
 
-Install and Upgrade Observability Framework creates unified consistent requirements for each product including assertions for Goss health checks, as well metrics and dashboards for health checks. The framework also includes a unified consistent method to automatically track Time to Install (TTI) and Time to Upgrade (TTU), as well as error and pattern count across clusters and product streams. Automate the deployment, installation, and configuration of the Install and Upgrade Observability framework in a CSM environment.
+Install and Upgrade Observability Framework creates unified consistent requirements for each product including assertions for Goss health checks, as well metrics and dashboards for health checks. The framework also includes a unified consistent method
+to automatically track Time to Install (TTI) and Time to Upgrade (TTU), as well as error and pattern count across clusters and product streams. Automate the deployment, installation, and configuration of the Install and Upgrade Observability framework
+in a CSM environment.
 
 For more information on the observability framework, refer to [Install and Upgrade Observability Framework](../observability/Observability.md).
