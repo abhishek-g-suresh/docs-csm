@@ -1,15 +1,15 @@
 # Example of the connections used in Shasta management network
 
-The intent of this guide is to give you an example of which transceivers would typically be used in Shasta management network. Please note that by this example does ***not*** work in every scenario and is simply made to give you an example of typical management network connections and they may or may not match how your specific setup is specified. 
+The intent of this guide is to give you an example of which transceivers would typically be used in Shasta management network. Please note that by this example does ***not*** work in every scenario and is simply made to give you an example of typical management network connections and they may or may not match how your specific setup is specified.
 
-In this example we are going to go over what you would see in typical "full" topology setup where you have the following switches: 
+In this example we are going to go over what you would see in typical "full" topology setup where you have the following switches:
 
 * Spine
 * Leaf
 * Cdu
 * Leaf-bmc
 
-***Warning*** 
+***Warning***
 
 * The transceivers here may not fit to your specified scenario because of "speed" or "distance" between devices.
 * The LLDP neighbor-info examples under the switches are only meant to give you can example of expected connections.
@@ -18,7 +18,7 @@ In this example we are going to go over what you would see in typical "full" top
 
 To see cabling instructions for NCN's please refer to this document:
 
-[Cable management network servers](https://github.com/Cray-HPE/docs-csm/blob/main/operations/network/management_network/cable_management_network_servers.md)
+[Cable management network servers](cable_management_network_servers.md)
 
 To get most up to date of supported transceivers, DAC cables, please go to aruba support portal and search for "Transceiver guide":
 
