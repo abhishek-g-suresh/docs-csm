@@ -16,7 +16,7 @@ In this example we are going to go over what you would see in typical "full" top
 
 ## Helpful links
 
-To see cabling instructions for NCN's please refer too this document:
+To see cabling instructions for NCN's please refer to this document:
 
 [Cable management network servers](https://github.com/Cray-HPE/docs-csm/blob/main/operations/network/management_network/cable_management_network_servers.md)
 
@@ -166,7 +166,7 @@ CDU typically has connection Leaf switches and they also have connections to:
 
 * Mountain management
 	* CMM (Chassis Management Module)
-	* CEC (Chassis Envinronment Control)
+	* CEC (Cabinet Envinronment Controller)
 
 Example LLDP neighbor-info output:
 
