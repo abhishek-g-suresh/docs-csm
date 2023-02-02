@@ -1,4 +1,3 @@
-adf
 # Example of the connections used in Shasta management network
 
 The intent of this guide is to give you an example of which transceivers would typically be used in Shasta management network. Please note that by this example does ***not*** work in every scenario and is simply made to give you an example of typical management network connections and they may or may not match how your specific setup is specified. 
