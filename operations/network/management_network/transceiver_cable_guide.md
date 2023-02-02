@@ -8,6 +8,8 @@ Also the intent of this guide is not to provide you "how-to" cable your system b
 
 The supported transceivers are broken down by vendor and have direct links to vendor sites for more information.
 
+* [Transceiver examples guide](transceiver_example.md)
+
 ## Vendors
 
 * Aruba
