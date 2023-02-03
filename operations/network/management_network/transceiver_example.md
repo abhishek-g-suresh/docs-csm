@@ -30,11 +30,6 @@ Typically Spine is "JL636A Aruba 8325-32C 32p 100G Switch".
 
 Spine typically only has connections to other switches, such as "spine", "leaf and so on.
 
-NOTE: preferred vs budget DIY
-NOTE: https://github.com/Cray-HPE/docs-csm/blob/main/operations/network/management_network/cable_management_network_servers.md
-
-Link the two.
-
 Example LLDP neighbor-info output:
 
 ```bash
