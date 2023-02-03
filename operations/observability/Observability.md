@@ -1,5 +1,27 @@
 # Install and Upgrade Observability Framework
 
+The following IUF topics are discussed in the following subsections.
+
+- [Overview](#overview)
+- [Automation of observability framework](#automation-of-observability-framework)
+  - [Features](#automation-framework-features)
+  - [Automation workflow](#automation-workflow)
+  - [`systemd` services](#systemd-services)
+- [IUF timing dashboard](#iuf-timing-dashboard)
+  - [Features](#timing-dashboard-features)
+  - [Prometheus metrics using Argo workflow](#prometheus-metrics-using-argo-workflow)
+  - [Timing dashboard](#timing-dashboard)
+- [GOSS tests for PIT and NCN](#goss-tests-for-pit-and-ncn)
+  - [Overview](#goss-test-overview)
+  - [Workflow](#goss-test-workflow)
+  - [Log file format](#goss-test-log-file-format)
+  - [Grok-exporter deployment, service and service-monitor](#grok-exporter-deployment-service-and-service-monitor)
+  - [Configuration file for the grok-exporter](#configuration-file-for-the-grok-exporter)
+  - [Prometheus metrics and Grafana dashboard](#prometheus-metrics-and-grafana-dashboard)
+- [Error dashboards](#error-dashboards)
+  - [Features](#error-dashboards-features)
+  - [Types](#error-dashboards-types)
+
 ## Overview
 
 The Install and Upgrade Observability Framework creates unified consistent requirements for each product
@@ -29,28 +51,7 @@ Time to Upgrade (TTU), as well as error and pattern count across clusters and pr
 1. The automatic generation of configurable Grafana dashboards that provide key insights and KPIs into the frequency of errors
    across the complex systems, panels to visualize the outliers, and trends in the complex system  across different dimensions.
 
-The following IUF topics are discussed in the following subsections.
-
-- [Automation of Observability framework](#automation-of-observability-framework)
-  - [Features](#automation-framework-features)
-  - [Automation workflow](#automation-workflow)
-  - [`systemd` services](#systemd-services)
-- [IUF Timing dashboard](#iuf-timing-dashboard)
-  - [Features](#timing-dashboard-features)
-  - [Prometheus metrics using Argo Workflow](#prometheus-metrics-using-argo-workflow)
-  - [Timing Dashboard](#timing-dashboard)
-- [GOSS Tests for PIT and NCN](#goss-tests-for-pit-and-ncn)
-  - [Overview](#goss-test-overview)
-  - [Workflow](#workflow)
-  - [Log file format](#log-file-format)
-  - [Grok-exporter deployment, service and service-monitor](#grok-exporter-deployment-service-and-service-monitor)
-  - [Configuration file for the grok-exporter](#configuration-file-for-the-grok-exporter)
-  - [Prometheus metrics and Grafana dashboard](#prometheus-metrics-and-grafana-dashboard)
-- [Error Dashboards](#error-dashboards)
-  - [Features](#error-dashboards-features)
-  - [Types](#error-dashboards-types)
-
-## Automation of Observability framework
+## Automation of observability framework
 
 Grok-exporter, Prometheus, and Grafana get instantiated automatically on the Combined Install Media LiveCD for PIT dimension of metrics for error/debug/count.
 
@@ -68,9 +69,11 @@ Grok-exporter, Prometheus, and Grafana get instantiated automatically on the Com
 
 ### `systemd` services
 
-Command to check the status of `pit-observability` services which includes grok-exporter, Prometheus, and Grafana.
+Commands to check the status of `pit-observability` services which includes grok-exporter, Prometheus, and Grafana.
 
-Command:
+#### Check grok-exporter status on PIT node
+
+(`pit#`) Command:
 
 ```bash
 systemctl status grok-exporter.service
@@ -100,7 +103,9 @@ Jan 25 00:04:36 redbull-pit grok-exporter[22381]: Starting server on http://redb
 Jan 25 00:04:36 redbull-pit systemd[1]: Started Grok-exporter.
 ```
 
-Command:
+#### Check Prometheus status on PIT node
+
+(`pit#`) Command:
 
 ```bash
 systemctl status prometheus.service
@@ -130,37 +135,41 @@ Jan 25 05:00:09 redbull-pit prometheus[25680]: ts=2023-01-25T05:00:09.261Z calle
 Jan 25 05:00:09 redbull-pit prometheus[25680]: ts=2023-01-25T05:00:09.263Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.7
 ```
 
-Command:
+#### Check Grafana status on PIT node
+
+(`pit#`) Command:
 
 ```bash
-systemctl status prometheus.service
+systemctl status grafana.service
 ```
 
 Example output:
 
 ```text
-● prometheus.service - Prometheus
-     Loaded: loaded (/usr/lib/systemd/system/prometheus.service; enabled; vendor preset: disabled)
-     Active: active (running) since Wed 2023-01-25 00:05:47 UTC; 6h ago
-   Main PID: 25680 (conmon)
+● grafana.service - Grafana
+     Loaded: loaded (/usr/lib/systemd/system/grafana.service; enabled; vendor preset: disabled)
+     Active: active (running) since Thu 2023-02-02 05:58:13 UTC; 1 day 12h ago
+    Process: 97577 ExecStartPre=/usr/sbin/grafana.sh /run/grafana.service-pid /run/grafana.service-cid grafana (code=exited, status=0/SUCCESS)
+    Process: 97720 ExecStart=/usr/bin/podman start grafana (code=exited, status=0/SUCCESS)
+   Main PID: 97776 (conmon)
       Tasks: 2
-     CGroup: /system.slice/prometheus.service
-             ├─ 25674 /usr/bin/fuse-overlayfs -o ,lowerdir=/var/lib/containers/storage/overlay/l/NZKANI3GOO3KXVE2HIZI33JUTY:/var/lib/containers/storage/over>
-             └─ 25680 /usr/bin/conmon --api-version 1 -c 8221fc0337a5bc8ac706ffeb270c18719caf2c02de8402a047670e578010921f -u 8221fc0337a5bc8ac706ffeb270c187>
+     CGroup: /system.slice/grafana.service
+             ├─ 97768 /usr/bin/fuse-overlayfs -o ,lowerdir=/var/lib/containers/storage/overlay/l/UOU2YMGV3WT2CIASNIEDBIY6OK:/var/lib/containers/storage/overlay/l/OTN7MKME4TAMZRF4URPIIIAXNI:/var/lib/>
+             └─ 97776 /usr/bin/conmon --api-version 1 -c f45f33ad520fb278776cf528dab1fdf619f0b1323e672d29d866f728ce8e2589 -u f45f33ad520fb278776cf528dab1fdf619f0b1323e672d29d866f728ce8e2589 -r /usr/>
 
-Jan 25 00:05:47 redbull-pit prometheus[25680]: ts=2023-01-25T00:05:47.048Z caller=main.go:993 level=info fs_type=TMPFS_MAGIC
-Jan 25 00:05:47 redbull-pit prometheus[25680]: ts=2023-01-25T00:05:47.048Z caller=main.go:996 level=info msg="TSDB started"
-Jan 25 00:05:47 redbull-pit prometheus[25680]: ts=2023-01-25T00:05:47.048Z caller=main.go:1177 level=info msg="Loading configuration file" filename=/etc/pro>
-Jan 25 00:05:47 redbull-pit prometheus[25680]: ts=2023-01-25T00:05:47.052Z caller=main.go:1214 level=info msg="Completed loading of configuration file" file>
-Jan 25 00:05:47 redbull-pit prometheus[25680]: ts=2023-01-25T00:05:47.052Z caller=main.go:957 level=info msg="Server is ready to receive web requests."
-Jan 25 00:05:47 redbull-pit prometheus[25680]: ts=2023-01-25T00:05:47.052Z caller=manager.go:937 level=info component="rule manager" msg="Starting rule mana>
-Jan 25 03:06:09 redbull-pit prometheus[25680]: ts=2023-01-25T03:06:09.240Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1674605167>
-Jan 25 03:06:09 redbull-pit prometheus[25680]: ts=2023-01-25T03:06:09.242Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.3>
-Jan 25 05:00:09 redbull-pit prometheus[25680]: ts=2023-01-25T05:00:09.261Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1674612007>
-Jan 25 05:00:09 redbull-pit prometheus[25680]: ts=2023-01-25T05:00:09.263Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.7>
+Feb 02 05:58:15 redbull-pit grafana[97776]: logger=live t=2023-02-02T05:58:15.25+0000 lvl=info msg="Initialized channel handler" channel=grafana/dashboard/uid/K-kKuniVk address=grafana/dashboard/uid>
+Feb 02 05:58:25 redbull-pit grafana[97776]: logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2023-02-02T05:58:25.52+0000 lvl=info msg="Request Completed" method>
+Feb 02 06:02:05 redbull-pit grafana[97776]: logger=live t=2023-02-02T06:02:05.57+0000 lvl=info msg="Initialized channel handler" channel=grafana/dashboard/uid/j3yZA2u7k address=grafana/dashboard/uid>
+Feb 02 06:02:36 redbull-pit grafana[97776]: logger=live t=2023-02-02T06:02:36.3+0000 lvl=info msg="Initialized channel handler" channel=grafana/dashboard/uid/1Z_Xj0Cnz address=grafana/dashboard/uid/>
+Feb 02 06:06:34 redbull-pit grafana[97776]: logger=live t=2023-02-02T06:06:34.73+0000 lvl=info msg="Initialized channel handler" channel=grafana/dashboard/uid/LATEST address=grafana/dashboard/uid/LA>
+Feb 02 07:54:25 redbull-pit grafana[97776]: logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2023-02-02T07:54:25.07+0000 lvl=info msg="Request Completed" method>
+Feb 02 14:21:56 redbull-pit grafana[97776]: logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2023-02-02T14:21:56.37+0000 lvl=info msg="Request Completed" method=GET >
+Feb 02 14:34:30 redbull-pit grafana[97776]: logger=context traceID=00000000000000000000000000000000 userId=0 orgId=0 uname= t=2023-02-02T14:34:30.84+0000 lvl=info msg="Request Completed" method=GET >
+Feb 02 14:35:01 redbull-pit grafana[97776]: logger=http.server t=2023-02-02T14:35:01.68+0000 lvl=info msg="Successful Login" User=admin@localhost
+Feb 02 14:35:07 redbull-pit grafana[97776]: logger=context traceID=00000000000000000000000000000000 userId=1 orgId=1 uname=admin t=2023-02-02T14:35:07.37+0000 lvl=info msg="Request Completed" method>
 ```
 
-## IUF Timing dashboard
+## IUF timing dashboard
 
 ### Timing dashboard features
 
@@ -169,7 +178,7 @@ Jan 25 05:00:09 redbull-pit prometheus[25680]: ts=2023-01-25T05:00:09.263Z calle
 - Generate Prometheus install/upgrade timing metrics.
 - Create Grafana dashboard using Prometheus metrics.
 
-### Prometheus metrics using Argo Workflow
+### Prometheus metrics using Argo workflow
 
 Able to get the start-time and end-time as Prometheus labels for the operations using Argo metrics approach. Added record time stamp task at the beginning and end of the operation template using timestamp output parameter as an input to the metrics.
 
@@ -223,11 +232,11 @@ For example, a Goss test to validate expected Kubernetes nodes exists using the 
 
 Running the automated scripts using the complete path of script like `/opt/cray/tests/install/ncn/automated/ncn-healthcheck`.
 
-### Workflow
+### Goss test workflow
 
 ![Goss test workflow](../../img/operations/GossWorkflow.png "Goss Workflow")
 
-### Log file format
+### Goss test log file format
 
 Individual lines of logs are in the following format for each node or PIT node, test name, and source:
 
