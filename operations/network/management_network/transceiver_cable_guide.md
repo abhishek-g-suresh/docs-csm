@@ -8,7 +8,9 @@ Also the intent of this guide is not to provide you "how-to" cable your system b
 
 The supported transceivers are broken down by vendor and have direct links to vendor sites for more information.
 
-* [Transceiver examples guide](transceiver_example.md)
+[Transceiver examples guide](transceiver_example.md)
+
+asdf
 
 ## Vendors
 
@@ -205,6 +207,46 @@ Cable (JL489A)
 * Aruba 100G QSFP28 to QSFP28 3m Direct Attach Copper Cable (JL307A)
 * Aruba 100G QSFP28 to QSFP28 5m Direct Attach Copper Cable (R0Z26A)
 * HPE (HIT) QSFP28 to 4xSFP28 3m Breakout Direct Attach Cable (845416-B21)
+
+## R8Z96A Aruba 9300-32D 32-port 100/200/400G QSFP-DD 2-port 10G Switch
+
+32-ports of 100GbE, 200GbE or 400GbE
+2-ports of 10GbE
+
+### 100G Transceivers and Cables
+
+* R9B63A2 Aruba 100G QSFP28 LC FR1 SMF 2km Transceiver
+
+### 200G Transceivers and Cables
+
+* R9B60A Aruba 200G QSFP-DD to 2x QSFP28 100G 3m Active Optical Cable
+* R9B58A Aruba 200G QSFP-DD to 2x QSFP28 100G 7m Active Optical Cable
+* R9B62A Aruba 200G QSFP-DD to 2x QSFP28 100G 15m Active Optical Cable
+* R9B61A Aruba 200G QSFP-DD to 2x QSFP28 100G 30m Active Optical Cable
+* R9B59A Aruba 200G QSFP-DD to 2x QSFP28 100G 50m Active Optical Cable
+
+### 400G Transceivers and Cables
+
+* R9B45A Aruba 400G QSFP-DD to QSFP-DD 3m Active Optical Cable
+* R9B43A Aruba 400G QSFP-DD to QSFP-DD 7m Active Optical Cable
+* R9B47A Aruba 400G QSFP-DD to QSFP-DD 15m Active Optical Cable
+* R9B46A Aruba 400G QSFP-DD to QSFP-DD 30m Active Optical Cable
+* R9B44A Aruba 400G QSFP-DD to QSFP-DD 50m Active Optical Cable
+* R9B41A Aruba 400G QSFP-DD MPO-16 SR8 100m MMF Transceiver
+* R9B42A2 Aruba 400G QSFP-DD MPO-12 eDR4 2km SMF Transceiver
+
+### 400G to 200G/100G Splitter cables
+
+* R9B55A Aruba 400G QSFP-DD to 2x QSFP56 200G 3m Active Optical Cable
+* R9B53A Aruba 400G QSFP-DD to 2x QSFP56 200G 7m Active Optical Cable
+* R9B57A Aruba 400G QSFP-DD to 2x QSFP56 200G 15m Active Optical Cable
+* R9B56A Aruba 400G QSFP-DD to 2x QSFP56 200G 30m Active Optical Cable
+* R9B54A Aruba 400G QSFP-DD to 2x QSFP56 200G 50m Active Optical Cable
+* R9B50A Aruba 400G QSFP-DD to 4x QSFP56 100G 3m Active Optical Cable
+* R9B48A Aruba 400G QSFP-DD to 4x QSFP56 100G 7m Active Optical Cable
+* R9B52A Aruba 400G QSFP-DD to 4x QSFP56 100G 15m Active Optical Cable
+* R9B51A Aruba 400G QSFP-DD to 4x QSFP56 100G 30m Active Optical Cable
+* R9B49A Aruba 400G QSFP-DD to 4x QSFP56 100G 50m Active Optical Cable
 
 ## Mellanox
 
