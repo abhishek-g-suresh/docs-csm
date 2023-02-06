@@ -1,6 +1,6 @@
 # Install and Upgrade Observability Framework
 
-The following IUF topics are discussed in the following subsections.
+The following Install and Upgrade Observability Framework topics are discussed in the following subsections.
 
 - [Overview](#overview)
 - [Automation of observability framework](#automation-of-observability-framework)
