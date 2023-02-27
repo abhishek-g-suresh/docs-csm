@@ -42,7 +42,7 @@ Fresh-installations may start at the [Boot installation environment](#2-boot-ins
 
 If one is reinstalling a system, the existing cluster needs to be wiped and powered down.
 
-See [Prepare Management Nodes](re-installation.md), and then come back and proceed
+See [Prepare Management Nodes](../re-installation.md), and then come back and proceed
 to the [Pre-Installation](#pre-installation) guide.
 
 These steps walk the user through properly setting up a Cray supercomputer for an installation.
