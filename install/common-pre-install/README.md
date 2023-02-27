@@ -28,7 +28,7 @@ shown here with numbered topics.
     1. [Apply security hardening](#11-apply-security-hardening)
 
 
-> **`NOTE:`** If problems are encountered during the installation, [Troubleshooting installation problems](#troubleshooting-installation-problems) and [Cray System Management (CSM) Administration Guide](../operations/README.md) will offer assistance.
+> **`NOTE:`** If problems are encountered during the installation, [Troubleshooting installation problems](#troubleshooting-installation-problems) and [Cray System Management (CSM) Administration Guide](../../operations/README.md) will offer assistance.
 
 ## Pre-installation
 
@@ -40,17 +40,17 @@ Fresh-installations may start at the [Boot installation environment](#2-boot-ins
 
 This section will guide the administrator through installing HPCM to generate seedfiles. The seedfiles will be used later in step of the CSM installation.
  
-See [Boot Pre-Install Live ISO and Seedfiles Generation](hpcm_installation.md)
+See [Boot Pre-Install Live ISO and Seedfiles Generation](hpcm_installation-cpi.md)
 
 ### 2. Preparing for a re-installation
 
 If one is reinstalling a system, the existing cluster needs to be wiped and powered down.
 
-See [Prepare Management Nodes](re-installation.md), and then come back and proceed to the [Pre-Installation](#pre-installation) guide.
+See [Prepare Management Nodes](../re-installation.md), and then come back and proceed to the [Pre-Installation](#pre-installation) guide.
 
 These steps walk the user through properly setting up a Cray supercomputer for an installation.
 
-See [Pre-installation](pre-installation.md).
+See [Pre-installation](pre-installation-cpi.md).
 
 ### 3. Boot installation environment
 
@@ -58,17 +58,17 @@ See [Boot installation environment](pre-installation.md#1-boot-installation-envi
 
 ### 4. Import CSM tarball
 
-See [Import CSM tarball](pre-installation.md#2-import-csm-tarball).
+See [Import CSM tarball](pre-installation-cpi.md#2-import-csm-tarball).
 
 ### 5. Create system configuration
 
-See [Create system configuration](pre-installation.md#3-create-system-configuration).
+See [Create system configuration](pre-installation-cpi.md#3-create-system-configuration).
 
 ### 6. Configure management network switches
 
 At this point external connectivity has been established, and either bare-metal configurations can be installed or new/updated configurations can be applied.
 
-See [Management Network User Guide](../operations/network/management_network/README.md).
+See [Management Network User Guide](../../operations/network/management_network/README.md).
 
 ## Installation
 
@@ -96,13 +96,13 @@ See [Validate CSM Health](../operations/validate_csm_health.md).
 
 Now that all CSM services have been installed and the CSM health checks completed, with the possible exception of Booting the CSM Barebones Image and the UAS/UAI tests, the PIT has served its purpose and the final NCN can be deployed. The node used for the PIT will be rebooted, this node will be the final NCN to deploy in the CSM install.
 
-See [Deploy Final NCN](deploy_final_non-compute_node.md).
+See [Deploy Final NCN](../deploy_final_non-compute_node.md).
 
 ### 5. Configure administrative access
 
 Now that all of the CSM services have been installed and the final NCN has been deployed, administrative access can be prepared. This may include configuring Keycloak with a local Keycloak account or confirming that Keycloak is properly federating LDAP or another Identity Provider (IdP), initializing the `cray` CLI for administrative commands, locking the management nodes from accidental actions such as firmware updates by FAS or power actions by CAPMC, configuring the CSM layer of configuration by CFS in NCN personalization, and configuring the node BMCs (node controllers) for nodes in liquid-cooled cabinets.
 
-See [Configure Administrative Access](configure_administrative_access.md).
+See [Configure Administrative Access](../configure_administrative_access.md).
 
 ### 6. Validate CSM health
 
@@ -110,19 +110,19 @@ Now that all management nodes have joined the Kubernetes cluster, CSM services h
 
 This CSM health validation can also be run at other points during the system lifecycle, such as when replacing a management node, checking the health after a management node has rebooted because of a crash, as part of doing a full system power down or power up, or after other types of system maintenance.
 
-See [Validate CSM Health](../operations/validate_csm_health.md).
+See [Validate CSM Health](../../operations/validate_csm_health.md).
 
 ### 7. Configure Prometheus alert notifications
 
 Now that CSM has been installed and health has been validated, if the system management health monitoring tools (specifically Prometheus) are found to be useful, then email notifications can be configured for specific alerts defined in Prometheus. Prometheus upstream documentation can be leveraged for an [Alert Notification Template Reference](https://prometheus.io/docs/alerting/latest/notifications/) as well as [Notification Template Examples](https://prometheus.io/docs/alerting/latest/notification_examples/). Currently supported notification types include Slack, Pager Duty, email, or a custom integration via a generic webhook interface.
 
-See [Configure Prometheus Email Alert Notifications](../operations/system_management_health/Configure_Prometheus_Email_Alert_Notifications.md) for an example configuration of an email alert notification for the Postgres replication alerts that are defined on the system.
+See [Configure Prometheus Email Alert Notifications](../../operations/system_management_health/Configure_Prometheus_Email_Alert_Notifications.md) for an example configuration of an email alert notification for the Postgres replication alerts that are defined on the system.
 
 ### 8. Update firmware with FAS
 
 Now that all management nodes and CSM services have been validated as healthy, the firmware on other components in the system can be checked and updated. The Firmware Action Service (FAS) communicates with many devices on the system. FAS can be used to update the firmware for all of the devices it communicates with at once, or specific devices can be targeted for a firmware update.
 
-> **IMPORTANT:** Before FAS can be used to update firmware, refer to the 1.5 _HPE Cray EX System Software Getting Started Guide S-8000_ on the [HPE Customer Support Center](https://www.hpe.com/support/ex-gsg) for more information about how to install the HPE Cray EX HPC Firmware Pack (HFP) product. The installation of HFP will inform FAS of the newest firmware available. Once FAS is aware that new firmware is available, then see [Update Firmware with FAS](../operations/firmware/Update_Firmware_with_FAS.md).
+> **IMPORTANT:** Before FAS can be used to update firmware, refer to the 1.5 _HPE Cray EX System Software Getting Started Guide S-8000_ on the [HPE Customer Support Center](https://www.hpe.com/support/ex-gsg) for more information about how to install the HPE Cray EX HPC Firmware Pack (HFP) product. The installation of HFP will inform FAS of the newest firmware available. Once FAS is aware that new firmware is available, then see [Update Firmware with FAS](../../operations/firmware/Update_Firmware_with_FAS.md).
 
 ### 9. Prepare compute nodes
 
@@ -143,7 +143,7 @@ After completion of the firmware update with FAS and the preparation of compute 
 
 The installation of the Cray System Management (CSM) product requires knowledge of the various nodes and switches for the HPE Cray EX system. The procedures in this section should be referenced during the CSM install for additional information on system hardware, troubleshooting, and administrative tasks related to CSM.
 
-See [Troubleshooting Installation Problems](troubleshooting_installation.md).
+See [Troubleshooting Installation Problems](../troubleshooting_installation.md).
 
 ## CSM Post-installation
 
@@ -151,4 +151,4 @@ See [Troubleshooting Installation Problems](troubleshooting_installation.md).
 
 Review the security hardening guide, apply non-optional procedures, and review optional procedures.
 
-See [Security Hardening](../operations/CSM_product_management/Apply_Security_Hardening.md).
+See [Security Hardening](Apply_Security_Hardening-cpi.md).
