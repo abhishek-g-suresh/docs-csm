@@ -30,7 +30,7 @@ shown here with numbered topics.
 
 > **`NOTE`** If problems are encountered during the installation,
 > [Troubleshooting installation problems](#troubleshooting-installation-problems) and
-> [Cray System Management (CSM) Administration Guide](../operations/README.md) will offer assistance.
+> [Cray System Management (CSM) Administration Guide](../../operations/README.md) will offer assistance.
 
 ## Pre-installation
 
