@@ -22,6 +22,6 @@ Detailed BICAN documentation can be found on the [BICAN technical details](../op
 
 Install Cray System Management by using one of the following options:
 
-Option 1 : [CSM Install](csm_install\README.md)
+**Option 1** : [CSM Install](csm_install\README.md)
 
-Option 2 : [CSM Install by Common Pre-installer](common_pre_installer\README.md) (**Tech Preview**)
+**Option 2 (Tech Preview)** : [CSM Install by Common Pre-installer](common_pre_installer\README.md)
