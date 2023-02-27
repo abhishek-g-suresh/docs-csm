@@ -47,19 +47,19 @@ to the [Pre-Installation](#pre-installation) guide.
 
 These steps walk the user through properly setting up a Cray supercomputer for an installation.
 
-See [Pre-installation](pre-installation.md).
+See [Pre-installation](../pre-installation.md).
 
 ### 2. Boot installation environment
 
-See [Boot installation environment](pre-installation.md#1-boot-installation-environment).
+See [Boot installation environment](../pre-installation.md#1-boot-installation-environment).
 
 ### 3. Import CSM tarball
 
-See [Import CSM tarball](pre-installation.md#2-import-csm-tarball).
+See [Import CSM tarball](../pre-installation.md#2-import-csm-tarball).
 
 ### 4. Create system configuration
 
-See [Create system configuration](pre-installation.md#3-create-system-configuration).
+See [Create system configuration](../pre-installation.md#3-create-system-configuration).
 
 ### 5. Configure management network switches
 
