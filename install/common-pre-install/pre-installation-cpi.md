@@ -312,10 +312,10 @@ in `/etc/environment` from the [Download CSM tarball](#21-download-csm-tarball) 
               --no-gpg-checks update -y cray-site-init
        ``` 
 
-       1. Install `iuf-cli`.
-
+   1. Install `iuf-cli`.
+       
        > **NOTE** This provides `iuf`, a command line interface to the [Install and Upgrade Framework](../operations/iuf/IUF.md).
-
+       
        ```bash
        zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \
               --no-gpg-checks install -y iuf-cli
