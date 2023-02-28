@@ -41,7 +41,7 @@ Fresh-installations may start at the [Boot installation environment](#3-boot-ins
 
 This section will guide the administrator through installing HPCM to generate seedfiles. The seedfiles will be used later in step of the CSM installation.
  
-See [Boot Pre-Install Live ISO and Seedfiles Generation](hpcm_installation-cpi.md)
+See [Boot Pre-Install Live ISO and Seedfiles Generation](hpcm_installation-cpi.md).
 
 ### 2. Preparing for a re-installation
 
