@@ -55,7 +55,7 @@ See [Pre-installation](pre-installation-cpi.md).
 
 ### 3. Boot installation environment
 
-See [Boot installation environment](pre-installation.md#1-boot-installation-environment).
+See [Boot installation environment](pre-installation-cpi.md#1-boot-installation-environment).
 
 ### 4. Import CSM tarball
 
@@ -77,7 +77,7 @@ See [Management Network User Guide](../../operations/network/management_network/
 
 The first nodes to deploy are the NCNs. These will host CSM services that are required for deploying the rest of the supercomputer.
 
-See [Deploy Management Nodes](deploy_non-compute_nodes.md).
+See [Deploy Management Nodes](../deploy_non-compute_nodes.md).
 
 > **`NOTE`** The PIT node will join Kubernetes after it is rebooted later in [Deploy final NCN](#4-deploy-final-ncn).
 
@@ -85,7 +85,7 @@ See [Deploy Management Nodes](deploy_non-compute_nodes.md).
 
 Now that deployment of management nodes is complete with initialized Ceph storage and a running Kubernetes cluster on all worker and master nodes, except the PIT node, the CSM services can be installed. The Nexus repository will be populated with artifacts; containerized CSM services will be installed; and a few other configuration steps will be taken. 
 
-See [Install CSM Services](install_csm_services.md).
+See [Install CSM Services](install_csm_services-cpi.md).
 
 ### 3. Validate CSM health before final NCN deployment
 
@@ -134,7 +134,7 @@ These compute node types require preparation:
 - HPE Apollo 6500 XL645d Gen10 Plus
 - Gigabyte
 
-See [Prepare Compute Nodes](prepare_compute_nodes.md).
+See [Prepare Compute Nodes](../prepare_compute_nodes.md).
 
 ### 10. Next topic
 
