@@ -91,7 +91,7 @@ See [Install CSM Services](install_csm_services-cpi.md).
 
 After installing all of the CSM services, now validate the health of the management nodes and all CSM services. The reason to do it now is that if there are any problems detected with the core infrastructure or the nodes, it is easy to rewind the installation to [Deploy management nodes](#1-deploy-management-nodes), because the final NCN has not yet been deployed. In addition, deploying the final NCN successfully requires several CSM services to be working properly.
 
-See [Validate CSM Health](../operations/validate_csm_health.md).
+See [Validate CSM Health](../../operations/validate_csm_health.md).
 
 ### 4. Deploy final NCN
 
