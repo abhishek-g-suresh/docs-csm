@@ -25,7 +25,8 @@ shown here with numbered topics.
     1. [Next topic](#10-next-topic)
     - [Troubleshooting installation problems](#troubleshooting-installation-problems)
 1. [Post-installation](#post-installation)
-    1. [Apply security hardening](#11-apply-security-hardening)
+    1. [Kubernetes Encryption](#1-kubernetes-encryption)
+    2. [Export Nexus Data](#2-export-nexus-data)
 
 
 > **`NOTE:`** If problems are encountered during the installation, [Troubleshooting installation problems](#troubleshooting-installation-problems) and [Cray System Management (CSM) Administration Guide](../../operations/README.md) will offer assistance.
@@ -145,10 +146,20 @@ The installation of the Cray System Management (CSM) product requires knowledge 
 
 See [Troubleshooting Installation Problems](../troubleshooting_installation.md).
 
-## CSM Post-installation
+## Post-installation
 
-### 11. Apply security hardening
+### 1. Kubernetes encryption
 
-Review the security hardening guide, apply non-optional procedures, and review optional procedures.
+As an optional post installation task, encryption of Kubernetes secrets may be enabled. This enables
+at rest encryption of data in the `etcd` database used by Kubernetes.
 
-See [Security Hardening](Apply_Security_Hardening-cpi.md).
+See [Kubernetes Encryption](../../operations/kubernetes/encryption/README.md).
+
+### 2. Export Nexus data
+
+**Warning:** This process can take multiple hours where Nexus is unavailable and should be done during scheduled maintenance periods.
+
+Prior to the upgrade it is recommended that a Nexus export is taken. This is not a required step but highly recommend to protect the data in Nexus.
+If there is no maintenance period available then this step should be skipped until after the upgrade process.
+
+Reference [Nexus Export and Restore Procedure](../../operations/package_repository_management/Nexus_Export_and_Restore.md) for details.
