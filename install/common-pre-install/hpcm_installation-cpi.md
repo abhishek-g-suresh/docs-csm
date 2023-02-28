@@ -66,7 +66,7 @@ If an administrator has the node booted with an operating system which will next
    1. Reboot the server.
    1. Press F6 until the following screen appears.
 
-      ![alt text](hpcm_installation_images/01.png)
+      ![alt text](../../img/install/01.png)
    1. Select the bootable device.
 
       ![alt text](hpcm_installation_images/02.png)
