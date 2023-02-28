@@ -69,7 +69,7 @@ If an administrator has the node booted with an operating system which will next
       ![alt text](../../img/install/01.png)
    1. Select the bootable device.
 
-      ![alt text](hpcm_installation_images/02.png)
+      ![alt text](../../img/install/02.png)
 
 1. _Option 2_ : Boot the LiveCD ISO image using `efibootmgr` (This option has not been tested).
       
@@ -136,11 +136,11 @@ If an administrator has the node booted with an operating system which will next
 
       1. From the GRUB menu, select "CM Live" option.
 
-         ![alt text](hpcm_installation_images/03.png)
+         ![alt text](../../img/install/03.png)
 
       2. Now a series of input prompts will appear. Provide the responses per the following example:
 
-         ![alt text](hpcm_installation_images/04.png)
+         ![alt text](../../img/install/04.png)
 
          >__Note:__ You might have to set `console=ttyS0`, `115200n8` or `console=ttyS1,115200n8` on some systems if the boot logs do not show after "Loading initrd...".
 
@@ -159,7 +159,7 @@ If an administrator has the node booted with an operating system which will next
       ip route add default via <gateway ip> dev eno1
       ```
 
-      ![alt text](hpcm_installation_images/05.png)
+      ![alt text](../../img/install/05.png)
       
       Now this server can be accessed from the external servers using `ssh`. Login to the machine using following command:
 
@@ -328,27 +328,27 @@ If an administrator has the node booted with an operating system which will next
 
             YaST menu can be navigated using TAB keys. Select appropriate language and keyboard layout and click Next.
 
-            ![alt text](hpcm_installation_images/06.png)
+            ![alt text](../../img/install/06.png)
 
          1. Accepting the Licence Agreement.
 
             Use SPACEBAR key to accept the licence agreement and click Next.
 
-            ![alt text](hpcm_installation_images/07.png)
+            ![alt text](../../img/install/07.png)
          
          1. Configuring Sitelan network using YaST menu.
 
-            ![alt text](hpcm_installation_images/08.png)
+            ![alt text](../../img/install/08.png)
 
             Fill out the IP Address, Subnet Mask, Hostname (FQDN) fields and click next.
 
-            ![alt text](hpcm_installation_images/09.png)
+            ![alt text](../../img/install/09.png)
          
          1. Setting the hostname.
 
             Select the "Hostname/DNS" menu, fill the Static Hostname field and click Next. 
 
-            ![alt text](hpcm_installation_images/10.png)
+            ![alt text](../../img/install/10.png)
 
          1. Setting the gateway.
 
@@ -356,23 +356,23 @@ If an administrator has the node booted with an operating system which will next
     
          1. Setting the timezone.
 
-            ![alt text](hpcm_installation_images/11.png)
+            ![alt text](../../img/install/11.png)
          
          1. Skip the user creation.
             
             Select skip user creation and click next.
 
-            ![alt text](hpcm_installation_images/12.png)
+            ![alt text](../../img/install/12.png)
          
          1. Set the root password.
 
             Fill out the root password.
 
-            ![alt text](hpcm_installation_images/13.png)
+            ![alt text](../../img/install/13.png)
 
             After setting root user's password, YaST First boot configuration will finish.
 
-            ![alt text](hpcm_installation_images/14.png)
+            ![alt text](../../img/install/14.png)
          
          1. Creating the sles 15 sp3 distro repo.
 
@@ -431,85 +431,85 @@ If an administrator has the node booted with an operating system which will next
          
          Select House Network Interface from the list of network interfaces.
 
-         ![alt text](hpcm_installation_images/15.png)
+         ![alt text](../../img/install/15.png)
 
       1. Configuring the management and BMC net interface.
 
          Select the Management/BMC interface from the list of network interfaces.
 
-         ![alt text](hpcm_installation_images/16.png)
+         ![alt text](../../img/install/16.png)
 
          Select no as we don't need separate network interfaces for BMC and Management network.
 
-         ![alt text](hpcm_installation_images/17.png)
+         ![alt text](../../img/install/17.png)
 
          Select LACP as network bonding type.
 
-         ![alt text](hpcm_installation_images/18.png)
+         ![alt text](../../img/install/18.png)
 
       1. Select the Initial setup menu from the Main Menu.
 
-         ![alt text](hpcm_installation_images/19.png)
+         ![alt text](../../img/install/19.png)
       
       1. Skip the repo selection menu (Repo manager).
          
          We skip this option as required repos were installed using "cm repo add" commands.
 
-         ![alt text](hpcm_installation_images/20.png)
+         ![alt text](../../img/install/20.png)
 
          Select the Install and configure Admin cluster software option.
 
-         ![alt text](hpcm_installation_images/21.png)
+         ![alt text](../../img/install/21.png)
       
          Select and configure the network settings:  
 
             Select the network settings menu option.
 
-            ![alt text](hpcm_installation_images/22.png)
+            ![alt text](../../img/install/22.png)
 
             Select yes as we have already configured NTP and timezone settings.
 
-            ![alt text](hpcm_installation_images/23.png)
+            ![alt text](../../img/install/23.png)
 
             Start the network and database initialization by clicking ok.
 
-            ![alt text](hpcm_installation_images/24.png)
+            ![alt text](../../img/install/24.png)
 
             Click  "back" on this menu.
 
-            ![alt text](hpcm_installation_images/25.png)
+            ![alt text](../../img/install/25.png)
 
          Select the Perform Initial Admin node infrastructure setup.
          
-            ![alt text](hpcm_installation_images/26.png)
+            ![alt text](../../img/install/26.png)
          
             Perform initial cluster setup by clicking ok.
 
-            ![alt text](hpcm_installation_images/27.png)
+            ![alt text](../../img/install/27.png)
 
             Domain Search Path input field will be populated by default. click ok.  
 
-            ![alt text](hpcm_installation_images/28.png)
+            ![alt text](../../img/install/28.png)
 
             Leave the Resolver IP fields empty and click ok.
 
-            ![alt text](hpcm_installation_images/29.png)
+            ![alt text](../../img/install/29.png)
 
             Click ok on the following prompt.
 
-            ![alt text](hpcm_installation_images/30.png)
+            ![alt text](../../img/install/30.png)
 
             Select yes and click ok option. This step will copy ssh configuration from current node to the image . Image will be created in next step. 
 
-            ![alt text](hpcm_installation_images/31.png)
+            ![alt text](../../img/install/31.png)
 
             Select the "default" image creation option and click ok. 
 
-            ![alt text](hpcm_installation_images/32.png)
+            ![alt text](../../img/install/32.png)
 
             Once the following prompt appears , click ok, and quit the configure-cluster process.
 
-            ![alt text](hpcm_installation_images/33.png)
+            ![alt text](../../img/install/33.png)
 
    1. Perform the cluster component discovery using `cm` commands.
       
@@ -590,7 +590,7 @@ If an administrator has the node booted with an operating system which will next
 
             And wait till we get data of  the discovered nodes in "Detected server MAC info" section. For example, 
 
-            ![alt text](hpcm_installation_images/34.png)
+            ![alt text](../../img/install/34.png)
 
          1. Create node configuration  definition file.
 
@@ -662,9 +662,8 @@ If an administrator has the node booted with an operating system which will next
          1. Enable passwordless ssh to all the discovered nodes (only if passwordless ssh is not working).
 
             ```
-             for _NODE in `cnodes`
-             do
-                ssh-copy-id $_NODE
+             for _NODE in `cnodes` do
+             ssh-copy-id $_NODE
              done
             ```
 	
