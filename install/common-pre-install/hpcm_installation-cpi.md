@@ -332,15 +332,15 @@ If an administrator has the node booted with an operating system which will next
 
          1. Accepting the Licence Agreement.
 
-            Use SPACEBAR key to accept the licence agreement and click Next.
+            Use spacebar key to accept the licence agreement and click Next.
 
             ![alt text](../../img/install/07.png)
          
-         1. Configuring Sitelan network using YaST menu.
+         1. Configuring sitelan network using YaST menu.
 
             ![alt text](../../img/install/08.png)
 
-            Fill out the IP Address, Subnet Mask, Hostname (FQDN) fields and click next.
+            Fill out the IP Address, Subnet Mask, Hostname (FQDN) fields and click Next.
 
             ![alt text](../../img/install/09.png)
          
@@ -360,7 +360,7 @@ If an administrator has the node booted with an operating system which will next
          
          1. Skip the user creation.
             
-            Select skip user creation and click next.
+            Select skip user creation and click Next.
 
             ![alt text](../../img/install/12.png)
          
@@ -475,7 +475,7 @@ If an administrator has the node booted with an operating system which will next
 
             ![alt text](../../img/install/24.png)
 
-            Click  "back" on this menu.
+            Click "back" on this menu.
 
             ![alt text](../../img/install/25.png)
 
@@ -487,27 +487,27 @@ If an administrator has the node booted with an operating system which will next
 
             ![alt text](../../img/install/27.png)
 
-            Domain Search Path input field will be populated by default. click ok.  
+            Domain Search Path input field will be populated by default. Click OK.  
 
             ![alt text](../../img/install/28.png)
 
-            Leave the Resolver IP fields empty and click ok.
+            Leave the Resolver IP fields empty and click OK.
 
             ![alt text](../../img/install/29.png)
 
-            Click ok on the following prompt.
+            Click OK on the following prompt.
 
             ![alt text](../../img/install/30.png)
 
-            Select yes and click ok option. This step will copy ssh configuration from current node to the image . Image will be created in next step. 
+            Select Yes and click OK option. This step will copy ssh configuration from current node to the image . Image will be created in next step. 
 
             ![alt text](../../img/install/31.png)
 
-            Select the "default" image creation option and click ok. 
+            Select the "default" image creation option and click OK. 
 
             ![alt text](../../img/install/32.png)
 
-            Once the following prompt appears , click ok, and quit the configure-cluster process.
+            Once the following prompt appears , click OK, and quit the configure-cluster process.
 
             ![alt text](../../img/install/33.png)
 
