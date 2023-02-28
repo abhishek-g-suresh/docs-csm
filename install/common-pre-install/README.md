@@ -34,7 +34,7 @@ shown here with numbered topics.
 
 This section will guide the administrator through creating and setting up the Cray Pre-Install Toolkit (PIT).
 
-Fresh-installations may start at the [Boot installation environment](#2-boot-installation-environment) section. Re-installations will have other steps to complete in the [Preparing for a re-installation](#1-preparing-for-a-re-installation) section.
+Fresh-installations may start at the [Boot installation environment](#3-boot-installation-environment) section. Re-installations will have other steps to complete in the [Preparing for a re-installation](#2-preparing-for-a-re-installation) section.
 
 ### 1. Boot Pre-Install Live ISO and Seedfiles Generation
 
