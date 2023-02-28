@@ -24,4 +24,4 @@ Install Cray System Management by using one of the following options:
 
 **Option 1** : [CSM Install](csm-install/README.md)
 
-**Option 2 (Tech Preview)** : [CSM Install by Common Pre-installer](common-pre-install/README.md)
+**Option 2 (Tech Preview)** : [CSM Install with Common Pre-installer](common-pre-install/README.md)
