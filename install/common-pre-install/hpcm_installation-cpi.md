@@ -226,13 +226,13 @@ If an administrator has the node booted with an operating system which will next
              sw-spine01 [standalone: master] > enable
              sw-spine01 [standalone: master] # configure terminal
              ```
-             Copy and paste network settings [from here](hpcm_switchconfig/hpcm_switch_conf_spine_001_gamora_19_09.txt) and save those configurations as "hpcm_blank1" using the following command:
+             Copy and paste network settings [from here](hpcm_switch_conf_spine_001_gamora_19_09.md) and save those configurations as "hpcm_blank1" using the following command:
 
              ``` 
              sw-spine01 [standalone: master] # configuration write
              ```
 
-             Exit from the switch1 and repeat the procedure for spine `switch2`. The `switch2` settings can be copied [from here](hpcm_switchconfig/hpcm_switch_conf_spine_002_gamora_19_09.txt).
+             Exit from the switch1 and repeat the procedure for spine `switch2`. The `switch2` settings can be copied [from here](hpcm_switch_conf_spine_002_gamora_19_09.md).
 
       1.  For leaf switches (Dell).
 
@@ -308,7 +308,7 @@ If an administrator has the node booted with an operating system which will next
               sw-leaf01(config)#
              ```
 
-             Copy and paste the configuration [from here](hpcm_switchconfig/hpcm_switch_conf_leaf_gamora_19_09.txt) and save the configuration using the following command: 
+             Copy and paste the configuration [from here](hpcm_switch_conf_leaf_gamora_19_09.md) and save the configuration using the following command: 
 
              ```
               sw-leaf01(config)# write configuration
@@ -370,7 +370,7 @@ If an administrator has the node booted with an operating system which will next
 
             ![alt text](../../img/install/13.png)
 
-            After setting root user's password, YaST First boot configuration will finish.
+            After setting root user's password, YaST First boot configuration will Finish.
 
             ![alt text](../../img/install/14.png)
          
@@ -394,7 +394,7 @@ If an administrator has the node booted with an operating system which will next
             Download `cm media iso`. 
 
             ``` 
-             https://preserve.eag.rdlabs.hpecorp.net/mirrors/sgi/dist.engr/test/stout7/iso-latest-sles15sp3-x86_64/cm-1.9-cd1-media-sles15sp3-x86_64.iso
+            https://preserve.eag.rdlabs.hpecorp.net/mirrors/sgi/dist.engr/test/stout7/iso-latest-sles15sp3-x86_64/cm-1.9-cd1-media-sles15sp3-x86_64.iso
             ```
 
             Add the cluster manager repo using `cm repo` command.
