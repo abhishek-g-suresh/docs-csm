@@ -144,7 +144,7 @@ If an administrator has the node booted with an operating system which will next
 
          >__Note:__ You might have to set `console=ttyS0`, `115200n8` or `console=ttyS1,115200n8` on some systems if the boot logs do not show after "Loading initrd...".
 
-         Once the system boots up the OS successfully, provide username and password as root/cmdefault to log in to the system.
+         Once the system boots up the OS successfully, provide username and password as `root/cmdefault` to log in to the system.
 
 ## Post Boot configuration 
 
@@ -439,7 +439,7 @@ If an administrator has the node booted with an operating system which will next
 
          ![alt text](../../img/install/16.png)
 
-         Select no as we don't need separate network interfaces for BMC and Management network.
+         Select No as we don't need separate network interfaces for BMC and Management network.
 
          ![alt text](../../img/install/17.png)
 
@@ -447,7 +447,7 @@ If an administrator has the node booted with an operating system which will next
 
          ![alt text](../../img/install/18.png)
 
-      1. Select the Initial setup menu from the Main Menu.
+      1. Select the Initial Setup Menu from the Main Menu.
 
          ![alt text](../../img/install/19.png)
       
@@ -457,33 +457,33 @@ If an administrator has the node booted with an operating system which will next
 
          ![alt text](../../img/install/20.png)
 
-         Select the Install and configure Admin cluster software option.
+         Select the Install and Configure Admin Cluster Software option.
 
          ![alt text](../../img/install/21.png)
       
          Select and configure the network settings:  
 
-            Select the network settings menu option.
+            Select the Network Settings menu option.
 
             ![alt text](../../img/install/22.png)
 
-            Select yes as we have already configured NTP and timezone settings.
+            Select Yes as we have already configured NTP and timezone settings.
 
             ![alt text](../../img/install/23.png)
 
-            Start the network and database initialization by clicking ok.
+            Start the network and database initialization by clicking OK.
 
             ![alt text](../../img/install/24.png)
 
-            Click "back" on this menu.
+            Click Back on this menu.
 
             ![alt text](../../img/install/25.png)
 
-         Select the Perform Initial Admin node infrastructure setup.
+         Select the Perform Initial Admin Node Infrastructure Setup.
          
             ![alt text](../../img/install/26.png)
          
-            Perform initial cluster setup by clicking ok.
+            Perform initial cluster setup by clicking OK.
 
             ![alt text](../../img/install/27.png)
 
