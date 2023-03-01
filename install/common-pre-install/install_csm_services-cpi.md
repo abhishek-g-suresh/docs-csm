@@ -141,7 +141,7 @@ Taking a manual backup enables restoring from backup later in this install proce
    /usr/share/doc/csm/scripts/operations/etcd/take-etcd-manual-backups.sh post_install
    ```
 
-1. The next step is to validate CSM health before redeploying the final NCN. See [Validate CSM health before final NCN deployment](../README.md#3-validate-csm-health-before-final-ncn-deployment).
+1. The next step is to validate CSM health before redeploying the final NCN. See [Validate CSM health before final NCN deployment](README.md#3-validate-csm-health-before-final-ncn-deployment).
 
 ## Known issues
 
