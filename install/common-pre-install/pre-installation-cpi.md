@@ -154,9 +154,9 @@ These variables will need to be set for many procedures within the CSM installat
 
       > Example release versions:
       >
-      > - An alpha build: `CSM_RELEASE=1.6.0-alpha.99`
-      > - A release candidate: `CSM_RELEASE=1.6.0-rc.1`
-      > - A stable release: `CSM_RELEASE=1.6.0`
+      > - An alpha build: `CSM_RELEASE=1.5.0-alpha.99`
+      > - A release candidate: `CSM_RELEASE=1.5.0-rc.1`
+      > - A stable release: `CSM_RELEASE=1.5.0`
 
       ```bash
       export CSM_RELEASE=<value>
@@ -283,13 +283,6 @@ in `/etc/environment` from the [Download CSM tarball](#21-download-csm-tarball) 
       > **NOTE** This installs necessary scripts for deployment checks, as well as the offline manual.
 
        ```bash
-       zypper \
-           --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-15sp2/" \
-           --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-15sp3/" \
-           --no-gpg-checks \
-           install -y docs-csm
-       ``` 
-       ```bash
        zypper   
            --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \
            --no-gpg-checks install -y docs-csm
@@ -298,15 +291,8 @@ in `/etc/environment` from the [Download CSM tarball](#21-download-csm-tarball) 
    1. Update `cray-site-init`.
 
        > **NOTE** This provides `csi`, a tool for creating and managing configurations, as well as
-       > orchestrating the [handoff and deploy of the final non-compute node](deploy_final_non-compute_node.md).
+       > orchestrating the [handoff and deploy of the final non-compute node](../deploy_final_non-compute_node.md).
 
-       ```bash
-       zypper \
-           --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-15sp2/" \
-           --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-15sp3/" \
-           --no-gpg-checks \
-           update -y cray-site-init
-       ```
        ```bash
        zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \
               --no-gpg-checks update -y cray-site-init
@@ -326,16 +312,9 @@ in `/etc/environment` from the [Download CSM tarball](#21-download-csm-tarball) 
        > **NOTE** This package provides the necessary tests and their dependencies for validating the pre-installation, installation, and more.
 
        ```bash
-       zypper \
-           --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-15sp2/" \
-           --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-15sp3/" \
-           --no-gpg-checks \
-           install -y csm-testing
-      ```
-      ```bash
-       zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \
-              --no-gpg-checks install -y csm-testing
-      ```
+        zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \
+               --no-gpg-checks install -y csm-testing
+       ```
 
 1. (`pit#`) Install/update the RPMs and configuration files necessary for CSM installation.i8
 
@@ -408,7 +387,7 @@ in `/etc/environment` from the [Download CSM tarball](#21-download-csm-tarball) 
 1. (`pit#`) Modify the NCN images with SSH keys and `root` passwords.
 
    The following substeps provide the most commonly used defaults for this process. For more advanced options, see
-   [Set NCN Image Root Password, SSH Keys, and Timezone on PIT Node](../operations/security_and_authentication/Change_NCN_Image_Root_Password_and_SSH_Keys_on_PIT_Node.md).
+   [Set NCN Image Root Password, SSH Keys, and Timezone on PIT Node](../../operations/security_and_authentication/Change_NCN_Image_Root_Password_and_SSH_Keys_on_PIT_Node.md).
 
    1. Generate SSH keys.
 
@@ -491,15 +470,15 @@ Run the following steps before starting any of the system configuration procedur
 
 The previous step for
    - [create Seedfiles](#31-create-seedfiles) generated the most of the required seedfiles. 
-   - [`application_node_config.yaml`](create_application_node_config_yaml.md)
-   - [`cabinets.yaml`](create_cabinets_yaml.md)
-   - [`hmn_connections.json`](create_hmn_connections_json.md)
-   - [`ncn_metadata.csv`](create_ncn_metadata_csv.md)
-   - [`switch_metadata.csv`](create_switch_metadata_csv.md)
+   - [`application_node_config.yaml`](../create_application_node_config_yaml.md)
+   - [`cabinets.yaml`](../create_cabinets_yaml.md)
+   - [`hmn_connections.json`](../create_hmn_connections_json.md)
+   - [`ncn_metadata.csv`](../create_ncn_metadata_csv.md)
+   - [`switch_metadata.csv`](../create_switch_metadata_csv.md)
 
 If `cabinets.yaml` config file has not been created (manually) so far, following step (#1) may be performed now otherwise, this step (1) can be skipped.
 1. (`pit#`) Create remaining seedfiles,  unless they already exist from a previous installation.
-   - [Create `cabinets.yaml`](create_cabinets_yaml.md)
+   - [Create `cabinets.yaml`](../create_cabinets_yaml.md)
 1. (`pit#`) Assuming all seedfiles are under `$HOME/seedfiles` directory, copy the generated files under `${PITDATA}/prep` directory.
    ```bash
    cp $HOME/seedfiles/* "${PITDATA}/prep"
@@ -620,7 +599,7 @@ If `cabinets.yaml` config file has not been created (manually) so far, following
 
 ### 3.5 Prepare Site Init
 
-Follow the [Prepare Site Init](prepare_site_init.md) procedure.
+Follow the [Prepare Site Init](prepare_site_init-cpi.md) procedure.
 
 ### 3.6 Initialize the LiveCD
 
