@@ -19,7 +19,7 @@ This procedure will install CSM applications and services into the CSM Kubernete
 > `${CSM_PATH}/tds_cpu_requests.yaml` for these settings. This file can be modified with different values (prior to executing the
 > `yapl` command below), if other settings are desired in the `customizations.yaml` file for this system. For more information about modifying `customizations.yaml`
 > and tuning for specific systems, see
-> [Post-Install Customizations](../operations/CSM_product_management/Post_Install_Customizations.md).
+> [Post-Install Customizations](../../operations/CSM_product_management/Post_Install_Customizations.md).
 
 1. (`pit#`) Install YAPL.
 
@@ -52,13 +52,11 @@ This procedure will install CSM applications and services into the CSM Kubernete
    >
    > * This command may take up to 90 minutes to complete.
    > * If any errors are encountered, then potential fixes should be displayed where the error occurred.
-   > * Output is redirected to `/usr/share/doc/csm/install/scripts/csm_services/yapl.log` . To show the output in the terminal, append
-   >   the `--console-output execute` argument to the `yapl` command.
-   > * The `yapl` command can safely be rerun. By default, it will skip any steps which were previously completed successfully. To force it to
-   >   rerun all steps regardless of what was previously completed, append the `--no-cache` argument to the `yapl` command.
+   > * Output is redirected to `/usr/share/doc/csm/install/scripts/csm_services/yapl.log`. To show the output in the terminal, append the `--console-output execute` argument to the `yapl` command.
+   > * The `yapl` command can safely be rerun. By default, it will skip any steps which were previously completed successfully. To force it to re-run all steps regardless of what was previously completed, append the `--no-cache` argument to the `yapl` command.
       
    > **`NOTE:`**
-   > Incase there are errors related to cgroups , then --privileged can be added to podman run statements in `initialize_bootstrap_registry.yaml` file.
+   > Incase there are errors related to cgroups , then `--privileged` can be added to podman run statements in `initialize_bootstrap_registry.yaml` file.
 
 ## 2. Create base BSS global boot parameters
 
@@ -143,7 +141,7 @@ Taking a manual backup enables restoring from backup later in this install proce
    /usr/share/doc/csm/scripts/operations/etcd/take-etcd-manual-backups.sh post_install
    ```
 
-1. The next step is to validate CSM health before redeploying the final NCN. See [Validate CSM health before final NCN deployment](./README.md#3-validate-csm-health-before-final-ncn-deployment).
+1. The next step is to validate CSM health before redeploying the final NCN. See [Validate CSM health before final NCN deployment](../README.md#3-validate-csm-health-before-final-ncn-deployment).
 
 ## Known issues
 
@@ -201,4 +199,4 @@ The following error may occur during the `Deploy CSM Applications and Services` 
 
 ### `Setup Nexus` known issues
 
-Known potential issues along with suggested fixes are listed in [Troubleshoot Nexus](../operations/package_repository_management/Troubleshoot_Nexus.md).
+Known potential issues along with suggested fixes are listed in [Troubleshoot Nexus](../../operations/package_repository_management/Troubleshoot_Nexus.md).
