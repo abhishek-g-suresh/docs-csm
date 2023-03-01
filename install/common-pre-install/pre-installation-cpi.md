@@ -300,7 +300,7 @@ in `/etc/environment` from the [Download CSM tarball](#21-download-csm-tarball) 
 
    1. Install `iuf-cli`.
        
-       > **NOTE** This provides `iuf`, a command line interface to the [Install and Upgrade Framework](../operations/iuf/IUF.md).
+       > **NOTE** This provides `iuf`, a command line interface to the [Install and Upgrade Framework](../../operations/iuf/IUF.md).
        
        ```bash
        zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \
@@ -516,9 +516,7 @@ If `cabinets.yaml` config file has not been created (manually) so far, following
    > **NOTE:**
    >
    > - For a short description of each key in the file, run `csi config init --help`.
-   > - For more description of these settings and the default values, see
-   >   [Default IP Address Ranges](../introduction/csm_overview.md#2-default-ip-address-ranges) and the other topics in
-   >   [CSM Overview](../introduction/csm_overview.md).
+   > - For more description of these settings and the default values, see [Default IP Address Ranges](../../introduction/csm_overview.md#2-default-ip-address-ranges) and the other topics in[CSM Overview](../../introduction/csm_overview.md).
    > - If the system is using a `cabinets.yaml` file, be sure to update the `cabinets-yaml` field with `'cabinets.yaml'` as its value.
 
    ```bash
@@ -710,7 +708,7 @@ Follow the [Prepare Site Init](prepare_site_init-cpi.md) procedure.
 
 After completing this procedure, proceed to configure the management network switches. The generated paddle file can be used as input to the canu command to configure the switches.
 
-See [Configure management network switches](README.md#5-configure-management-network-switches).
+See [Configure management network switches](README.md#6-configure-management-network-switches).
 
 > **NOTE:** After applying management switch settings please ensure that snmp credentials are properly set.
 
