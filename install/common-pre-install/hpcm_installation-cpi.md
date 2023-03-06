@@ -16,7 +16,7 @@ To create the bootable LiveCD image use `dd` command. Before creating the media,
 1. (`external#`) Download the LiveCD ISO.
 
    ```
-   wget http://preserve.eag.rdlabs.hpecorp.net/mirrors/sgi/dist.engr/test/stout7/iso-latest-sles15sp3-x86_64/cm-admin-install-1.9-sles15sp3-x86_64.iso
+   wget http://preserve.eag.rdlabs.hpecorp.net/mirrors/sgi/dist.engr/test/stout727/iso-latest-sles15sp4-x86_64/cm-admin-install-1.9-sles15sp4-x86_64.iso
    ```
 
 1. (`external#`) Identify the USB device.
@@ -50,10 +50,10 @@ To create the bootable LiveCD image use `dd` command. Before creating the media,
    Burn the LiveCD ISO on USB device using `dd` command in the following format:
 
    ```
-   #dd if=$PWD/cm-admin-install-1.9-sles15sp3-x86_64.iso of=$USB bs=4M oflag=sync status=progress
+   #dd if=$PWD/cm-admin-install-1.9-sles15sp4-x86_64.iso of=$USB bs=4M oflag=sync status=progress
    ```
 
-At this point, image is ready and system can be booted from the USB drive (`/dev/sdd`).
+At this point, image is ready and system can be booted from the USB drive.
 
 ## Boot the LiveCD
 
@@ -142,7 +142,7 @@ If an administrator has the node booted with an operating system which will next
 
          ![alt text](../../img/install/04.png)
 
-         >__Note:__ You might have to set `console=ttyS0`, `115200n8` or `console=ttyS1,115200n8` on some systems if the boot logs do not show after "Loading initrd...".
+         >__Note:__ You might have to set `console=ttyS0,115200n8` or `console=ttyS1,115200n8` on some systems if the boot logs do not show after "Loading initrd...".
 
          Once the system boots up the OS successfully, provide username and password as `root/cmdefault` to log in to the system.
 
@@ -179,16 +179,20 @@ If an administrator has the node booted with an operating system which will next
 
    1. Configure Management Switches.
 
-      1.  For spine switches (Mellanox).
+      1.  For Mellanox spine switches.
 
-          1. Access the spine `switch1` using minicom. Here we assume `/dev/ttyUSB1` is `spine01`.
+          1. Access the mellanox switch using Ip address or using minicom. \
+
+            ```
+              ssh admin@10.1.0.2
+             ```
 
              ```
               minicom -b 115200 -D /dev/ttyUSB1
              ```
-             >__Note:__ Device name may vary.
+             >__Note:__ Device name and Ip may vary.
 
-          1. Login to the spine `switch1` using the switch credentials. Login prompt for Mellanox switch is as follows:
+          1. Login to the switch using the switch credentials. Login prompt for Mellanox switch is as follows:
 
              ```
              Welcome to minicom 2.7.1
@@ -379,14 +383,13 @@ If an administrator has the node booted with an operating system which will next
             Download the SLES15 SP3 ISO.
 
             ```
-            wget http://blofly.us.rdlabs.hpecorp.net/mrepo/SLE-15-SP3/SLE-15-SP3-Full-GM-x86_64/iso/SLE-15-SP3-Full-x86_64-GM-Media1.iso 
-            wget http://preserve.eag.rdlabs.hpecorp.net/mirrors/novell/sles/15sp3/x86_64/latest/SLE-15-SP3-Full-x86_64-GM-Media1.iso
+            wget http://preserve.eag.rdlabs.hpecorp.net/mirrors/novell/sles/15sp4/x86_64/latest/SLE-15-SP4-Full-x86_64-GM-Media1.iso
             ```
 
             Add the SLES15 repo  using `cm repo` command.
 
             ``` 
-            cm repo add SLE-15-SP3-Full-x86_64-GM-Media1.iso
+            cm repo add SLE-15-SP4-Full-x86_64-GM-Media1.iso
             ```
 
          1. Creating the cluster manager repo.
@@ -394,13 +397,13 @@ If an administrator has the node booted with an operating system which will next
             Download `cm media iso`. 
 
             ``` 
-            https://preserve.eag.rdlabs.hpecorp.net/mirrors/sgi/dist.engr/test/stout7/iso-latest-sles15sp3-x86_64/cm-1.9-cd1-media-sles15sp3-x86_64.iso
+            wget http://preserve.eag.rdlabs.hpecorp.net/mirrors/sgi/dist.engr/test/stout727/iso-latest-sles15sp4-x86_64/cm-1.9-cd1-media-sles15sp4-x86_64.iso
             ```
 
             Add the cluster manager repo using `cm repo` command.
 
             ``` 
-            cm repo add cm-1.9-cd1-media-sles15sp3-x86_64.iso
+            cm repo add cm-1.9-cd1-media-sles15sp4-x86_64.iso
             ```
 
          1. List the repos.
@@ -412,8 +415,8 @@ If an administrator has the node booted with an operating system which will next
             Expected Output:
 
             ```
-            Cluster-Manager-1.9-sles15sp3-x86_64 : /opt/clmgr/repos/cm/Cluster-Manager-1.9-sles15sp3-x86_64
-            SLE-15-SP3-Full-x86_64 : /opt/clmgr/repos/distro/sles15sp3-x86_64
+            Cluster-Manager-1.9-sles15sp4-x86_64 : /opt/clmgr/repos/cm/Cluster-Manager-1.9-sles15sp4-x86_64
+            SLE-15-SP4-Full-x86_64 : /opt/clmgr/repos/distro/sles15sp4-x86_64
             ```
 
          1. Select and activate the repo.
@@ -421,8 +424,8 @@ If an administrator has the node booted with an operating system which will next
             Run the following commands and activate repos. 
 
             ```
-            cm repo select SLE-15-SP3-Full-x86_64
-            cm repo select Cluster-Manager-1.9-sles15sp3-x86_64
+            cm repo select SLE-15-SP4-Full-x86_64
+            cm repo select Cluster-Manager-1.9-sles15sp4-x86_64
             ```
 
    1. Run configure-cluster command. 
@@ -475,9 +478,45 @@ If an administrator has the node booted with an operating system which will next
 
             ![alt text](../../img/install/24.png)
 
-            Click Back on this menu.
+            Select the List and Adjust Subnet Addresses.
 
             ![alt text](../../img/install/25.png)
+
+            Click OK on the following prompt.
+
+            ![alt text](../../img/install/common_installer_1.PNG)
+
+            Select Head Network and click Ok.
+
+            ![alt text](../../img/install/common_installer_2.PNG)
+
+            Change Subnet, Netmask, Gateway and vlan for head network
+
+            ![alt text](../../img/install/common_installer_3.PNG)
+
+            Click OK on the following prompt.
+
+            ![alt text](../../img/install/common_installer_4.PNG)
+
+            Select Head-bmc Network and click Ok.
+
+            ![alt text](../../img/install/common_installer_5.PNG)
+
+            Change Subnet, Netmask, Gateway and vlan for head-bmc network
+
+            ![alt text](../../img/install/common_installer_6.PNG)
+
+            Click OK on the following prompt.
+
+            ![alt text](../../img/install/common_installer_7.PNG)
+            
+            Select Back on the following prompt.
+
+            ![alt text](../../img/install/common_installer_8.PNG)
+
+            Select Back on the following prompt.
+
+            ![alt text](../../img/install/common_installer_9.PNG)
 
          Select the Perform Initial Admin Node Infrastructure Setup.
          
@@ -523,9 +562,9 @@ If an administrator has the node booted with an operating system which will next
                
                ```
                [discover]
-               temponame=mgmtsw0, mgmt_net_name=head, mgmt_net_macs="b8:59:9f:68:8a:00", mgmt_net_interfaces="eth0", transport=udpcast, redundant_mgmt_network=yes, net=head/head-bmc, type=spine, ice=yes, console_device=ttyS1, architecture=x86_64, discover_skip_switchconfig=yes, mgmt_net_ip=172.23.255.251
-               temponame=mgmtsw1, mgmt_net_name=head, mgmt_net_macs="b8:59:9f:68:94:00", mgmt_net_interfaces="eth0", transport=udpcast, redundant_mgmt_network=yes, net=head/head-bmc, type=spine, ice=yes, console_device=ttyS1, architecture=x86_64, discover_skip_switchconfig=yes, mgmt_net_ip=172.23.255.252
-               temponame=mgmtsw2, mgmt_net_name=head, mgmt_net_macs="e4:f0:04:4e:1a:ec", mgmt_net_interfaces="eth0", transport=udpcast, redundant_mgmt_network=yes, net=head/head-bmc, type=leaf, ice=yes, console_device=ttyS1, architecture=x86_64, discover_skip_switchconfig=yes, mgmt_net_ip=172.23.255.253
+               temponame=mgmtsw0, mgmt_net_name=head, mgmt_net_macs="b8:59:9f:68:8a:00", mgmt_net_interfaces="eth0", transport=udpcast, redundant_mgmt_network=yes, net=head/head-bmc, type=spine, ice=yes, console_device=ttyS1, architecture=x86_64, discover_skip_switchconfig=yes, mgmt_net_ip=10.1.0.2
+               temponame=mgmtsw1, mgmt_net_name=head, mgmt_net_macs="b8:59:9f:68:94:00", mgmt_net_interfaces="eth0", transport=udpcast, redundant_mgmt_network=yes, net=head/head-bmc, type=spine, ice=yes, console_device=ttyS1, architecture=x86_64, discover_skip_switchconfig=yes, mgmt_net_ip=10.1.0.3
+               temponame=mgmtsw2, mgmt_net_name=head, mgmt_net_macs="e4:f0:04:4e:1a:ec", mgmt_net_interfaces="eth0", transport=udpcast, redundant_mgmt_network=yes, net=head/head-bmc, type=leaf, ice=yes, console_device=ttyS1, architecture=x86_64, discover_skip_switchconfig=yes, mgmt_net_ip=10.1.0.4
                ```
    
                Perform switch discovery.
@@ -538,7 +577,7 @@ If an administrator has the node booted with an operating system which will next
                
                ```
                [discover]
-               internal_name=pdu0, mgmt_bmc_net_name=head-bmc, geolocation="cold isle 4 rack 1 B power",mgmt_bmc_net_macs=00:0a:9c:62:04:ee,hostname1=testpdu0, pdu_protocol="snmp/admn"
+               internal_name=pdu-x3000-001, mgmt_bmc_net_name=head-bmc, geolocation="cold isle 4 rack 1 B power",mgmt_bmc_net_macs=00:0a:9c:62:04:ee,hostname1=pdu-x3000-001, pdu_protocol="snmp/admn"
                ```
 
                Perform PDU discovery.
@@ -547,10 +586,10 @@ If an administrator has the node booted with an operating system which will next
                cm node add -c pdus.conf
                ```
 
-         1. For Fabric Switch: Use cm controller add to perform discovery.
+         1. For Fabric Switch: Use cm controller add to perform discovery. Add only River cabinent fabric switches
 
             ```
-            cm controller add -c x3000c0r24b0  -t external_switch -m 00:40:a6:82:f7:5f -u root -p initial0
+            cm controller add -c sw-hsn-x3000-001 -t external_switch -m 00:40:a6:82:f7:5f -u root -p initial0
             ```
 
          1. For CMC : Use cm controller add to perform discovery.
@@ -558,7 +597,7 @@ If an administrator has the node booted with an operating system which will next
             For gigabyte server. 
 
             ```
-            cm controller add -c SubRack-001-cmc -t gigabyte -m  b4:2e:99:b8:da:03 -u root -p initial0
+            cm controller add -c SubRack001-cmc -t gigabyte -m  b4:2e:99:b8:da:03 -u root -p initial0
             ```
 
          1. For CEC : TBD.
@@ -571,7 +610,15 @@ If an administrator has the node booted with an operating system which will next
          >__Note:__
          > - Ensure all the river components are powered on, dhcp is enabled on bmc and only one switch out of the available spine switch.
          >
-         > - If there are multiple spine switches then there should be only 1 spine switch with active port connection to NCNs. On other switches, connections to NCNs should be disabled till all nodes have been booted with HPCM Images. 
+         > - If there are multiple mellanox spine switches then there should be only 1 spine switch with active port connection to NCNs. On other switches, connections to NCNs should be disabled till all nodes have been booted with HPCM Images.
+         >  ```
+         >  ssh admin@<ip-addr>
+         >  enable
+         >  configure terminal
+         >  interface 1/2-1/9
+         >  shutdown
+         > ```
+         > Once all the NCN's are booted enable all the ports.
 
 
          1. Enable auto-discovery process.
@@ -581,6 +628,30 @@ If an administrator has the node booted with an operating system which will next
             ```
             cm node discover enable 
             ```
+            >__Note:__ If there are any intel nodes run below command
+            >```  
+            >sed -i '226s/ipmitool lan print/ipmitool lan print 3/g' /opt/clmgr/tools/cm_pxe_status
+            >```
+         1. Check the power status and pxe status.
+            > Note: Check all the river node BMC's are leased with an IP
+
+            Check power status of the nodes
+            ```
+            cm node discover status | grep BMC  > temp.txt
+		      for i in `cat temp.txt| awk '{print $1}'` ; do echo $i; ipmitool -I lanplus -H $i -U root -P initial0 power status; done
+            ```
+            Check if all the nodes Bootorder set to pxe
+            ``` 
+            for i in `cat temp.txt| awk '{print $1}'` ; do echo $i; ipmitool -I lanplus -H $i -U root -P initial0 chassis bootdev; done
+            ```
+            Set the Boot order to pxe and reboot the nodes
+
+            ```
+            for i in `cat temp.txt| awk '{print $1}'` ; do echo $i; ipmitool -I lanplus -H $i -U root -P initial0 chassis bootdev pxe; done
+            for i in `cat temp.txt| awk '{print $1}'` ; do echo $i; ipmitool -I lanplus -H $i -U root -P initial0 power on; done
+            for i in `cat temp.txt| awk '{print $1}'` ; do echo $i; ipmitool -I lanplus -H $i -U root -P initial0 power reset; done
+            ```
+
 
          1. Wait for discovery process to detect desired hardware components check the status of discovered hardware using following command.
 
@@ -619,8 +690,8 @@ If an administrator has the node booted with an operating system which will next
          1. Add discovered nodes, set image for the discovered nodes.
 
             ```
-            cm node discover add nodes1.conf
-            cinstallman --assign-image --image sles15sp3 --kernel <kernel version> --node '*'
+            cm node discover add nodes.conf
+            cinstallman --assign-image --image sles15sp4 --kernel <kernel version> --node '*'
             cinstallman --set-rootfs tmpfs --node '*'
             cm node refresh netboot -n '*'
             ```
@@ -631,10 +702,11 @@ If an administrator has the node booted with an operating system which will next
 
             ```
             cm node discover disable
+            cm power status -n '*'
             cm power on -n '*'
             ```
-
-         1. Check the status of nodes.
+            __NOTE:__ Power on the nodes when 'cm power status -n '*'' lists all the nodes. if there is any errors rerun the command
+            1. Check the status of nodes.
 
             ```
             cm power status -n '*'
@@ -646,11 +718,11 @@ If an administrator has the node booted with an operating system which will next
             node1        : BOOTED
             node2        : BOOTED
             node3        : BOOTED
-            node4        : On
+            node4        : BOOTED
             node5        : BOOTED
             node6        : BOOTED
             node7        : BOOTED
-            node8        : On
+            node8        : BOOTED
             node9        : BOOTED
             node10       : BOOTED
             node11       : BOOTED
@@ -658,14 +730,7 @@ If an administrator has the node booted with an operating system which will next
             ```
 
             __NOTE:__ We need to wait at this step till all nodes report status as "BOOTED". Now the ports to all the NCNs can be enabled on switches.
-
-         1. Enable passwordless ssh to all the discovered nodes (only if passwordless ssh is not working).
-
-            ```
-             for _NODE in `cnodes` do
-             ssh-copy-id $_NODE
-             done
-            ```
+         1. Create a Bond Network
 	
 ## Seed File generation
 
@@ -700,6 +765,7 @@ If an administrator has the node booted with an operating system which will next
        sw-spine02,x3000,u40,
        sw-leaf-bmc-01,x3000,u37,
       ```
+      __NOTE:__ Hostname should be in CSM supported format.
 
    1. Create `cabinets.yaml` (Manually).
 
@@ -708,10 +774,10 @@ If an administrator has the node booted with an operating system which will next
       The following command stores the inventory of nodes and switches (fabric and management) in the database.
 
       ```
-      cm cvt config create -t all --mgmt_username 'uname' --mgmt_password 'passwd'  --fabric_username 'fabric_uname' --fabric_password 'fabric_pass'  --load_xname /root/new-cluster-config-verification-tool/xnames.csv --architecture '<architecture>'
+      cm cvt config create -t all --mgmt_username 'uname' --mgmt_password 'passwd'  --fabric_username --load_xname /root/xnames.csv --architecture '<architecture>'
       ```
 
-   1. Save the generated seed files (`switch_metadata.csv`, `application_node_config.yaml`, `hmn_connections.json`, `ncn_metadata.csv`, `cabinets.yaml`), paddlefile (`cvt-ccj.json`) and `cvt.json`. The seed files (or configuration payload files) and paddlefile will be used later during the CSM installation process so they can be saved/backed up in a persistent storage.
+   1. Save the generated seed files (`switch_metadata.csv`, `application_node_config.yaml`, `hmn_connections.json`, `ncn_metadata.csv`,), paddlefile (`cvt-ccj.json`) and `cvt.json`. The seed files (or configuration payload files) and paddlefile will be used later during the CSM installation process so they can be saved/backed up in a persistent storage.
 
 ## CleanUp (Optional)
 
@@ -719,9 +785,9 @@ If an administrator has the node booted with an operating system which will next
 
    ```
    rm *.iso 
-   cm image delete -i sles15sp3
-   cm repo del Cluster-Manager-1.9-sles15sp3-x86_64
-   cm repo del SLE-15-SP3-Full-x86_64    
+   cm image delete -i sles15sp4
+   cm repo del Cluster-Manager-1.9-sles15sp4-x86_64
+   cm repo del SLE-15-SP4-Full-x86_64    
    ```
 
    These steps can help reclaim ~40 GB of space in the `tmpfs/overlay` partition.
