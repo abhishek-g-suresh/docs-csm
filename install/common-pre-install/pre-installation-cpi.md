@@ -3,19 +3,19 @@
 The page walks a user through setting up the Cray LiveCD with the intention of installing Cray System Management (CSM).
 
 1. [Boot installation environment](#1-boot-installation-environment)
-    1. [Setup site network](#13-setup-site-network)
-    1. [Prepare the data partition](#14-prepare-the-data-partition)
-    1. [Set reusable environment variables](#15-set-reusable-environment-variables)
-    1. [Exit the console and log in with SSH](#16-exit-the-console-and-log-in-with-ssh)
+    1. [Setup site network](#11-setup-site-network)
+    1. [Prepare the data partition](#12-prepare-the-data-partition)
+    1. [Set reusable environment variables](#13-set-reusable-environment-variables)
+    1. [Exit the console and log in with SSH](#14-exit-the-console-and-log-in-with-ssh)
 1. [Import CSM tarball](#2-import-csm-tarball)
     1. [Download CSM tarball](#21-download-csm-tarball)
     1. [Import tarball assets](#22-import-tarball-assets)
 1. [Create system configuration](#3-create-system-configuration)
-    1. [Generate topology files](#32-generate-topology-files)
-    1. [Customize `system_config.yaml`](#33-customize-system_configyaml)
-    1. [Run CSI](#34-run-csi)
-    1. [Prepare Site Init](#35-prepare-site-init)
-    1. [Initialize the LiveCD](#36-initialize-the-livecd)
+    1. [Generate topology files](#31-generate-topology-files)
+    1. [Customize `system_config.yaml`](#32-customize-system_configyaml)
+    1. [Run CSI](#33-run-csi)
+    1. [Prepare Site Init](#34-prepare-site-init)
+    1. [Initialize the LiveCD](#35-initialize-the-livecd)
 1. [Next topic](#next-topic)
 
 ## 1. Boot installation environment
@@ -474,7 +474,7 @@ Run the following steps before starting any of the system configuration procedur
    cd "${PITDATA}/prep"
    ```
 
-### 3.2 Generate topology files
+### 3.1 Generate topology files
 
 The previous step for
    - [create Seedfiles](#31-create-seedfiles) generated the most of the required seedfiles. 
@@ -507,7 +507,7 @@ If `cabinets.yaml` config file has not been created (manually) so far, following
    -rw-r--r-- 1 root root  150 Jun  6 00:12 /var/www/ephemeral/prep/switch_metadata.csv
    ```
 
-### 3.3 Customize `system_config.yaml`
+### 3.2 Customize `system_config.yaml`
 
 1. (`pit#`) Create or copy `system_config.yaml`.
 
@@ -531,7 +531,7 @@ If `cabinets.yaml` config file has not been created (manually) so far, following
    vim system_config.yaml
    ```
 
-### 3.4 Run CSI
+### 3.3 Run CSI
 
 1. (`pit#`) Generate the initial configuration for CSI.
 
@@ -603,11 +603,11 @@ If `cabinets.yaml` config file has not been created (manually) so far, following
         ]
    ```
 
-### 3.5 Prepare Site Init
+### 3.4 Prepare Site Init
 
 Follow the [Prepare Site Init](prepare_site_init-cpi.md) procedure.
 
-### 3.6 Initialize the LiveCD
+### 3.5 Initialize the LiveCD
 
 > **NOTE:** If starting an installation at this point, ensure to copy the previous `prep` directory back onto the system.
 
