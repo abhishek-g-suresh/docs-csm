@@ -85,7 +85,7 @@ See [Deploy Management Nodes](../deploy_non-compute_nodes.md).
 
 Now that deployment of management nodes is complete with initialized Ceph storage and a running Kubernetes cluster on all worker and master nodes, except the PIT node, the CSM services can be installed. The Nexus repository will be populated with artifacts; containerized CSM services will be installed; and a few other configuration steps will be taken. 
 
-See [Install CSM Services](install_csm_services-cpi.md).
+See [Install CSM Services](../install_csm_services.md).
 
 ### 3. Validate CSM health before final NCN deployment
 
