@@ -267,7 +267,7 @@ These variables will need to be set for many procedures within the CSM installat
         "https://release.algol60.net/$(awk -F. '{print "csm-"$1"."$2}' <<< ${CSM_RELEASE})/csm/csm-${CSM_RELEASE}.tar.gz"
       ```
 
-   - `scp` from the external server used in [Prepare installation environment server](#11-prepare-installation-environment-server):
+   - `scp` from the external server:
 
       ```bash
       scp "<external-server>:/<path>/csm-${CSM_RELEASE}.tar.gz" /var/www/ephemeral/
