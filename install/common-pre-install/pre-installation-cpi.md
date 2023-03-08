@@ -3,7 +3,7 @@
 The page walks a user through setting up the Cray LiveCD with the intention of installing Cray System Management (CSM).
 
 1. [Boot installation environment](#1-boot-installation-environment)
-    1. [First log in](#13-first-log-in)
+    1. [Setup site network](#13-setup-site-network)
     1. [Prepare the data partition](#14-prepare-the-data-partition)
     1. [Set reusable environment variables](#15-set-reusable-environment-variables)
     1. [Exit the console and log in with SSH](#16-exit-the-console-and-log-in-with-ssh)
@@ -26,7 +26,7 @@ DHCP and external connectivity is required to download csm tar ball.
  
 > **NOTE:** Each step denotes where its commands must run; `external#` refers to a server that is **not** the Cray, whereas `pit# or gamora#` refers to the LiveCD itself.
 
-### 1.1 First log in
+### 1.1 Setup site network
 
 On the first login, configure and verify the sitelink, DNS and gateway IP addresses.
 
@@ -246,15 +246,25 @@ These variables will need to be set for many procedures within the CSM installat
 
 ### 2.1 Download CSM tarball
 
-1. (`pit#`) Download the CSM tarball.
+1. (`pit#`) Download the CSM tarball
 
    - From Cray using `curl`:
 
-    The command `-C -` is used to allow partial downloads. These tarballs are large, in the event of a connection disruption, the same `curl` command can be used to continue the disrupted download.
+      > - `-C -` is used to allow partial downloads. These tarballs are large; in the event of a connection disruption, the same `curl` command can be used to continue the disrupted download.
+      > - CSM does NOT support the use of proxy servers for anything other than downloading artifacts from external endpoints. Using `http_proxy` or `https_proxy` in any way other than the following examples will cause many failures in subsequent steps.
+
+      Without proxy:
 
       ```bash
       curl -C - -f -o "/var/www/ephemeral/csm-${CSM_RELEASE}.tar.gz" \
-        "https://artifactory.algol60.net/artifactory/csm-releases/csm/$(awk -F. '{print $1"."$2}' <<< ${CSM_RELEASE})/csm-${CSM_RELEASE}.tar.gz"
+        "https://release.algol60.net/$(awk -F. '{print "csm-"$1"."$2}' <<< ${CSM_RELEASE})/csm/csm-${CSM_RELEASE}.tar.gz"
+      ```
+
+      With HTTPS proxy:
+
+      ```bash
+      https_proxy=https://example.proxy.net:443 curl -C - -f -o "/var/www/ephemeral/csm-${CSM_RELEASE}.tar.gz" \
+        "https://release.algol60.net/$(awk -F. '{print "csm-"$1"."$2}' <<< ${CSM_RELEASE})/csm/csm-${CSM_RELEASE}.tar.gz"
       ```
 
    - `scp` from the external server used in [Prepare installation environment server](#11-prepare-installation-environment-server):
@@ -262,7 +272,6 @@ These variables will need to be set for many procedures within the CSM installat
       ```bash
       scp "<external-server>:/<path>/csm-${CSM_RELEASE}.tar.gz" /var/www/ephemeral/
       ```
-
 ### 2.2 Import tarball assets
 
 If resuming at this stage, the `CSM_RELEASE` and `PITDATA` variables are already set
@@ -290,8 +299,7 @@ in `/etc/environment` from the [Download CSM tarball](#21-download-csm-tarball) 
 
    1. Update `cray-site-init`.
 
-       > **NOTE** This provides `csi`, a tool for creating and managing configurations, as well as
-       > orchestrating the [handoff and deploy of the final non-compute node](../deploy_final_non-compute_node.md).
+       > **NOTE** This provides `csi`, a tool for creating and managing configurations, as well as orchestrating the [handoff and deploy of the final non-compute node](../deploy_final_non-compute_node.md).
 
        ```bash
        zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \
