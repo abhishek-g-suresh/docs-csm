@@ -709,7 +709,7 @@ Follow the [Prepare Site Init](../prepare_site_init.md) procedure.
 
    If any tests fail, they need to be investigated. After actions have been taken to rectify the tests
    (for example, editing configuration or CSI inputs), then restart from the beginning of the
-   [Initialize the LiveCD](#36-initialize-the-livecd) procedure.
+   [Initialize the LiveCD](#35-initialize-the-livecd) procedure.
 
 1. Save the `prep` directory for re-use.
 
