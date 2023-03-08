@@ -609,7 +609,7 @@ Run the following steps before starting any of the system configuration procedur
 
 ### 3.4 Prepare Site Init
 
-Follow the [Prepare Site Init](prepare_site_init-cpi.md) procedure.
+Follow the [Prepare Site Init](../prepare_site_init.md) procedure.
 
 ### 3.5 Initialize the LiveCD
 
