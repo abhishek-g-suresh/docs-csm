@@ -32,9 +32,7 @@ On the first login, configure and verify the sitelink, DNS and gateway IP addres
 
 1. (`pit#`) Configure the site-link (`lan0`), DNS, and gateway IP addresses. (Optional) Also, at this stage, you can change the admin node password to "initial0".
 
-   1. Set `site_ip`, `site_gw`, and `site_dns` variables.
-
-      > **NOTE:** The `site_ip`, `site_gw`, and `site_dns` values must come from the local network administration or authority.
+   1. Set `site_ip` variable.
 
       Set the `site_ip` value in CIDR format (`A.B.C.D/N`):
 
@@ -42,26 +40,32 @@ On the first login, configure and verify the sitelink, DNS and gateway IP addres
       site_ip=<IP CIDR>
       ```
 
-      Set the `site_gw` value in CIDR format (`A.B.C.D/N`):
+   1. Set the `site_gw` and `site_dns` variables.
+
+      Set the `site_gw` and `site_dns` values in IPv4 dotted decimal format (`A.B.C.D`):
 
       ```bash
-      site_gw=<IP CIDR>
+      site_gw=<Gateway IP address>
+      site_dns=<DNS IP address>
       ```
 
-      Set the `site_dns` value in CIDR format (`A.B.C.D/N`):
+   1. Set the `site_nics` variable.
 
-      ```bash
-      site_dns=<IP CIDR>
-      ```
-
-   1. Set `site_nics` variable.
-
-      > **NOTE:** The `site_nics` value or values are found while the user is in the LiveCD (For example, `site_nics='p2p1 p2p2 p2p3'` or `site_nics=em1`).
+      The `site_nics` value or values are found while the user is in the LiveCD (for example, `site_nics='p2p1 p2p2 p2p3'` or `site_nics=em1`).
 
       ```bash
       site_nics='<site NIC or NICs>'
       ```
 
+   1. Set the `SYSTEM_NAME` variable.
+
+      `SYSTEM_NAME` is the name of the system. This will only be used for the PIT hostname.
+      This variable is capitalized because it will be used in a subsequent section.
+
+      ```bash
+      SYSTEM_NAME=<system name>
+      ```
+      
    1. Set network device files.
 
         1. Download and extract the contents of network file template tarball from [here](files/network_template.tar.gz), extract the contents.
@@ -85,7 +89,7 @@ On the first login, configure and verify the sitelink, DNS and gateway IP addres
       > - The hostname is auto-resolved based on reverse DNS.
 
       ```bash
-      /root/bin/csi-setup-lan0.sh "${site_ip}" "${site_gw}" "${site_dns}" "${site_nics}"
+      /root/bin/csi-setup-lan0.sh "${SYSTEM_NAME}" "${site_ip}" "${site_gw}" "${site_dns}" "${site_nics}"
       ```
 
 1. (`pit#`) Verify that the assigned IP address was successfully applied to `lan0`.
@@ -154,9 +158,9 @@ These variables will need to be set for many procedures within the CSM installat
 
       > Example release versions:
       >
-      > - An alpha build: `CSM_RELEASE=1.5.0-alpha.99`
-      > - A release candidate: `CSM_RELEASE=1.5.0-rc.1`
-      > - A stable release: `CSM_RELEASE=1.5.0`
+      > - An alpha build: `CSM_RELEASE=1.4.0-alpha.99`
+      > - A release candidate: `CSM_RELEASE=1.4.0-rc.1`
+      > - A stable release: `CSM_RELEASE=1.4.0`
 
       ```bash
       export CSM_RELEASE=<value>
@@ -476,17 +480,16 @@ Run the following steps before starting any of the system configuration procedur
 
 ### 3.1 Generate topology files
 
-The previous step for
-   - [create Seedfiles](#31-create-seedfiles) generated the most of the required seedfiles. 
-   - [`application_node_config.yaml`](../create_application_node_config_yaml.md)
-   - [`cabinets.yaml`](../create_cabinets_yaml.md)
-   - [`hmn_connections.json`](../create_hmn_connections_json.md)
-   - [`ncn_metadata.csv`](../create_ncn_metadata_csv.md)
-   - [`switch_metadata.csv`](../create_switch_metadata_csv.md)
+> **Note:** The following seed files are auto-generated with the common pre-installer `application_node_config.yaml` ,`hmn_connections.json` ,`ncn_metadata.csv` ,`switch_metadata.csv`. See [Seed file generation](hpcm_installation-cpi.md#seed-file-generation).
 
-If `cabinets.yaml` config file has not been created (manually) so far, following step (#1) may be performed now otherwise, this step (1) can be skipped.
-1. (`pit#`) Create remaining seedfiles,  unless they already exist from a previous installation.
-   - [Create `cabinets.yaml`](../create_cabinets_yaml.md)
+1. Verify if `cabinets.yaml` config file has not been created (manually).
+
+   If `cabinets.yaml` config file has not been created, create the `cabinets.yaml` using the following step, else skip the following step.
+      
+      (`pit#`)
+      1. Create remaining seedfiles,  unless they already exist from a previous installation.
+         - [Create `cabinets.yaml`](../create_cabinets_yaml.md)
+   
 1. (`pit#`) Assuming all seedfiles are under `$HOME/seedfiles` directory, copy the generated files under `${PITDATA}/prep` directory.
    ```bash
    cp $HOME/seedfiles/* "${PITDATA}/prep"
@@ -517,7 +520,7 @@ If `cabinets.yaml` config file has not been created (manually) so far, following
       csi config init empty
       ```
 
-   - Otherwise, copy the existing `system_config.yaml` file into the working directory and proceed to the [Run CSI](#34-run-csi) step.
+   - Otherwise, copy the existing `system_config.yaml` file into the working directory and proceed to the [Run CSI](#33-run-csi) step.
 
 1. (`pit#`) Edit the `system_config.yaml` file with the appropriate values.
 
@@ -525,6 +528,7 @@ If `cabinets.yaml` config file has not been created (manually) so far, following
    >
    > - For a short description of each key in the file, run `csi config init --help`.
    > - For more description of these settings and the default values, see [Default IP Address Ranges](../../introduction/csm_overview.md#2-default-ip-address-ranges) and the other topics in[CSM Overview](../../introduction/csm_overview.md).
+   > - To enable or disable audit logging, refer to [Audit Logs](../../operations/security_and_authentication/Audit_Logs.md) for more information.
    > - If the system is using a `cabinets.yaml` file, be sure to update the `cabinets-yaml` field with `'cabinets.yaml'` as its value.
 
    ```bash
