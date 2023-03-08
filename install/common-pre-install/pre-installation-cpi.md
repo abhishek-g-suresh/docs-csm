@@ -6,7 +6,7 @@ The page walks a user through setting up the Cray LiveCD with the intention of i
     1. [Setup site network](#11-setup-site-network)
     1. [Prepare the data partition](#12-prepare-the-data-partition)
     1. [Set reusable environment variables](#13-set-reusable-environment-variables)
-    1. [Exit the console and log in with SSH](#14-exit-the-console-and-log-in-with-ssh)
+    1. [Save the PIT image information](#14-save-the-pit-image-information)
 1. [Import CSM tarball](#2-import-csm-tarball)
     1. [Download CSM tarball](#21-download-csm-tarball)
     1. [Import tarball assets](#22-import-tarball-assets)
@@ -193,7 +193,7 @@ These variables will need to be set for many procedures within the CSM installat
    EOF
    ```
 
-### 1.4 Exit the console and log in with SSH
+### 1.4 Save the PIT image information
 
 1. (`pit#`) Create the `admin` directory for the typescripts and administrative scratch work.
 
