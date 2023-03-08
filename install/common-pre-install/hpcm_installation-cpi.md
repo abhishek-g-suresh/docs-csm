@@ -792,3 +792,8 @@ If an administrator has the node booted with an operating system which will next
 
    These steps can help reclaim ~40 GB of space in the `tmpfs/overlay` partition.
  
+## Next topic
+
+After completing this procedure, proceed to pre-installation.
+
+See [Pre-installation](pre-installation-cpi.md).
