@@ -6,6 +6,7 @@ The topics in this chapter need to be done as part of an ordered procedure so ar
 shown here with numbered topics.
 
 1. [Pre-installation](#pre-installation)  
+       [Prerequisites](#prerequisites)
     1. [Boot Pre-Install Live ISO and Seedfiles Generation](#1-boot-pre-install-live-iso-and-seedfiles-generation)
     1. [Preparing for a re-installation](#2-preparing-for-a-re-installation)
     1. [Boot installation environment](#3-boot-installation-environment)
@@ -36,6 +37,28 @@ shown here with numbered topics.
 This section will guide the administrator through creating and setting up the Cray Pre-Install Toolkit (PIT).
 
 Fresh-installations may start at the [Boot installation environment](#3-boot-installation-environment) section. Re-installations will have other steps to complete in the [Preparing for a re-installation](#2-preparing-for-a-re-installation) section.
+
+### Prerequisites
+
+The following must be verified before starting the Pre-installation procedure:
+
+    1. All the River Node BMCs should be reachable and set to DHCP mode. Refer to [Set node BMCs to DHCP](../re-installation.md#set-node-bmcs-to-dhcp).
+    
+    >**Note:** For baremetal installation these settings will be default.
+
+    1. Management Switch should be configured with IP address on vlan1 or need a serial console to the switches.
+       
+       List of Management Switch IP address configured on vlan1 have to be shared or need serial console to the switches.
+       
+    1. Verify if the SHCD Document is available with xnames of server.
+    
+    1. Collect ip address of admin node, site dns, gateway ip, and proxy details, and ensure all these IPs are reachable from admin node.
+    
+    1. Verify and ensure you have access to admin node and BMC.
+    
+    1. Download `SLE-15-SP3-Full-x86_64` and `cm-admin-install-1.8-sles15sp3-x86_64.iso` ISO files and csm tarball.
+    
+    1. Verify and ensure a minimum of 64GB memory is available for the admin node.
 
 ### 1. Boot Pre-Install Live ISO and Seedfiles Generation
 
