@@ -42,23 +42,21 @@ Fresh-installations may start at the [Boot installation environment](#3-boot-ins
 
 The following must be verified before starting the Pre-installation procedure:
 
-    1. All the River Node BMCs should be reachable and set to DHCP mode. Refer to [Set node BMCs to DHCP](../re-installation.md#set-node-bmcs-to-dhcp).
-    
-    >**Note:** For baremetal installation these settings will be default.
+- Ensure all the River Node BMCs are reachable and is set to DHCP mode. Refer to [Set node BMCs to DHCP](../re-installation.md#set-node-bmcs-to-dhcp).
 
-    1. Management Switch should be configured with IP address on vlan1 or need a serial console to the switches.
+  >**Note:** For baremetal installation these settings will be default.
        
-       List of Management Switch IP address configured on vlan1 have to be shared or need serial console to the switches.
+- Ensure that list of Management Switch IP address configured on `vlan1` is available, this need to be shared or will require serial console to the switches.
        
-    1. Verify if the SHCD Document is available with xnames of server.
+- Verify if the SHCD Document is available with xnames of server.
     
-    1. Collect ip address of admin node, site dns, gateway ip, and proxy details, and ensure all these IPs are reachable from admin node.
+- Collect ip address of admin node, site dns, gateway ip, and proxy details, and ensure all these IPs are reachable from admin node.
     
-    1. Verify and ensure you have access to admin node and BMC.
+- Verify and ensure you have access to admin node and BMC.
     
-    1. Download `SLE-15-SP3-Full-x86_64` and `cm-admin-install-1.8-sles15sp3-x86_64.iso` ISO files and csm tarball.
+- Verify and ensure you are able to download the `SLE-15-SP3-Full-x86_64` and `cm-admin-install-1.8-sles15sp3-x86_64.iso` ISO files and csm tarball.
     
-    1. Verify and ensure a minimum of 64GB memory is available for the admin node.
+- Verify and ensure a minimum of 64GB memory is available for the admin node.
 
 ### 1. Boot Pre-Install Live ISO and Seedfiles Generation
 
