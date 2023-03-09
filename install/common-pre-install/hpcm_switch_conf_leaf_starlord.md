@@ -2,7 +2,7 @@ Copy the text from here:
 
 ```
 ! Version 10.5.1.4
-! Last configuration change at Sep  16 15:55:48 2022
+! Last configuration change at Mar  06 12:09:16 2023
 !
 ip vrf default
 !
@@ -21,7 +21,7 @@ policy-map type application policy-iscsi
 !
 interface vlan1
  no shutdown
- ip address 172.23.255.251/16
+ ip address 10.1.0.4/16
 !
 interface port-channel51
  no shutdown
@@ -294,18 +294,8 @@ interface ethernet1/1/52
  no switchport
  flowcontrol receive on
 !
-interface ethernet1/1/53
- no shutdown
- switchport access vlan 1
- flowcontrol receive on
-!
-interface ethernet1/1/54
- no shutdown
- switchport access vlan 1
- flowcontrol receive on
-!
 snmp-server contact "Contact Support"
 !
 telemetry
-ntp server 172.23.0.1
+ntp server 10.1.0.5
 ```
