@@ -8,6 +8,8 @@ The following steps provide instructions to boot the Pre-Install Live ISo and cr
 1. [Booting the Master node using Bootable USB](#boot-the-livecd)
 1. [Post Boot Configuration](#post-boot-configuration)
 1. [Seed File generation](#seed-file-generation)
+[CleanUp (Optional)](#cleanup-optional)
+[Next Topic](#next-topic)
 
 ## Create the Bootable Media
 
@@ -378,15 +380,15 @@ If an administrator has the node booted with an operating system which will next
 
             ![alt text](../../img/install/14.png)
          
-         1. Creating the sles 15 sp3 distro repo.
+         1. Creating the `sles15 sp4` distro repo.
 
-            Download the SLES15 SP3 ISO.
+            Download the SLES15-SP4 ISO.
 
             ```
             wget http://preserve.eag.rdlabs.hpecorp.net/mirrors/novell/sles/15sp4/x86_64/latest/SLE-15-SP4-Full-x86_64-GM-Media1.iso
             ```
 
-            Add the SLES15 repo  using `cm repo` command.
+            Add the `sles15 sp4` repo  using `cm repo` command.
 
             ``` 
             cm repo add SLE-15-SP4-Full-x86_64-GM-Media1.iso
@@ -774,10 +776,10 @@ If an administrator has the node booted with an operating system which will next
       The following command stores the inventory of nodes and switches (fabric and management) in the database.
 
       ```
-      cm cvt config create -t all --mgmt_username 'uname' --mgmt_password 'passwd'  --fabric_username --load_xname /root/xnames.csv --architecture '<architecture>'
+      cm cvt config create -t all --mgmt_username 'uname' --mgmt_password 'passwd' --load_xname /root/xnames.csv --architecture '<architecture>'
       ```
 
-   1. Save the generated seed files (`switch_metadata.csv`, `application_node_config.yaml`, `hmn_connections.json`, `ncn_metadata.csv`,), paddlefile (`cvt-ccj.json`) and `cvt.json`. The seed files (or configuration payload files) and paddlefile will be used later during the CSM installation process so they can be saved/backed up in a persistent storage.
+   1. Save the generated seed files (`switch_metadata.csv`, `application_node_config.yaml`, `hmn_connections.json`, `ncn_metadata.csv`), paddlefile (`cvt-ccj.json`) and `cvt.json`. The seed files (or configuration payload files) and paddlefile will be used later during the CSM installation process so they can be saved/backed up in a persistent storage.
 
 ## CleanUp (Optional)
 
