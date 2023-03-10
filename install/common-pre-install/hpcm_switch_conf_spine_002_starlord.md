@@ -2,8 +2,8 @@ Copy the text from here:
 
 ```
 ##
-## Running database "hpcm_basic_config"
-## Generated at 2022/09/19 12:21:26 +0000
+## Running database "hpcm230223-10"
+## Generated at 2023/03/09 06:02:43 +0000
 ## Hostname: sw-spine02
 ## Product release: 3.9.3210
 ##
@@ -20,13 +20,13 @@ no cli default prefix-modes enable
 
 ##
 ## Interface Ethernet configuration
-## speed should come before mlag-port-channel
-   interface ethernet 1/1-1/10 speed 40G force
-   interface ethernet 1/12 speed 40G force
-   interface ethernet 1/15 speed 40G force
+##
    interface mlag-port-channel 1-9
    interface mlag-port-channel 15
    interface port-channel 100
+   interface ethernet 1/1-1/10 speed 40G force
+   interface ethernet 1/13-1/14 speed 40G force
+   interface ethernet 1/15 speed 10G force
    interface ethernet 1/1 mlag-channel-group 1 mode active
    interface ethernet 1/2 mlag-channel-group 2 mode active
    interface ethernet 1/3 mlag-channel-group 3 mode active
@@ -36,8 +36,7 @@ no cli default prefix-modes enable
    interface ethernet 1/7 mlag-channel-group 7 mode active
    interface ethernet 1/8 mlag-channel-group 8 mode active
    interface ethernet 1/9 mlag-channel-group 9 mode active
-   interface ethernet 1/10 channel-group 100 mode active
-   interface ethernet 1/12 channel-group 100 mode active
+   interface ethernet 1/13-1/14 channel-group 100 mode active
    interface ethernet 1/15 mlag-channel-group 15 mode on
    interface mlag-port-channel 1 switchport mode hybrid
    interface mlag-port-channel 2 switchport mode hybrid
@@ -49,9 +48,10 @@ no cli default prefix-modes enable
    interface mlag-port-channel 8 switchport mode hybrid
    interface mlag-port-channel 9 switchport mode hybrid
    interface mlag-port-channel 15 switchport mode hybrid
-   interface ethernet 1/10 description "sw-spine01-1/10"
-   interface ethernet 1/12 description "sw-spine01-1/12"
+   interface ethernet 1/13 description "sw-spine01-1/10"
+   interface ethernet 1/14 description "sw-spine01-1/12"
    interface port-channel 100 description "mlag-isl"
+   interface ethernet 1/2-1/9 shutdown
    interface mlag-port-channel 1-9 no shutdown
    interface mlag-port-channel 15 no shutdown
 
@@ -94,7 +94,7 @@ no cli default prefix-modes enable
    interface vlan 1
    interface vlan 1999
    interface vlan 4000
-   interface vlan 1 ip address 172.23.255.253/16 primary
+   interface vlan 1 ip address 10.1.0.3/16 primary
    interface vlan 1999 ip address 1.1.255.253/16 primary
    interface vlan 4000 ip address 1.2.0.2/30 primary
    ip load-sharing source-ip-port
@@ -120,7 +120,7 @@ no cli default prefix-modes enable
 ##
    protocol magp
    interface vlan 1 magp 1
-   interface vlan 1 magp 1 ip virtual-router address 172.23.255.254
+   interface vlan 1 magp 1 ip virtual-router address 10.1.0.254
    interface vlan 1 magp 1 ip virtual-router mac-address 00:00:5E:01:01:55
 
 ##
@@ -167,10 +167,14 @@ no password hardening enable
 ## Network management configuration
 ##
 # web proxy auth basic password ********
-no ntp server 172.23.0.1 disable
-   ntp server 172.23.0.1 keyID 0
-no ntp server 172.23.0.1 trusted-enable
-   ntp server 172.23.0.1 version 4
+no ntp server 1.1.0.5 disable
+   ntp server 1.1.0.5 keyID 0
+no ntp server 1.1.0.5 trusted-enable
+   ntp server 1.1.0.5 version 4
+no ntp server 10.1.0.5 disable
+   ntp server 10.1.0.5 keyID 0
+no ntp server 10.1.0.5 trusted-enable
+   ntp server 10.1.0.5 version 4
    ntp vrf mgmt enable
    web vrf mgmt enable
 
@@ -178,7 +182,7 @@ no ntp server 172.23.0.1 trusted-enable
 ## X.509 certificates configuration
 ##
 #
-# Certificate name system-self-signed, ID 4f013a388151f9d88196f0738b4bc13294672f0c
+# Certificate name system-self-signed, ID ad2bdbdee2de9127920c11f46459827d8080ac83
 # (public-cert config omitted since private-key config is hidden)
 
 ##
