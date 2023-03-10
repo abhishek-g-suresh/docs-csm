@@ -8,8 +8,8 @@ The following steps provide instructions to boot the Pre-Install Live ISo and cr
 1. [Booting the Master node using Bootable USB](#boot-the-livecd)
 1. [Post Boot Configuration](#post-boot-configuration)
 1. [Seed File generation](#seed-file-generation)
-[CleanUp (Optional)](#cleanup-optional)
-[Next Topic](#next-topic)
+1. [CleanUp (Optional)](#cleanup-optional)
+1. [Next Topic](#next-topic)
 
 ## Create the Bootable Media
 
