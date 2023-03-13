@@ -8,12 +8,13 @@ The following steps provide instructions to boot the Pre-Install Live ISo and cr
 1. [Booting the Master node using Bootable USB](#boot-the-livecd)
 1. [Post Boot Configuration](#post-boot-configuration)
 1. [Seed File generation](#seed-file-generation)
+1. [Compare the SHCD Data with CVT Inventory Data](#compare-the-shcd-data-with-cvt-inventory-data)
 1. [CleanUp (Optional)](#cleanup-optional)
 1. [Next Topic](#next-topic)
 
 ## Create the Bootable Media
 
-To create the bootable LiveCD image use `dd` command. Before creating the media, identify which device will be used for it. If you already have the bootable media with LiveCD image ready, jump to XXXX.
+To create the bootable LiveCD image use `dd` command. Before creating the media, identify which device will be used for it. If you already have the bootable media with LiveCD image ready, skip to [Boot the LiveCD](#boot-the-livecd).
 
 1. (`external#`) Download the LiveCD ISO.
 
@@ -781,6 +782,10 @@ If an administrator has the node booted with an operating system which will next
 
    1. Save the generated seed files (`switch_metadata.csv`, `application_node_config.yaml`, `hmn_connections.json`, `ncn_metadata.csv`), paddlefile (`cvt-ccj.json`) and `cvt.json`. The seed files (or configuration payload files) and paddlefile will be used later during the CSM installation process so they can be saved/backed up in a persistent storage.
 
+## Compare the SHCD Data with CVT Inventory Data
+
+   Follow the [Compare the SHCD Data with CVT Inventory Data](compare-the-shcd-data-with-cvt-inventory-data.md) procedure.
+	
 ## CleanUp (Optional)
 
    1. If the amount of memory on the booted system is low, then cleanup step can be performed by removing the downloaded ISO files and deleting the images.
