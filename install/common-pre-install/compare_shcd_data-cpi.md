@@ -21,7 +21,11 @@
 
    Option 2: Run the following command: `cm cvt parse shcd --canu_json_file cabling.json`
 
-   Post successful run, a snapshot ID along with the timestamp will be created and the data will be inserted into the table named SHCD_DATA. 
+   Post successful run, a snapshot ID along with the timestamp will be created and the data will be inserted into the table named SHCD_DATA.
+   
+   Example output:
+   
+   ![store SHCD data](../../img/install/parse_shcd.PNG)
  
 ## 3. Collect CVT inventory data
 
@@ -32,6 +36,10 @@
    Option 2: Run the following command: `cm cvt discover` (provide all the credentials mentioned in the help menu)
 
    The script inserts data into the respective inventory tables and snapshot IDs will be created along with the timestamps.
+   
+   Example output:
+   
+   ![collect CVT inventory](../../img/install/collect_cvt_data.png)
  
 ## 4. Compare the SHCD snapshot and CVT snapshot
 
@@ -40,6 +48,10 @@
    Option 1: Run the following script: `./shcd_compare.py --list`
 
    Option 2: Run the following command: `cm cvt shcd compare --list`
+   
+   Example output:
+   
+   ![List CVT inventory](../../img/install/list_inventory.png)
  
 2. Compare the CVT and SHCD snapshots using one of the following options.
 
@@ -54,6 +66,10 @@
    ```
    cm cvt shcd compare --shcd_id c4b166df-7678-4484-8762-87104de8d117 --cvt_id 84e208e3-7b0d-4ce5-9a03-95bee60714d8
    ```
+   
+   Example output:
+   
+   ![Compare SHCD data](../../img/install/compare_shcd-cvt.png)
 
    In the previous command, `--shcd_id` accepts the snapshot ID created while inserting into SHCD_DATA table and `--cvt_id` accepts the snapshot ID created while inserting into Management Inventory tables.
  
