@@ -784,7 +784,7 @@ If an administrator has the node booted with an operating system which will next
 
 ## Compare the SHCD Data with CVT Inventory Data
 
-   Follow the [Compare the SHCD Data with CVT Inventory Data](compare-the-shcd-data-with-cvt-inventory-data.md) procedure.
+   Follow the [Compare the SHCD Data with CVT Inventory Data](compare_shcd_data-cpi.md) procedure.
 	
 ## CleanUp (Optional)
 
