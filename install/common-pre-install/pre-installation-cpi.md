@@ -15,7 +15,8 @@ The page walks a user through setting up the Cray LiveCD with the intention of i
     1. [Customize `system_config.yaml`](#32-customize-system_configyaml)
     1. [Run CSI](#33-run-csi)
     1. [Prepare Site Init](#34-prepare-site-init)
-    1. [Initialize the LiveCD](#35-initialize-the-livecd)
+    1. [Configure Management Network](#35-configure-management-network) 
+    1. [Initialize the LiveCD](#36-initialize-the-livecd)
 1. [Next topic](#next-topic)
 
 ## 1. Boot installation environment
@@ -296,9 +297,7 @@ in `/etc/environment` from the [Download CSM tarball](#21-download-csm-tarball) 
       > **NOTE** This installs necessary scripts for deployment checks, as well as the offline manual.
 
        ```bash
-       zypper   
-           --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \
-           --no-gpg-checks install -y docs-csm
+       zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \ --no-gpg-checks install -y docs-csm
        ```
 
    1. Update `cray-site-init`.
@@ -306,8 +305,7 @@ in `/etc/environment` from the [Download CSM tarball](#21-download-csm-tarball) 
        > **NOTE** This provides `csi`, a tool for creating and managing configurations, as well as orchestrating the [handoff and deploy of the final non-compute node](../deploy_final_non-compute_node.md).
 
        ```bash
-       zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \
-              --no-gpg-checks update -y cray-site-init
+       zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \ --no-gpg-checks update -y cray-site-init
        ``` 
 
    1. Install `iuf-cli`.
@@ -315,8 +313,7 @@ in `/etc/environment` from the [Download CSM tarball](#21-download-csm-tarball) 
        > **NOTE** This provides `iuf`, a command line interface to the [Install and Upgrade Framework](../../operations/iuf/IUF.md).
        
        ```bash
-       zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \
-              --no-gpg-checks install -y iuf-cli
+       zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \ --no-gpg-checks install -y iuf-cli
        ```
 
    1. Install `csm-testing` RPM.
@@ -324,11 +321,10 @@ in `/etc/environment` from the [Download CSM tarball](#21-download-csm-tarball) 
        > **NOTE** This package provides the necessary tests and their dependencies for validating the pre-installation, installation, and more.
 
        ```bash
-        zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \
-               --no-gpg-checks install -y csm-testing
+        zypper --plus-repo "${CSM_PATH}/rpm/cray/csm/sle-$(awk -F= '/VERSION=/{gsub(/["-]/, "") ; print tolower($NF)}' /etc/os-release)/" \ --no-gpg-checks install -y csm-testing
        ```
 
-1. (`pit#`) Install/update the RPMs and configuration files necessary for CSM installation.i8
+1. (`pit#`) Install/update the RPMs and configuration files necessary for CSM installation
 
    1. Install following rpms -
       ```bash
@@ -611,7 +607,13 @@ Run the following steps before starting any of the system configuration procedur
 
 Follow the [Prepare Site Init](../prepare_site_init.md) procedure.
 
-### 3.5 Initialize the LiveCD
+### 3.5 Configure Management Network 
+
+Follow  [Configure management network switches](README.md#6-configure-management-network-switches).
+
+> **NOTE:** The generated paddle file can be used as input to the canu command to configure the switches.
+
+### 3.6 Initialize the LiveCD
 
 > **NOTE:** If starting an installation at this point, ensure to copy the previous `prep` directory back onto the system.
 
@@ -681,14 +683,23 @@ Follow the [Prepare Site Init](../prepare_site_init.md) procedure.
    Goto `/var/www` and create additional symlinks - 
 
    ``` 
-    cd /var/www
-    cwd=$PWD; for dir in $(ls|grep ncn-); do cd $dir; ln -sf ../ephemeral/data/k8s/0.3.59/secure-kubernetes-*.squashfs rootfs ; cd $cwd; done   
-    cd  /srv/tftpboot/
-    ln -sf /var/www/ncn-* .
+   cp -r /var/www/ncn-* /srv/tftpboot/
+   mkdir /srv/tftpboot/ephemeral
+   cp -r /var/www/ephemeral/data/ /srv/tftpboot/ephemeral/
+   ```
+
+   Start conman service
+   ```
+   systemctl start conman.service
    ```
 
 1. (`pit#`) Verify that the LiveCD is ready by running the preflight tests.
 
+   Run the following command to make the kubectl binary executable:
+   ```
+   chmod +x /usr/bin/kubectl
+   ```
+   Run preflight tests
    ```bash
    csi pit validate --livecd-preflight
    ```
@@ -716,30 +727,27 @@ Follow the [Prepare Site Init](../prepare_site_init.md) procedure.
    This needs to be copied off the system and either stored in a secure location or in a secured Git repository.
    There are secrets in this directory that should not be accidentally exposed.
 
+## TBD
+
+1. Grant necessary privileges by running the following command
+   ```
+   sed -i 's/podman run/podman run --privileged/g' /usr/share/doc/csm/install/scripts/csm_services/steps/1.initialize_bootstrap_registry.yaml
+   ```
+1. Check if there are any processes attached to port 5000 by running the following command:
+   ```
+   netstat -tlnp | grep 5000
+   ```
+   If there is a process attached to port 5000, kill it using the kill command.
+   ```
+   kill -9 <pid>
+   ```
+   Restart Nexus 
+   ```
+   systemctl restart nexus.service
+   ```
+
 ## Next topic
 
-After completing this procedure, proceed to configure the management network switches. The generated paddle file can be used as input to the canu command to configure the switches.
+After completing the Pre-install step, the next step is to Deploy Management Nodes.
 
-See [Configure management network switches](README.md#6-configure-management-network-switches).
-
-> **NOTE:** After applying management switch settings please ensure that snmp credentials are properly set.
-
-https://github.com/Cray-HPE/docs-csm/blob/release/1.0/operations/security_and_authentication/Change_SNMP_Credentials_on_Leaf_Switches.md
-
-In summary, following needs to be performed for leaf switch (refer cray-site-init section for the credentials) 
-
-```
-sw-leaf-bmc-001# configure terminal
-sw-leaf-bmc-001(config)# snmp-server user testuser cray-reds-group 3 auth md5 testpass1 priv des testpass2
-sw-leaf-bmc-001(config)# exit
-sw-leaf-bmc-001# write memory
-sw-leaf-bmc-001# exit
-```
-
-Perform the following on the `pit#` node - 
-
-```
-   pit# kubectl -n services rollout restart deployment cray-reds
-```
-
-After sometime, nodes will be discovered and HMS test will pass.
+See [Deploy Management Nodes](README.md#1-deploy-management-nodes).
