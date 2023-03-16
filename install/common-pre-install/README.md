@@ -5,8 +5,8 @@
 The topics in this chapter need to be done as part of an ordered procedure so are
 shown here with numbered topics.
 
+[Prerequisites](#prerequisites)
 1. [Pre-installation](#pre-installation)  
-       [Prerequisites](#prerequisites)
     1. [Boot Pre-Install Live ISO and Seedfiles Generation](#1-boot-pre-install-live-iso-and-seedfiles-generation)
     1. [Preparing for a re-installation](#2-preparing-for-a-re-installation)
     1. [Boot installation environment](#3-boot-installation-environment)
@@ -29,16 +29,9 @@ shown here with numbered topics.
     1. [Kubernetes Encryption](#1-kubernetes-encryption)
     2. [Export Nexus Data](#2-export-nexus-data)
 
-
 > **`NOTE:`** If problems are encountered during the installation, [Troubleshooting installation problems](#troubleshooting-installation-problems) and [Cray System Management (CSM) Administration Guide](../../operations/README.md) will offer assistance.
 
-## Pre-installation
-
-This section will guide the administrator through creating and setting up the Cray Pre-Install Toolkit (PIT).
-
-Fresh-installations may start at the [Boot installation environment](#3-boot-installation-environment) section. Re-installations will have other steps to complete in the [Preparing for a re-installation](#2-preparing-for-a-re-installation) section.
-
-### Prerequisites
+## Prerequisites
 
 The following must be verified before starting the Pre-installation procedure:
 
@@ -57,6 +50,12 @@ The following must be verified before starting the Pre-installation procedure:
 - Verify and ensure you are able to download the `SLE-15-SP4-Full-x86_64` and `cm-admin-install-1.8-sles15sp4-x86_64.iso` ISO files and csm tarball.
     
 - Verify and ensure a minimum of 64GB memory is available for the admin node.
+
+## Pre-installation
+
+This section will guide the administrator through creating and setting up the Cray Pre-Install Toolkit (PIT).
+
+Fresh-installations may start at the [Boot installation environment](#3-boot-installation-environment) section. Re-installations will have other steps to complete in the [Preparing for a re-installation](#2-preparing-for-a-re-installation) section.
 
 ### 1. Boot Pre-Install Live ISO and Seedfiles Generation
 
