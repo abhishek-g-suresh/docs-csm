@@ -54,7 +54,7 @@ The following must be verified before starting the Pre-installation procedure:
     
 - Verify and ensure you have access to admin node and BMC.
     
-- Verify and ensure you are able to download the `SLE-15-SP3-Full-x86_64` and `cm-admin-install-1.8-sles15sp3-x86_64.iso` ISO files and csm tarball.
+- Verify and ensure you are able to download the `SLE-15-SP4-Full-x86_64` and `cm-admin-install-1.8-sles15sp4-x86_64.iso` ISO files and csm tarball.
     
 - Verify and ensure a minimum of 64GB memory is available for the admin node.
 
