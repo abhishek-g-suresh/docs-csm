@@ -6,7 +6,7 @@ Copy the text from here:
 !
 ip vrf default
 !
-hostname sw-leaf01
+hostname sw-leaf-bmc-001
 iscsi enable
 iscsi target port 860
 iscsi target port 3260
