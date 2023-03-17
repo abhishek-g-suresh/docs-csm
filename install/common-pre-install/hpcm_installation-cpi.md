@@ -8,7 +8,8 @@ The following steps provide instructions to boot the Pre-Install Live ISo and cr
 1. [Booting the Master node using Bootable USB](#boot-the-livecd)
 1. [Post Boot Configuration](#post-boot-configuration)
 1. [Seed File generation](#seed-file-generation)
-1. [Compare the SHCD Data with CVT Inventory Data](#compare-the-shcd-data-with-cvt-inventory-data)
+1. [Compare the SHCD Data with CVT Inventory Data](#compare-the-shcd-data-with-cvt-inventory-dataoptional)
+1. [Stop HPCM services](#stop-hpcm-services)
 1. [CleanUp (Optional)](#cleanup-optional)
 1. [Next Topic](#next-topic)
 
@@ -431,8 +432,11 @@ If an administrator has the node booted with an operating system which will next
             cm repo select Cluster-Manager-1.9-sles15sp4-x86_64
             ```
 
-   1. Run the command `configure-cluster` to start configuring the clusters as follows.
 
+   1. Run configure-cluster command. 
+      1. ```
+         configure-cluster
+         ```
       1. Configuring the House network Interface.
          
          Select House Network Interface from the list of network interfaces.
@@ -621,7 +625,7 @@ If an administrator has the node booted with an operating system which will next
          >  interface ethernet 1/2-1/9
          >  shutdown
          > ```
-         > Once all the NCN's are booted enable all the ports.
+         > Once all the NCN's are booted enable all the ports by running `no shutdown` command.
 
 
          1. Enable auto-discovery process.
@@ -740,56 +744,67 @@ If an administrator has the node booted with an operating system which will next
 
    Here's the stepwise procedure to generate seedfiles.
 
-   1. Obtain `xnames.csv` file for the targetted system's installation.
+   1. Generate Paddle File
+      To generate the paddle file using the Canu Validate tool, follow link [Validate SHCD](../../operations/network/management_network/validate_shcd.md)
+      Example Command:
+      ```
+      canu validate shcd --shcd CrayInc-ShastaRiver-Groot-RevE12.xlsx --architecture V1 --tabs 40G_10G,NMN,HMN --corners I12,Q38,I13,Q21,J20,   U38 --json --out cabling.json
+      ```
+   1. Store SHCD Data in CVT Database 
+      ```
+      cm cvt parse shcd --canu_json_file cabling.json
+      ```
+      Example output:
+      ![store SHCD data](../../img/install/parse_shcd.PNG)
 
-      The file will have the following format:
+   1. Create [`cabinets.yaml`](../create_cabinets_yaml.md) (Manually).
+
+   1. Capture hardware inventory and generate seedfiles and paadlefile
+
+      The following command stores the inventory of nodes and switches (fabric and management) in the database and generates the seedfiles and paadlefile
 
       ```
-      HOSTNAME,RACK,ULOCATION,SUBLOCATION
+      cnodes | grep node >>nodelist
+      pdsh -w^nodelist /opt/clmgr/scripts/cluster-config-verification-tool/create_bond0.sh
+      cm cvt config create -t all --mgmt_username 'uname' --mgmt_password 'passwd' --architecture '<architecture>'
       ```
-
-      ```
-       Source,Rack,Location,SUBLOCATION
-       uan01,x3000,u20,
-       ncn-s003,x3000,u09,
-       ncn-s002,x3000,u08,
-       ncn-s001,x3000,u07,
-       ncn-w003,x3000,u06,
-       ncn-w002,x3000,u05,
-       ncn-w001,x3000,u04,
-       ncn-m003,x3000,u03,
-       ncn-m002,x3000,u02,
-       ncn-m001,x3000,u01,
-       nid000004,x3000,u11,L
-       nid000003,x3000,u12,L
-       nid000002,x3000,u11,R
-       nid000001,x3000,u12,R
-       ncn-w004,x3000,u13,
-       sw-spine01,x3000,u39,
-       sw-spine02,x3000,u40,
-       sw-leaf-bmc-01,x3000,u37,
-      ```
-      __NOTE:__ Hostname should be in CSM supported format.
-
-   1. Create `cabinets.yaml` (Manually).
-
-   1. Capture hardware inventory.
-
-      The following command stores the inventory of nodes and switches (fabric and management) in the database.
-
-      ```
-      cm cvt config create -t all --mgmt_username 'uname' --mgmt_password 'passwd' --load_xname /root/xnames.csv --architecture '<architecture>'
-      ```
+      __NOTE:__ The seedfiles and paddle file will be generated in the present working directory.
 
    1. Save the generated seed files (`switch_metadata.csv`, `application_node_config.yaml`, `hmn_connections.json`, `ncn_metadata.csv`), paddlefile (`cvt-ccj.json`) and `cvt.json`. The seed files (or configuration payload files) and paddlefile will be used later during the CSM installation process so they can be saved/backed up in a persistent storage.
 
-## Compare the SHCD Data with CVT Inventory Data
+## Compare the SHCD Data with CVT Inventory Data(Optional)
 
-   Follow the [Compare the SHCD Data with CVT Inventory Data](compare_shcd_data-cpi.md) procedure.
-	
+   1. Display the list of generated snapshot IDs
+      ```
+      cm cvt shcd compare --list
+      ```
+      Sample Output:
+      ![List CVT inventory](../../img/install/list_inventory.png)
+
+   1. Compare the CVT and SHCD snapshots
+
+      ```
+      cm cvt shcd compare --shcd_id c4b166df-7678-4484-8762-87104de8d117 --cvt_id 84e208e3-7b0d-4ce5-9a03-95bee60714d8
+      ```
+      In the previous command, `--shcd_id` accepts the snapshot ID created while inserting into SHCD_DATA table and `--cvt_id` accepts the snapshot ID created while inserting into Management Inventory tables.
+      
+      Sample Output:
+      ![Compare SHCD data](../../img/install/compare_shcd-cvt.png)
+
+      In the previous output, wherever there is a difference in the data found, the left hand side is the data from SHCD and the right hand side is the data from CVT (SHCD => CVT). Under the Result column `Found in CVT Data` implies the data is present only in the CVT inventory and not found in the SHCD data, `Not Found in CVT Data` implies the data is present only in the SHCD data and not found in the CVT inventory. And the Difference Found is resulted along with the display of the mismatch found between both the data.
+
+## Stop HPCM services
+
+Run the following commands to stop HPCM services:
+   ```
+   systemctl stop clmgr-power
+   systemctl stop grafana-server.service
+   systemctl stop aiops-mlflow.service
+   ```
+
 ## CleanUp (Optional)
 
-   1. If the amount of memory on the booted system is low, then cleanup step can be performed by removing the downloaded ISO files and deleting the images.
+1. If the amount of memory on the booted system is low, then cleanup step can be performed by removing the downloaded ISO files and deleting the images.
 
    ```
    rm *.iso 
