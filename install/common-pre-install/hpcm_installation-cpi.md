@@ -319,7 +319,7 @@ If an administrator has the node booted with an operating system which will next
              Copy and paste the configuration [from here](hpcm_switch_conf_leaf_starlord.md) and save the configuration using the following command: 
 
              ```
-              sw-leaf01(config)# write configuration
+              sw-leaf01(config)# write memory
              ```
 
       >__Note:__ Incase the spine and/or leaf switches are from Aruba then following document an be referred for the configuration in the following link: https://hpedia.osp.hpe.com/wiki/Setting_up_Aruba_Switches_with_HPCM.
@@ -431,6 +431,7 @@ If an administrator has the node booted with an operating system which will next
             cm repo select SLE-15-SP4-Full-x86_64
             cm repo select Cluster-Manager-1.9-sles15sp4-x86_64
             ```
+
 
    1. Run configure-cluster command. 
       1. ```
@@ -621,7 +622,7 @@ If an administrator has the node booted with an operating system which will next
          >  ssh admin@<ip-addr>
          >  enable
          >  configure terminal
-         >  interface 1/2-1/9
+         >  interface ethernet 1/2-1/9
          >  shutdown
          > ```
          > Once all the NCN's are booted enable all the ports by running `no shutdown` command.
@@ -736,6 +737,7 @@ If an administrator has the node booted with an operating system which will next
             ```
 
             __NOTE:__ We need to wait at this step till all nodes report status as "BOOTED". Now the ports to all the NCNs can be enabled on switches.
+	
          1. Create a Bond Network
 	
 ## Seed File generation

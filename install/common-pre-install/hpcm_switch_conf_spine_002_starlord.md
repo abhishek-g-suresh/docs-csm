@@ -134,7 +134,7 @@ no mlag shutdown
 ##
 ## Other IP configuration
 ##
-   hostname sw-spine02
+   hostname sw-spine-002
    ip domain-list local
 
 ##
